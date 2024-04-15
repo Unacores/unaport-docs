@@ -5,7 +5,7 @@ The Financial User Module is a platform designed to facilitate the management an
 
 ## Dashboard
 
-![Dashboard](/docs\images\Dashboard.jpeg)
+![Dashboard](images/Dashboard.jpeg)
 
 ### Overview Dashboard
 The Overview Dashboard serves as the landing page, offering a comprehensive summary of your financial data and activities.
@@ -30,7 +30,7 @@ Shows the distribution of your linked accounts based on their types (e.g., savin
 
 ## Manage Consent
 
-![Dashboard](/docs\images\ManageConsents.jpeg)
+![Dashboard](images/ManageConsents.jpeg)
 
 ### Raise Consent
 The Raise Consent feature allows you to grant consent for sharing your financial data with third-party entities securely. Follow these steps to raise a consent:
@@ -55,7 +55,7 @@ After raising a consent, you may be required to review and approve or reject it 
 
 ## Data Inquiry 
 
-![Dashboard](/docs\images\Data.jpeg)
+![Dashboard](images/Data.jpeg)
 The Data Inquiry feature enables you to request specific financial data from your linked accounts. Here's how to use it:
 
 1. Go to the "Data Inquiry" section.
@@ -75,7 +75,7 @@ The View Analytics section provides a 360-degree view of your financial history 
 
 ### Products
 
-![Dashboard](/docs\images\AddProduct.jpeg)
+![Dashboard](images/AddProduct.jpeg)
 
 The Products configuration allows you to manage the products linked to your profile.The Products are used as a Consent template to be used while raising a Consent.Follow these steps to manage your products:
 
@@ -97,7 +97,7 @@ The Products configuration allows you to manage the products linked to your prof
 
 ### Account Aggregator
 
-![Dashboard](/docs\images\AA.jpeg)
+![Dashboard](images/AA.jpeg)
 
 The Account Aggregator configuration settings are specific to the integration with the Account Aggregator service. Here's how to configure it:
 
@@ -107,7 +107,7 @@ The Account Aggregator configuration settings are specific to the integration wi
 
 ## Support
 
-![Dashboard](/docs\images\Support.jpeg)
+![Dashboard](images/Support.jpeg)
 
 The Support section provides assistance and resources for users encountering issues or needing help. Here's what you can find:
 
@@ -115,6 +115,6 @@ The Support section provides assistance and resources for users encountering iss
 
 ## KYC
 
-![Dashboard](/docs\images\KYC.jpeg)
+![Dashboard](images/KYC.jpeg)
 
 The KYC (Know Your Customer) section facilitates the completion and updating of KYC information to ensure compliance with regulatory requirements and enhance security. Follow the prompts to complete or update your KYC details.
