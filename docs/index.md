@@ -79,11 +79,6 @@ The View Analytics section provides a 360-degree view of your financial history 
 
 The Products configuration allows you to manage the products linked to your profile.The Products are used as a Consent template to be used while raising a Consent.Follow these steps to manage your products:
 
-1. Navigate to the "Configuration" section.
-2. Select the "Products" option.
-3. Add Products 
-4. 
-
 ## Adding a Product
 
 ### Steps:
