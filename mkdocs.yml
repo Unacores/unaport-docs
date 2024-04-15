@@ -1,0 +1,27 @@
+site_name: Product Manual - Unaport.ai
+# Copyright
+copyright: "Copyright &copy; Unacores Solutions Pvt Ltd."
+
+extra_css:
+  - css/custom.css
+
+theme:
+  name: "material"
+  features:
+    - navigation.footer
+  logo: "images/ic_splash.png"
+  palette:
+    primary: "white"
+    accent: "blue"
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.mark
+extra:
+  generator: true
+
+# Page tree
+nav:
+  - Overview: index.md
+  # - Sample Test Data: fip_data_api.md
+  # - FIP API Sandbox: fip_simulator.md
