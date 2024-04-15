@@ -9,7 +9,7 @@ theme:
   name: "material"
   features:
     - navigation.footer
-  logo: "images/logo.png"
+  logo: "images/unaport_logo.svg"
   palette:
     primary: "white"
     accent: "blue"
