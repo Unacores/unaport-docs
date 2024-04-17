@@ -136,12 +136,6 @@ API to call
 
 Method: `POST`
 
-PARAMETERS: 
-
-`consentHandleId` The consentHandleId when raising a consent Request
-
-`custAAId` The Customer AA id
-
 Below `HTTP` headers need to be set when calling the API
 
   |  Key          |   Value       |	Description	|
