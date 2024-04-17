@@ -1,34 +1,30 @@
-# Integrating with the Ink FIU Module
+# Integrating a FIU backend with your frontend application
 
-We've taken care of the intricate details and complexities of the FIU functionality, streamlining its interaction with an AA. This allows you to concentrate on developing your application once you have access to the decrypted data.
+Integrating a Financial Information User backend with your frontend application typically involves connecting your frontend interface with a system that manages financial data or transactions.
 
 Our FIU sandbox environment is continuously hosted and accessible for your convenience.
 
-The FIU sandbox is AA-agnostic and can seamlessly interface with any account aggregator. This is accomplished based on the AA user's handle. For instance, a handle like `customer1@ink` will automatically redirect requests to the 'Ink AA,' while `customer2@otheraa` will route requests to the 'Other AA.'
+### Unaport FIU Endpoint
 
-### Ink FIU Endpoint
-
-The Ink FIU API root endpoint `https://fiu.uatdev.ink-aa.com`
+The Unaport FIU API root endpoint `https://api.sandbox.unaport.com/backend/api/v1/`
 
 
-Proceed to CREATE A CONSENT TEMPLATE or USE Below PRE-CREATED TEMPLATES
+Proceed to CREATE A PRODUCT TEMPLATE or USE Below PRE-CREATED TEMPLATES
 
-  |  CONSENT TEMPLATE          |   CONSENT TYPE       |	Template Description	|
+  |  PRODUCT TEMPLATE          |   CONSENT TYPE       |	Template Description	|
   | ------------- |-------------|-------------|
   | `ONETIME_DEV_TEMPLATE` | `ONETIME` | Template used for One time consent to fetch PROFILE, SUMMARY & TRANSACTIONSget for last 6 months  |
   | `PERIODIC_DEV_TEMPLATE` | `PERIODIC`  | Periodic Template where data request and fetch can be done 100 times a day to fetch PROFILE, SUMMARY & TRANSACTIONS |
  
 
 
-### Create a Consent Template
-Whenever a consent request is raised, the consent parameters and information needs to be provided. In order to reduce repetitive work, errors and also give flexibility for different customers or channels, a consent template can be created once and be for raising a consent request. This provides ease and flexibility when interaction with the customer and AA. We have provided an API to create a consent template. 
-
-We have built-in structural and valid value validations however to further reduce errors, once the consent template is created, the template would require an approval and allow a four-eye check to avoid errors, etc. The approval of the template can be done via an API call.  
+### Create a Product Template
+Whenever a consent request is raised, the consent parameters and information needs to be provided. In order to reduce repetitive work, errors and also give flexibility for different customers or channels, a product template can be created once and be for raising a consent request. This provides ease and flexibility when interaction with the customer and AA. We have provided an API to create a product template. 
 
 #### Step 1. Create a consent template 
 
 API to call : 
-`https://fiu.uatdev.ink-aa.in/ConnectHub/FIU/API/V1/ConsentTemplate`
+`https://api.sandbox.unaport.com/backend/api/v1/FIU/InsertProduct/{orgId}`
 
 Method : `POST`
 
@@ -43,56 +39,57 @@ Below `HTTP` headers need to be set when calling the API
 Sample Template creation Request
 ``` json
 {
-    "header": {
-        "rid": "f871126b-dd3f-4bb4-be8c-b1911b57a893",
-        "ts": "2020-01-13T12:58:33.501+0000",
-        "channelId": null
-    },
-    "body": {
-                "templateName": "PERIDOIC_DAILY_CONSENT",
-                "templateDescription": "PERIDOIC_DAILY_CONSENT",
-                "consentMode": "STORE",
-                "consentTypes": [
-                    "PROFILE",
-                    "TRANSACTIONS",
-                    "SUMMARY"
-                ],
-                "fiTypes": [
-                    "DEPOSIT"
-                ],
-                "Purpose": {
-                    "code": "101",
-		            "refUri": "https://api.rebit.org.in/aa/purpose/101.xml",
-		            "text": "Wealth management service",
-		            "Category": {
-		                "type": "Personal Finance"
-		            }
-                },
-                "fetchType": "PERIODIC",
-                "Frequency": {
-                    "unit": "DAY",
-                    "value": 5
-                },
-                "DataLife":{
-                	"unit": "YEAR",
-                    "value": 5
-                },
-                 "ConsentExpiry":{
-                	"unit": "YEAR",
-                    "value": 5
-                },
-                "consentStartDays": 1,
-                "dataRangeStartMonths": 3,
-                "dataRangeEndMonths": 2,
-                "approvalStatus": "pending verification"
+    "product_name": "Deposit",
+    "ConsentDetail": {
+        "consentStart": "2024-04-17T00:00:00.000Z",
+        "consentExpiry": "1",
+        "consentMode": "STORE",
+        "fetchType": "ONETIME",
+        "consentTypes": [
+            "PROFILE",
+            "SUMMARY",
+            "TRANSACTIONS"
+        ],
+        "fiTypes": [
+            "DEPOSIT"
+        ],
+        "DataConsumer": {
+            "id": "UNACORES-FIU-UAT"
+        },
+        "Purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/aa/purpose/101.xml",
+            "text": "Wealth management service",
+            "Category": {
+                "type": "Personal Finance"
             }
+        },
+        "FIDataRange": {
+            "from": "-3",
+            "to": "-1"
+        },
+        "DataLife": {
+            "unit": "MONTH",
+            "value": 1
+        },
+        "Frequency": {
+            "unit": "MONTH",
+            "value": 1
+        },
+        "DataFilter": [
+            {
+                "type": "TRANSACTIONAMOUNT",
+                "operator": ">=",
+                "value": "100"
+            }
+        ]
+    }
 }
 ```  
 
   |  Field Name          |   Values       |	Description	|
   | ------------- |-------------|-------------|
-  | `templateName` | The name of the template which can be alpha numeric | API request and response are in JSON format |
-  | `templateDescription` |  Alpha numeric | Brief description of the template |
+  | `product_name` | The name of the product which can be alpha numeric | API request and response are in JSON format |
   | `consentMode`	| Allowed values: `STORE` , `VIEW`, `QUERY` | Specifies whether the consent mode is view only, store or query. |
   | `consentTypes` | Allowed values: `PROFILE`, `TRANSACTIONS`, `SUMMARY` | Specifies the account information that can be fetched with this consent i.e. account profile or summary or transactions | 
   | `fiTypes` | Refer to the ReBIT FITypes for possible values [ReBIT Schema](https://api.rebit.org.in/schema) | This specifies the type of Financial Information that can be fetched with this consent. e.g. Deposit accounts (Savings, Current), recurring deposit, etc. |
@@ -105,7 +102,7 @@ Sample Template creation Request
   
   
 !!! note "Calculated values for Fields"
-	Since this is a template and some of the values need to be calculated when raising a consent request, hence absolute values cannot be provided. For which we have provided fields that help you to define the necessary information for calculation at runtime. 
+	Since this is a product and some of the values need to be calculated when raising a consent request, hence absolute values cannot be provided. For which we have provided fields that help you to define the necessary information for calculation at runtime. 
 	
 	Fields such as the `consent expiry`, `consent start date`, `data range` are calculated based on when the consent request is raised.  
 
@@ -124,107 +121,12 @@ Sample Template creation Request
   A data range to get last 6 months historic data plus for the next 12 months in the future values can be as below   
   `dataRangeStartMonths` = 6 and `dataRangeEndMonths` = 12  	
 
-#### Step 2. Approve the consent template
-This API is used to approve a previously created consent template. 
-
-The API to call:
-`https://fiu.uatdev.ink-aa.in/ConnectHub/FIU/API/V1/ApproveConsentTemplate`
-
-
-Method: `POST`
-
-Below `HTTP` headers need to be set when calling the API
-
-  |  Key          |   Value       |	Description	|
-  | ------------- |-------------|-------------|
-  | `content-Type` | `application/json`| API request and response are in JSON format |
-  | `Authorization` | `Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2MzY1NDI2MzMsImp0aSI6IktMam10c2JzOW84NVVtYko3NzlmdGciLCJpYXQiOjE2MDUwMDY2MzMsIm5iZiI6MTYwNTAwNjYzMywic3ViIjoiZmludnUiLCJyb2wiOiJhZG1pbiJ9.BLv4p2QNn_MwkXEORftET6w2IzYM7sRIgriVG-fsgSaUim3Gu_jd9rsutXeOgLtJ99DjHH9dsEpIJm5yk8zKjOJR-pz1n24K2nodoGslddR2CqHM2wfsmSZCFsWrgMaEft0QGDrPBh2ubQ5Z7KC2rRnu3rTP193YraEhzlMzbSkpjPrQeN6wWkTJsGWqIx-nlZFqK1DxeYt3WiAR2dC7mZCHGdCrevVdfNZ666kvelzCO74587CB4jDxrwYHz9Q9tMeiFWt4uIiJjJvf9YYIVHJFf4teYqqIwOS6MdUAB1K6bHHGAv2Cg6-DmDAGIEsmgMTdNRG9Vcq19XtW6Wvywg`  | The token to be used for approving the consent template |
-  
-  
- 
-!!! note "Bearer Token of the User" 
-	This should be the bearer token of the approver. 
-
-
-Sample Template approval Request
-``` json
-{
-    "header": {
-        "rid": "f871126b-dd3f-4bb4-be8c-b1911b57a893",
-        "ts": "2020-01-13T12:58:33.501+0000",
-        "channelId": null
-    },
-    "body": {
-        "templateName": "PERIDOIC_DAILY_CONSENT"
-    }
-}
-```
-
-  |  Field          |   Value       |	Description	|
-  | ------------- |-------------|-------------|
-  | `templateName` | The name of the template created in Step 1. | This is the name of the template that needs approval.|
-
-### Request Consent for user to approve
-This API is used to raise a consent request that customer can approve on the Ink Mobile or Web application.
-
-API to call:
-`https://fiu.uatdev.ink-aa.in/ConnectHub/FIU/API/V1/SubmitConsentRequest`
-
-Method : `POST`
-
-Below `HTTP` headers need to be set when calling the API
-
-  |  Key          |   Value       |	Description	|
-  | ------------- |-------------|-------------|
-  | `content-Type` | `application/json` | API request and response are in JSON format |
-  | `Authorization` | `Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2NDUwNzMyNTksImp0aSI6InJ6THUzQWFEcjFqbTFHbTlxb0VLcXciLCJpYXQiOjE2MTM1MzcyNTksIm5iZiI6MTYxMzUzNzI1OSwic3ViIjoiZmludnVkZW1vIiwiYXpwIjoiZmludnVkZW1vIiwicm9sZXMiOiJhZG1pbiJ9.kCvdxxxdXi69Z8GudZB6JBfcPW6_aC9kTuAQjFUMVqKKxd_JExcqjbsiDRjWLcvhjrNpQZBSIEmQk3eflTnS7rYn7XT2E-jzqIe9j6aE5SsJfNpDp37r_LQK8PEmnOVHaOUnuHha5Hvw8qkKhOOi9Ck94EV4nm-pjWo0VvNEleGTGa1rAL25NJtjMY2MvTJ6dd3o_HaypnJVDmvCZi2LPv7hoiu8awhfc1PQAINtjA7Q9C8jhNhW9vq426ePA8-u3yOKaBw1Pe73IGJfAJzQEBDf-Jp67iBVrEHjUbAbECUst-kxhXKmkwbpD8R_UDzMyW14ze6cgW1S6XHx2kq0Jw`  | The token to be used when calling the APIs | 
-
-
-  Below needs to go in the Body of the Request.
-
-  |  Field          |   Value       |	Description	|
-  | ------------- |-------------|-------------|
-  | `custId` | A valid customer AA id | This is the virtual AA id of the customer e.g. customer1@ink-aa
-  | `consentDescription` | Descriptive Text | Brief description of the consent. e.g. Consent for a loan application
-  | `templateName` | Valid and approved template | This is the name of an approved template.
-
-
-Sample Request
-``` json
-{
-    "header": {
-        "rid": "f871126b-dd3f-4bb4-be8c-b1911b57a893",
-        "ts": "2020-01-13T12:58:33.501+0000",
-        "channelId": "fiu.uatdev"
-    },
-    "body":  {
-    			"custId": "customer1@ink-aa",
-    			"consentDescription": "Template 1",
-                "templateName": "Template Test"
-            }
-}
-```
-
 Sample Response
 ``` json
 {
-    "header": {
-        "rid": "42c06b9f-cc5b-4a53-9119-9ca9d8e9acdb",
-        "ts": "2020-02-21T12:23:14.550+0000",
-        "channelId": "fiu.uatdev"
-    },
-    "body": {
-        "custId": "customer1@ink-aa",
-        "consentHandle": "0417b382-f5df-4e5a-a372-b489f040bd5f",
-        "consentPurpose": "Wealth management service",
-        "consentDescription": "Wealth Management Service",
-        "requestDate": "2020-02-21T12:23:14.562+0000",
-        "consentStatus": "REQUESTED",
-        "requestSessionId": null,
-        "requestConsentId": null,
-        "dateTimeRangeFrom": "2020-01-01T06:47:45.557+0000",
-        "dateTimeRangeTo": "2020-01-31T06:47:45.560+0000"
-    }
+    "success": "Product created successfully",
+    "status":200
+
 }
 ``` 
 
