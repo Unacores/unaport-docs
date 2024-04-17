@@ -211,7 +211,7 @@ Sample Consent creation Request
   | `redirectUrl` | AA login url where consent creater login and approve the consent which can be url | API request and response are in JSON format |
   | `fiuBaseUrl` | FIU backend url which can be url | API request and response are in JSON format |
   | `ver` | Consent request version number | API request and response are in JSON format |
-  | `timestamp` | Consent request current timestamp format YYYY-MM-DDThh:ii:ss.mmmZ| API request and response are in JSON format |
+  | `timestamp` | Consent request current timestamp format yyyy-MM-dd'T'HH:mm:ss.SSS'Z'| API request and response are in JSON format |
   | `txnid` | Consent unique id which is UUID | API request and response are in JSON format |    
   | `consentMode`	| Allowed values: `STORE` , `VIEW`, `QUERY` | Specifies whether the consent mode is view only, store or query. |
   | `consentTypes` | Allowed values: `PROFILE`, `TRANSACTIONS`, `SUMMARY` | Specifies the account information that can be fetched with this consent i.e. account profile or summary or transactions | 
