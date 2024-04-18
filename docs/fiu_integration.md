@@ -258,3 +258,212 @@ Sample Response
   "redirectUrl": "https://api.sandbox.unaport.com/backend/api/v1/redirect/dfdESWW23dx"
 }
 ```
+### Get Consent using consent handle
+
+This API retrieves the consent details.
+
+API to call
+`https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/GetConsent/{consentHandle}`
+
+Method: `GET`
+PARAMETERS:
+`consentHandle` The consentHandleId when raising a consent Request
+
+Below `HTTP` headers need to be set when calling the API
+
+  |  Key          |   Value       |	Description	|
+  | ------------- |-------------|-------------|
+  | `content-Type` | `application/json` | API request and response are in JSON format |
+  | `Authorization` | `Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2NDUwNzMyNTksImp0aSI6InJ6THUzQWFEcjFqbTFHbTlxb0VLcXciLCJpYXQiOjE2MTM1MzcyNTksIm5iZiI6MTYxMzUzNzI1OSwic3ViIjoiZmludnVkZW1vIiwiYXpwIjoiZmludnVkZW1vIiwicm9sZXMiOiJhZG1pbiJ9.kCvdxxxdXi69Z8GudZB6JBfcPW6_aC9kTuAQjFUMVqKKxd_JExcqjbsiDRjWLcvhjrNpQZBSIEmQk3eflTnS7rYn7XT2E-jzqIe9j6aE5SsJfNpDp37r_LQK8PEmnOVHaOUnuHha5Hvw8qkKhOOi9Ck94EV4nm-pjWo0VvNEleGTGa1rAL25NJtjMY2MvTJ6dd3o_HaypnJVDmvCZi2LPv7hoiu8awhfc1PQAINtjA7Q9C8jhNhW9vq426ePA8-u3yOKaBw1Pe73IGJfAJzQEBDf-Jp67iBVrEHjUbAbECUst-kxhXKmkwbpD8R_UDzMyW14ze6cgW1S6XHx2kq0Jw`  | The token to be used when calling the APIs | 
+
+Sample Response
+``` json
+{
+    "Data": [
+        {
+            "id": 1122,
+            "trackingId": "0021",
+            "vuaId": "8655721266@ink",
+            "orgId": "4509dd7b-9ebc-4d93-b1bd-0c2ca7025149",
+            "consentHandle": "8d0b4a94-39c2-4108-95e9-206cb956c926",
+            "approveStatus": "READY",
+            "consentStatus": "ACTIVE",
+            "fetchType": "ONETIME",
+            "consentId": "ef129007-7a9b-4418-ac89-482e18367149",
+            "createdAt": "2024-04-18T07:05:23.089+00:00",
+            "notificationDate": "2024-04-18T07:05:43.058+00:00",
+            "consentStart": "2024-04-18T00:00:00.000+00:00",
+            "consentExpried": "2024-05-18T00:00:00.000+00:00",
+            "lastRuntime": "2024-04-18T07:05:43.000+00:00",
+            "nextRuntime": null,
+            "updatedOn": null,
+            "createdBy": "siddharthshetty@hi2.in",
+            "aaId": "UNACORES-AA-UAT",
+            "consentsDetail": "{\"ver\":\"2.0.0\",\"timestamp\":\"2024-04-18T07:05:23.089Z\",\"txnid\":\"b9580a96-bb7e-4b08-8881-da540ccbd27b\",\"ConsentDetail\":{\"consentStart\":\"2024-04-18T00:00:00.000Z\",\"consentExpiry\":\"2024-05-18T00:00:00.000Z\",\"consentMode\":\"STORE\",\"fetchType\":\"ONETIME\",\"consentTypes\":[\"PROFILE\",\"TRANSACTIONS\",\"SUMMARY\"],\"fiTypes\":[\"NPS\"],\"DataConsumer\":{\"id\":\"UNACORES-FIU-UAT\",\"type\":\"FIU\"},\"Customer\":{\"id\":\"8655721266@ink\"},\"Purpose\":{\"code\":\"101\",\"refUri\":\"https://api.rebit.org.in/aa/purpose/101.xml\",\"text\":\"Wealth management service\",\"Category\":{\"type\":\"Personal Finance\"}},\"FIDataRange\":{\"from\":\"2022-10-18T00:00:00.000Z\",\"to\":\"2024-04-18T00:00:00.000Z\"},\"DataLife\":{\"unit\":\"DAY\",\"value\":2},\"Frequency\":{\"unit\":\"DAY\",\"value\":2}}}",
+            "consentidCalled": 0,
+            "runCounter": 0,
+            "consentidError": null
+        }
+    ]
+}
+```
+
+### Fetch Data using sessionId
+
+This API retrieves the account details.
+
+API to call
+`https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/FifetchDataBySessionId/{sessionId}`
+
+Method: `GET`
+PARAMETERS:
+`sessionId` The sessionId must be included in the webhook API calls.
+
+Below `HTTP` headers need to be set when calling the API
+
+  |  Key          |   Value       |	Description	|
+  | ------------- |-------------|-------------|
+  | `content-Type` | `application/json` | API request and response are in JSON format |
+  | `Authorization` | `Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2NDUwNzMyNTksImp0aSI6InJ6THUzQWFEcjFqbTFHbTlxb0VLcXciLCJpYXQiOjE2MTM1MzcyNTksIm5iZiI6MTYxMzUzNzI1OSwic3ViIjoiZmludnVkZW1vIiwiYXpwIjoiZmludnVkZW1vIiwicm9sZXMiOiJhZG1pbiJ9.kCvdxxxdXi69Z8GudZB6JBfcPW6_aC9kTuAQjFUMVqKKxd_JExcqjbsiDRjWLcvhjrNpQZBSIEmQk3eflTnS7rYn7XT2E-jzqIe9j6aE5SsJfNpDp37r_LQK8PEmnOVHaOUnuHha5Hvw8qkKhOOi9Ck94EV4nm-pjWo0VvNEleGTGa1rAL25NJtjMY2MvTJ6dd3o_HaypnJVDmvCZi2LPv7hoiu8awhfc1PQAINtjA7Q9C8jhNhW9vq426ePA8-u3yOKaBw1Pe73IGJfAJzQEBDf-Jp67iBVrEHjUbAbECUst-kxhXKmkwbpD8R_UDzMyW14ze6cgW1S6XHx2kq0Jw`  | The token to be used when calling the APIs | 
+
+Sample Response
+``` json
+{
+    "tabs": [
+        {
+            "name": "DEPOSIT"
+        }
+    ],
+    "DEPOSIT": {
+        "summary": [
+            {
+                "id": null,
+                "currentBalance": "101401773.000",
+                "orgId": "4509dd7b-9ebc-4d93-b1bd-0c2ca7025149",
+                "branch": "41101",
+                "status": "ACTIVE",
+                "currency": "INR",
+                "fip": "IDFC-FIP",
+                "accountNumber": "XXXXXXX1046",
+                "sessionId": "f8d0f98d-165f-4d28-a134-c0acee4d0992",
+                "fetchType": null,
+                "exchangeRate": "",
+                "consentId": "04586e55-d950-4a11-b7bb-ffee54ca61f7",
+                "balanceDate": null,
+                "createdAt": "2024-04-18T06:59:24.663+00:00",
+                "facility": "OD",
+                "ifscCode": "IDFB0041101",
+                "microCode": "461751505",
+                "openingDate": "2023-08-17",
+                "currentOdLimit": "0.00",
+                "drawingLimit": "0.00",
+                "accountType": "SAVINGS",
+                "compoundingFrequency": null,
+                "currentValue": null,
+                "description": null,
+                "interestComputation": null,
+                "interestOnMaturity": null,
+                "interestPayout": null,
+                "interestPeriodicPayoutAmount": null,
+                "interestRate": null,
+                "maturityAmount": null,
+                "maturityDate": null,
+                "principalAmount": null,
+                "tenureDays": null,
+                "tenureMonths": null,
+                "tenureYears": null
+            }
+        ],
+        "accountHolder": [
+            {
+                "id": null,
+                "consentId": "04586e55-d950-4a11-b7bb-ffee54ca61f7",
+                "orgId": "4509dd7b-9ebc-4d93-b1bd-0c2ca7025149",
+                "name": "Ms. Priyanka  Jalan",
+                "dob": "1991-08-01",
+                "nominee": "NOT-REGISTERED",
+                "email": "priyanka.jalan@idfcfirstbank.com",
+                "pan": "GGGGG1111Q",
+                "address": "AIROLI,,,Mumbai,400001",
+                "mobile": "919748783710",
+                "fip": "IDFC-FIP",
+                "accountNumber": "XXXXXXX1046",
+                "sessionId": "f8d0f98d-165f-4d28-a134-c0acee4d0992",
+                "fetchType": "deposit",
+                "accountType": "SAVINGS",
+                "accountHoldertype": "SINGLE",
+                "ckycCompliance": "false",
+                "createdAt": "2024-04-18T06:59:24.663+00:00"
+            }
+        ],
+        "transactions": [
+            {
+                "id": null,
+                "orgId": "4509dd7b-9ebc-4d93-b1bd-0c2ca7025149",
+                "tranTimestamp": "2024-01-16T15:39:30+05:30",
+                "sessionId": "f8d0f98d-165f-4d28-a134-c0acee4d0992",
+                "narration": "TEST2",
+                "amount": "220022.0",
+                "consentId": "04586e55-d950-4a11-b7bb-ffee54ca61f7",
+                "type": "CREDIT",
+                "mode": "OTHERS",
+                "currentBalance": "220022.00",
+                "txnId": "0",
+                "valueDate": null,
+                "reference": "0",
+                "balance": null,
+                "accountNumber": "XXXXXXX1046",
+                "transactionDate": null,
+                "createdAt": "2024-04-18T06:59:24.663+00:00"
+            },
+            {
+                "id": null,
+                "orgId": "4509dd7b-9ebc-4d93-b1bd-0c2ca7025149",
+                "tranTimestamp": "2024-01-16T15:39:33+05:30",
+                "sessionId": "f8d0f98d-165f-4d28-a134-c0acee4d0992",
+                "narration": "TEST1",
+                "amount": "1.0E8",
+                "consentId": "04586e55-d950-4a11-b7bb-ffee54ca61f7",
+                "type": "CREDIT",
+                "mode": "OTHERS",
+                "currentBalance": "100220022.00",
+                "txnId": "0",
+                "valueDate": null,
+                "reference": "0",
+                "balance": null,
+                "accountNumber": "XXXXXXX1046",
+                "transactionDate": null,
+                "createdAt": "2024-04-18T06:59:24.663+00:00"
+            },
+            {
+                "id": null,
+                "orgId": "4509dd7b-9ebc-4d93-b1bd-0c2ca7025149",
+                "tranTimestamp": "2024-03-31T22:20:45+05:30",
+                "sessionId": "f8d0f98d-165f-4d28-a134-c0acee4d0992",
+                "narration": "MONTHLY SAVINGS INTEREST CREDIT",
+                "amount": "480844.0",
+                "consentId": "04586e55-d950-4a11-b7bb-ffee54ca61f7",
+                "type": "CREDIT",
+                "mode": "OTHERS",
+                "currentBalance": "101401773.00",
+                "txnId": "0",
+                "valueDate": null,
+                "reference": "0",
+                "balance": null,
+                "accountNumber": "XXXXXXX1046",
+                "transactionDate": null,
+                "createdAt": "2024-04-18T06:59:24.663+00:00"
+            }
+        ]
+    }
+}
+```
+
+
+
+
+
+
+
+
+
