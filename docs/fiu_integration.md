@@ -20,8 +20,8 @@ Method: `POST`
 Sample Request
 ``` json
 {
-    "emailId": "siddharthshetty@hi2.in",
-    "password": "12345"
+    "emailId": "siddhar****tty@hi2.in",
+    "password": "*****"
 }
 ```
   |  Field Name          |   Values       |	Description	|
@@ -42,7 +42,7 @@ Sample Response
     "scope": "email profile",
     "firstName": null,
     "lastName": null,
-    "emailId": "siddharthshetty@hi2.in"
+    "emailId": "siddhar****etty@hi2.in"
 }
 ```
 ### Create a consent request
@@ -63,8 +63,8 @@ Below `HTTP` headers need to be set when calling the API
 Sample Consent creation Request
 ``` json
  {
-    "vuaId": "9867902913@ink",
-    "createdBy": "siddharthshetty@hi2.in",
+    "vuaId": "9867****13@ink",
+    "createdBy": "siddharths****y@hi2.in",
     "trackingId": "test-m",
     "aaId": "UNACORES-AA-UAT",
     "fiuId": "UNACORES-FIU-UAT",
@@ -200,7 +200,7 @@ Sample Response
         {
             "id": 1122,
             "trackingId": "0021",
-            "vuaId": "8655721266@ink",
+            "vuaId": "865****266@ink",
             "orgId": "4509dd7b-9ebc-4d93-b1bd-0c2ca7025149",
             "consentHandle": "8d0b4a94-39c2-4108-95e9-206cb956c926",
             "approveStatus": "READY",
@@ -214,9 +214,9 @@ Sample Response
             "lastRuntime": "2024-04-18T07:05:43.000+00:00",
             "nextRuntime": null,
             "updatedOn": null,
-            "createdBy": "siddharthshetty@hi2.in",
+            "createdBy": "siddhar****etty@hi2.in",
             "aaId": "UNACORES-AA-UAT",
-            "consentsDetail": "{\"ver\":\"2.0.0\",\"timestamp\":\"2024-04-18T07:05:23.089Z\",\"txnid\":\"b9580a96-bb7e-4b08-8881-da540ccbd27b\",\"ConsentDetail\":{\"consentStart\":\"2024-04-18T00:00:00.000Z\",\"consentExpiry\":\"2024-05-18T00:00:00.000Z\",\"consentMode\":\"STORE\",\"fetchType\":\"ONETIME\",\"consentTypes\":[\"PROFILE\",\"TRANSACTIONS\",\"SUMMARY\"],\"fiTypes\":[\"NPS\"],\"DataConsumer\":{\"id\":\"UNACORES-FIU-UAT\",\"type\":\"FIU\"},\"Customer\":{\"id\":\"8655721266@ink\"},\"Purpose\":{\"code\":\"101\",\"refUri\":\"https://api.rebit.org.in/aa/purpose/101.xml\",\"text\":\"Wealth management service\",\"Category\":{\"type\":\"Personal Finance\"}},\"FIDataRange\":{\"from\":\"2022-10-18T00:00:00.000Z\",\"to\":\"2024-04-18T00:00:00.000Z\"},\"DataLife\":{\"unit\":\"DAY\",\"value\":2},\"Frequency\":{\"unit\":\"DAY\",\"value\":2}}}",
+            "consentsDetail": "{\"ver\":\"2.0.0\",\"timestamp\":\"2024-04-18T07:05:23.089Z\",\"txnid\":\"b9580a96-bb7e-4b08-8881-da540ccbd27b\",\"ConsentDetail\":{\"consentStart\":\"2024-04-18T00:00:00.000Z\",\"consentExpiry\":\"2024-05-18T00:00:00.000Z\",\"consentMode\":\"STORE\",\"fetchType\":\"ONETIME\",\"consentTypes\":[\"PROFILE\",\"TRANSACTIONS\",\"SUMMARY\"],\"fiTypes\":[\"NPS\"],\"DataConsumer\":{\"id\":\"UNACORES-FIU-UAT\",\"type\":\"FIU\"},\"Customer\":{\"id\":\"865****266@ink\"},\"Purpose\":{\"code\":\"101\",\"refUri\":\"https://api.rebit.org.in/aa/purpose/101.xml\",\"text\":\"Wealth management service\",\"Category\":{\"type\":\"Personal Finance\"}},\"FIDataRange\":{\"from\":\"2022-10-18T00:00:00.000Z\",\"to\":\"2024-04-18T00:00:00.000Z\"},\"DataLife\":{\"unit\":\"DAY\",\"value\":2},\"Frequency\":{\"unit\":\"DAY\",\"value\":2}}}",
             "consentidCalled": 0,
             "runCounter": 0,
             "consentidError": null
