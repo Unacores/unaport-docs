@@ -8,6 +8,30 @@ Our FIU sandbox environment is continuously hosted and accessible for your conve
 
 The Unaport FIU API root endpoint `https://api.sandbox.unaport.com/backend/api/v1/`
 
+### Generate Token
+
+This API retrieves the consent details.
+
+API to call
+`https://common.sandbox.unaport.com/api/v1/public/user/login`
+
+Method: `POST`
+
+Sample Request
+``` json
+{
+    "emailId": "siddharthshetty@hi2.in",
+    "password": "12345"
+}
+```
+  |  Field Name          |   Values       |	Description	|
+  | ------------- |-------------|-------------|
+  | `emailId` | The keyclock username which can be alpha numeric | API request and response are in JSON format |
+  | `password` | The keyclock password which can be alpha numeric | API request and response are in JSON format |
+
+Sample Response
+``` json
+```
 ### Create a consent request
 This API is used to create a consent request. 
 
@@ -143,7 +167,7 @@ Sample Response
 This API retrieves the consent details.
 
 API to call
-`https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/GetConsent/{consentHandle}`
+`https://api.sandbox.unaport.com/backend/api/v1/FIU/GetConsent/{consentHandle}`
 
 Method: `GET`
 PARAMETERS:
@@ -188,12 +212,65 @@ Sample Response
 }
 ```
 
+### Get FI Notification
+
+This API retrieves the consent details.
+
+API to call
+`https://api.sandbox.unaport.com/backend/api/v1/FIU/FINotification/{consentHandle}`
+
+Method: `GET`
+PARAMETERS:
+`consentHandle` The consentHandleId when raising a consent Request
+
+Below `HTTP` headers need to be set when calling the API
+
+  |  Key          |   Value       |	Description	|
+  | ------------- |-------------|-------------|
+  | `content-Type` | `application/json` | API request and response are in JSON format |
+  | `Authorization` | `Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2NDUwNzMyNTksImp0aSI6InJ6THUzQWFEcjFqbTFHbTlxb0VLcXciLCJpYXQiOjE2MTM1MzcyNTksIm5iZiI6MTYxMzUzNzI1OSwic3ViIjoiZmludnVkZW1vIiwiYXpwIjoiZmludnVkZW1vIiwicm9sZXMiOiJhZG1pbiJ9.kCvdxxxdXi69Z8GudZB6JBfcPW6_aC9kTuAQjFUMVqKKxd_JExcqjbsiDRjWLcvhjrNpQZBSIEmQk3eflTnS7rYn7XT2E-jzqIe9j6aE5SsJfNpDp37r_LQK8PEmnOVHaOUnuHha5Hvw8qkKhOOi9Ck94EV4nm-pjWo0VvNEleGTGa1rAL25NJtjMY2MvTJ6dd3o_HaypnJVDmvCZi2LPv7hoiu8awhfc1PQAINtjA7Q9C8jhNhW9vq426ePA8-u3yOKaBw1Pe73IGJfAJzQEBDf-Jp67iBVrEHjUbAbECUst-kxhXKmkwbpD8R_UDzMyW14ze6cgW1S6XHx2kq0Jw`  | The token to be used when calling the APIs | 
+
+Sample Response
+``` json
+{
+    "data": [
+        {
+            "ver": "2.0.0",
+            "timestamp": "2024-04-22T06:00:31.696+00:00",
+            "txnid": "d0d3cf8a-54c0-4865-9b42-ad7b2e17e07e",
+            "Notifier": {
+                "type": "AA",
+                "id": "UNACORES-AA-UAT"
+            },
+            "FIStatusNotification": {
+                "sessionId": "e24d453a-fc14-4152-aee3-e5246ae29eb9",
+                "sessionStatus": "COMPLETED",
+                "FIStatusResponse": [
+                    {
+                        "fipID": "kfinnps-fip-uat",
+                        "Accounts": [
+                            {
+                                "linkRefNumber": "e8a3e99a-4e8c-4dec-a8b5-c27799d5d218",
+                                "FIStatus": "READY",
+                                "description": "Data is ready"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "success"
+}
+```
+
+
 ### Fetch Data using sessionId
 
 This API retrieves the account details.
 
 API to call
-`https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/FifetchDataBySessionId/{sessionId}`
+`https://api.sandbox.unaport.com/backend/api/v1/FIU/FifetchDataBySessionId/{sessionId}`
 
 Method: `GET`
 PARAMETERS:
