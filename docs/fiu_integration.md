@@ -6,7 +6,12 @@ Our FIU sandbox environment is continuously hosted and accessible for your conve
 
 ### Unaport FIU Endpoint
 
-The Unaport FIU API root endpoint `https://api.sandbox.unaport.com/backend/api/v1/`
+The Unaport FIU API root endpoint `https://api.sandbox.unaport.com/backend-v2/api/v2/`
+
+
+### Postman collection
+
+You can also use the below APIs by importing our Postman collection from the link: [Download](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/PostmanCollections/FIU+third+party+integration.postman_collection.json)
 
 ### Generate Token
 
@@ -49,7 +54,7 @@ Sample Response
 This API is used to create a consent request. 
 
 API to call
-`https://api.sandbox.unaport.com/backend/api/v1/FIU/Consents/{orgId}`
+`https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/Consents/{orgId}`
 
 Method: `POST`
 
@@ -71,7 +76,7 @@ Sample Consent creation Request
     "redirectUrl": "https://console.sandbox.unaport.com/admin/consent",
     "fiuBaseUrl": "https://api.sandbox.unaport.com/backend/api/v1",
     "ConsentsRequest": {
-        "ver": "1.1.2",
+        "ver": "2.0.0",
         "timestamp": "2024-03-28T05:04:39.821Z",
         "txnid": "00b6c131-bf74-4296-b489-0febc0136b9f",
         "ConsentDetail": {
@@ -180,7 +185,7 @@ Sample Response
 This API retrieves the consent details.
 
 API to call
-`https://api.sandbox.unaport.com/backend/api/v1/FIU/GetConsent/{consentHandle}`
+`https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/GetConsent/{consentHandle}`
 
 Method: `GET`
 PARAMETERS:
@@ -230,7 +235,7 @@ Sample Response
 This API retrieves the consent details.
 
 API to call
-`https://api.sandbox.unaport.com/backend/api/v1/FIU/FINotification/{consentHandle}`
+`https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/FINotification/{consentHandle}`
 
 Method: `GET`
 PARAMETERS:
@@ -283,7 +288,7 @@ Sample Response
 This API retrieves the account details.
 
 API to call
-`https://api.sandbox.unaport.com/backend/api/v1/FIU/FifetchDataBySessionId/{sessionId}`
+`https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/FifetchDataBySessionId/{sessionId}`
 
 Method: `GET`
 PARAMETERS:
