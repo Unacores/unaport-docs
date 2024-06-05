@@ -24,5 +24,6 @@ extra:
 nav:
   - Overview: index.md
   - TSP Integration with FIU: fiu_integration.md
+  - FIU Onboarding Manual: fiu_onboarding.md
   # - Sample Test Data: fip_data_api.md
   # - FIP API Sandbox: fip_simulator.md
