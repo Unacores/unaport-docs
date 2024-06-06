@@ -5,20 +5,20 @@ Welcome to our website! This manual will guide you through the process of onboar
 
 ## Required Documentation
 Before starting the onboarding process, please make sure you have the following documents ready:
-###### Required Documents:
-1. GST Certificate
-2. PAN Card
-3. Cancelled Cheque
-4. NBFC Certificate
-5. Certificate of Incorporation
-6. Authorized Signatory Board Resolution
-7. Unaport.ai – FIU Agreement
-8. FIU – INK-AA (Account Aggregator) Agreement
+
+      1. GST Certificate
+      2. PAN Card
+      3. Cancelled Cheque
+      4. NBFC Certificate
+      5. Certificate of Incorporation
+      6. Authorized Signatory Board Resolution
+      7. Unaport.ai – FIU Agreement
+      8. FIU – INK-AA (Account Aggregator) Agreement
 
 ## Steps to Onboard
 
 ### Step 1: Visit the Website
-1. Open your web browser and navigate to our website at [www.unaport.ai](www.unaport.ai)
+1. Open your web browser and navigate to our website at [https://www.unaport.ai](https://www.unaport.ai)
 
 ### Step 2: Register for an Account
 1. Click on the "Sign In" button located at the center of the homepage.
