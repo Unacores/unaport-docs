@@ -5,6 +5,7 @@ Welcome to our website! This manual will guide you through the process of onboar
 
 ## Required Documentation
 Before starting the onboarding process, please make sure you have the following documents ready:
+###### Required Documents:
 1. GST Certificate
 2. PAN Card
 3. Cancelled Cheque
@@ -42,17 +43,17 @@ Before starting the onboarding process, please make sure you have the following 
 1. In the "Upload Documents" section, you will find an option to upload documents.
 2. Click on the "Upload Documents" button.
 3. Upload the following documents:
-   - Certificate of Incorporation: Provide the certificate of incorporation of your company.
-   - Unaport.ai Agreement: Provide duly filled agreement with Unacores Solutions Private Limited and the Company. [Download Agreement](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Unaport+Agreement.docx)
-   - Account Aggregator Agreement: Provide duly filled agreement with Unacores AA Solutions Private Limited and the Company. [Download Agreement](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/INKAA+and+FIU+Agreement.docx)
+   1. Certificate of Incorporation: Provide the certificate of incorporation of your company.
+   2. Unaport.ai Agreement: Provide duly filled agreement with Unacores Solutions Private Limited and the Company. [Download Agreement](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Unaport+Agreement.docx)
+   3. Account Aggregator Agreement: Provide duly filled agreement with Unacores AA Solutions Private Limited and the Company. [Download Agreement](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/INKAA+and+FIU+Agreement.docx)
 
 4. Provide the below certificates by email at connect@ink-aa.com with your Company Name:
-   - GST Certificate: Ensure the certificate is clear and legible.
-   - PAN Card: Upload a scanned copy of your PAN card.
-   - FIU Certification: Provide a copy of your FIU certification.
-   - Cancelled Cheque: Ensure the cheque is clearly marked as cancelled.
-   - NBFC Certificate: Upload your NBFC certificate if applicable.
-   - Authorized Signatory Board Resolution: Upload the board resolution document authorizing the signatory.
+   1. GST Certificate: Ensure the certificate is clear and legible.
+   2. PAN Card: Upload a scanned copy of your PAN card.
+   3. FIU Certification: Provide a copy of your FIU certification.
+   4. Cancelled Cheque: Ensure the cheque is clearly marked as cancelled.
+   5. NBFC Certificate: Upload your NBFC certificate if applicable.
+   6. Authorized Signatory Board Resolution: Upload the board resolution document authorizing the signatory.
 
 ### Step 7: Submit for Verification
 1. After uploading all the required documents, click on the "Submit for Verification" button.
