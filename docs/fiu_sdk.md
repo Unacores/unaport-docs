@@ -286,25 +286,29 @@ Optional (O)</strong>
 
 ## Process flow
 
-1. SDK consumer generates config JSON.
-2. JSON is then encrypted using AES-256-ecb algorithm with key provided by us
-3. SDK Consumer redirects the user to Unaport web view, or Loads the page as an Iframe. URL will be &lt;unaport web endpoint>/unaport/config=&lt;encryptedconfigjson>
-4. Unaport FIU securely generates a unique session, authenticates the user in the background using the client id and client secret
-5. Based on the mobile number passed Unaport will securely load a summary of the Users linked accounts and balances
-6. If the user has no linked accounts or wants to add additional accounts, User clicks on the link more accounts button to link. Linking steps are as follows:
-
-   - On clicking linked accounts, the Ink AA screen is securely loaded. An OTP is sent to the user for authentication
-   - Upon Authentication, users can select from a list of all FIP (Financial Information Providers)/ Banks.
-   - AA discovers accounts of the user based on his authenticated mobile number.
-   - User selects account(s) to be linked.
-   - User will receive an OTP from the Bank to link account
-   - Upon successful authentication, the user is shown a consent approval screen. He has to accept consent to his data.
-   - On clicking approve his consent is raised and data is securely fetched.
-   - This only needs to be done once per account.
-
-7. User clicks on a particular account, He is able to see the latest transactions of that account, of any bank within the same application.
-8. User can click on the Account analysis button to view ML powered analytics of his account, spending categories, income and trends.
-9. User can exit the view as required
+<ol>
+<li>SDK consumer generates config JSON.</li>
+<li>JSON is then encrypted using AES-256-ecb algorithm with key provided by us</li>
+<li>SDK Consumer redirects the user to Unaport web view, or Loads the page as an Iframe. URL will be &lt;unaport web endpoint&gt;/unaport/config=&lt;encryptedconfigjson&gt;</li>
+<li>Unaport FIU securely generates a unique session, authenticates the user in the background using the client id and client secret</li>
+<li>Based on the mobile number passed Unaport will securely load a summary of the Users linked accounts and balances</li>
+<li><p>If the user has no linked accounts or wants to add additional accounts, User clicks on the link more accounts button to link. Linking steps are as follows:</p>
+<ul>
+<li>On clicking linked accounts, the Ink AA screen is securely loaded. An OTP is sent to the user for authentication</li>
+<li>Upon Authentication, users can select from a list of all FIP (Financial Information Providers)/ Banks.</li>
+<li>AA discovers accounts of the user based on his authenticated mobile number.</li>
+<li>User selects account(s) to be linked.</li>
+<li>User will receive an OTP from the Bank to link account</li>
+<li>Upon successful authentication, the user is shown a consent approval screen. He has to accept consent to his data.</li>
+<li>On clicking approve his consent is raised and data is securely fetched.</li>
+<li>This only needs to be done once per account.</li>
+</ul>
+</li>
+<li><p>User clicks on a particular account, He is able to see the latest transactions of that account, of any bank within the same application.</p>
+</li>
+<li>User can click on the Account analysis button to view ML powered analytics of his account, spending categories, income and trends.</li>
+<li>User can exit the view as required</li>
+</ol>
 
 ## Conclusion
 
