@@ -256,7 +256,7 @@ Optional (O)</strong>
     "fiuName": "Unacores FIU UAT",
     "logoUrl": "https://link.to/yourpage/something.png",
     "clientId": "siddhar****tty@hi2.in",
-    "clientSecret": "12F&(D*UFJKD****",
+    "clientSecret": "12F&*UFJKD****",
     "callbackUrl": "https://google.com",
     "colorConfiguration": {
         "primaryColor":"#FF23DD",
