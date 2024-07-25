@@ -1,12 +1,4 @@
-## FIU - Integration with
-
-# Unaport FIU
-
-## Ravi Doshi
-
-25th July, 2024
-
-Confidential
+# FIU - Integration with Unaport FIU
 
 ## This document provides details for an FIU web SDK to integrate with the Account Aggregator framework via the Unaport FIU solution.
 
