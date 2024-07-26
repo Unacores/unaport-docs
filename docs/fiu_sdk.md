@@ -309,7 +309,3 @@ Optional (O)</strong>
 <li>User can click on the Account analysis button to view ML powered analytics of his account, spending categories, income and trends.</li>
 <li>User can exit the view as required</li>
 </ol>
-
-## Conclusion
-
-<!-- watermark --><div style="background-color:#FFFFFF"><p style="color:#FFFFFF; font-size: 1px">gd2md-html: xyzzy Thu Jul 25 2024</p></div>
