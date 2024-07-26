@@ -10,7 +10,7 @@ Unaport FIU collaborates with Ink to provide comprehensive financial information
 
 ## Web endpoint
 
-Endpoint: [https://websdk.sandbox.unaport.com](https://websdk.sandbox.unaport.com)
+Endpoint: [https://websdk.sandbox.unaport.com/unaport](https://websdk.sandbox.unaport.com/unaport)
 
 ## SDK config:
 
