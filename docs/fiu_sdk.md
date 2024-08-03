@@ -289,7 +289,7 @@ Optional (O)</strong>
 <ol>
 <li>SDK consumer generates config JSON.</li>
 <li>JSON is then encrypted using AES-256-ecb algorithm with key provided by us</li>
-<li>SDK Consumer redirects the user to Unaport web view, or Loads the page as an Iframe. URL will be &lt;unaport web endpoint&gt;/unaport/config=&lt;encryptedconfigjson&gt;</li>
+<li>SDK Consumer redirects the user to Unaport web view, or Loads the page as an Iframe. URL will be &lt;unaport web endpoint&gt;/unaport?config=&lt;encryptedconfigjson&gt;</li>
 <li>Unaport FIU securely generates a unique session, authenticates the user in the background using the client id and client secret</li>
 <li>Based on the mobile number passed Unaport will securely load a summary of the Users linked accounts and balances</li>
 <li><p>If the user has no linked accounts or wants to add additional accounts, User clicks on the link more accounts button to link. Linking steps are as follows:</p>
@@ -307,5 +307,12 @@ Optional (O)</strong>
 <li><p>User clicks on a particular account, He is able to see the latest transactions of that account, of any bank within the same application.</p>
 </li>
 <li>User can click on the Account analysis button to view ML powered analytics of his account, spending categories, income and trends.</li>
+<li>On the top right of the home page user will also see a notification icon, Upon clicking user recieves personalized nudges based on the data fetched from AA.</li>
 <li>User can exit the view as required</li>
 </ol>
+
+
+## Key Features
+- Single view of total balances and transactions across all banks.
+- ML powered account anlysis, spend categorization and insights.
+- Personalized nudges based on cumilative account data.
