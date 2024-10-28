@@ -1,5 +1,84 @@
-/* Increase the logo size */
-.md-header__button.md-logo img, .md-header__button.md-logo svg{
-    width: auto; /* Adjust this value to your desired width */
-    height: 50px; /* Maintain the aspect ratio */
+
+/* extra.css */
+.black-text {
+    color: black;
+}
+
+/* Hides the secondary sidebar (ToC) */
+.md-sidebar--secondary, .md-nav__title {
+    display: none !important;
+}
+
+/* Expand main content to take up full width */
+.md-main {
+    max-width: 100% !important;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary button color */
+    color: #fff!important;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.line {
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.download-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+.download-button .icon {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
+
+.tab-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc; /* Optional: add a border for aesthetics */
+}
+
+.tabcontent {
+  display: none; /* Hidden by default */
+  padding: 5px 15px; /* Reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.tablink {
+  background-color: #f1f1f1;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.tablink:hover {
+  background-color: #ddd;
+}
+
+.tablink.active {
+  background-color: #ccc;
+}
+
+.small-font {
+  font-size: 1em; /* Adjust this value for desired size */
+  line-height: 1.2; /* Adjust line height for readability */
 }

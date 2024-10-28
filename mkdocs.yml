@@ -1,10 +1,10 @@
-site_name: Product Manual - Unaport.ai
+site_name: " "
 # Copyright
 copyright: "Copyright &copy; Unacores Solutions Pvt Ltd."
 
 extra_css:
   - css/custom.css
-
+  
 theme:
   name: "material"
   features:
@@ -19,11 +19,33 @@ markdown_extensions:
   - pymdownx.mark
 extra:
   generator: true
-
+  toc: false
+  
 # Page tree
 nav:
-  - Overview: index.md
-  - TSP Integration with FIU: fiu_integration.md
-  - FIU Onboarding Manual: fiu_onboarding.md
-  - FIU Integration using SDK: fiu_sdk.md
-  # - FIP API Sandbox: fip_simulator.md
+  - "🏠  Overview": index.md
+  - "📁 API Documentation":
+      - "📁 Postman Collection": fiu.md#postman
+      - "📁 Authentication":
+          - "📁 Generate Token (POST)": fiu.md
+      - "📁 Consents":
+          - "📁 Create Template (POST)": fiu.md
+          - "📁 List Template (GET)": fiu.md
+          - "📁 Create Consent (POST)": fiu.md
+          - "📁 Create Consent with Template (POST)": fiu.md
+      - "📁 Reports":
+          - "📁 Fetch Raw Data (POST)": fiu.md
+          - "📁 Generate Analytics (GET)": fiu.md
+          - "📁 Bank Statement Analytics (POST)": fiu.md
+      - "📁 SDK Documentation": fiu_sdk.md
+  - "📁 Self-Service Onboarding":
+      - "📁 Onboarding Guide": fiu_onboarding.md
+
+
+      
+
+
+  
+
+
+

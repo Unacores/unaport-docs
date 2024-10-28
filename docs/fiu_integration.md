@@ -1,41 +1,97 @@
-# Integrating a FIU backend with your frontend application
+# Unaport.ai API Documentation
 
-Integrating a Financial Information User backend with your frontend application typically involves connecting your frontend interface with a system that manages financial data or transactions.
-
-Our FIU sandbox environment is continuously hosted and accessible for your convenience.
-
-### Unaport FIU Endpoint
-
-The Unaport FIU API root endpoint `https://api.sandbox.unaport.com/backend-v2/api/v2/`
-
+Welcome to the Unaport.ai API Reference. This guide provides all the information you need to integrate Unaport.ai services into your application, including generating user consent, retrieving user details, and accessing analyzed data and CAM sheets. The Unaport.ai APIs are fully RESTful, and all responses are delivered in JSON format.
 
 ### Postman collection
 
-You can also use the below APIs by importing our Postman collection from the link: [Download](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/PostmanCollections/FIU+third+party+integration.postman_collection.json)
+You can also access the APIs below by importing our Postman collection from this link:: [Download](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/PostmanCollections/FIU+third+party+integration.postman_collection.json)
 
-### Generate Token
+<style>
+.tab-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc; /* Optional: add a border for aesthetics */
+}
 
-This API retrieves the consent details.
+.tabcontent {
+  display: none; /* Hidden by default */
+ padding: 5px 15px; /* Reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  
+   overflow-x: auto; /* Enable horizontal scrolling */
+}
 
-API to call
-`https://common.sandbox.unaport.com/api/v1/public/user/login`
+.tablink {
+  background-color: #f1f1f1;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap; /* Prevent line breaks */
+}
 
-Method: `POST`
+.small-font {
+  font-size: 0.7em; /* Adjust this value for desired size */
+  line-height: 1.2; /* Adjust line height for readability */
 
-Sample Request
-``` json
+.tablink:hover {
+  background-color: #ddd;
+}
+
+.tablink.active {
+  background-color: #ccc;
+}
+</style>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";  
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";  
+  evt.currentTarget.className += " active";
+}
+
+</script>
+
+### Authentication
+
+<div>
+ 
+  <button class="tablink" onclick="openTab(event, 'Request')" >Request</button>
+  <button class="tablink" onclick="openTab(event, 'Response')">Response</button>
+</div>
+
+<div id="Request" class="tabcontent">
+  <pre class="small-font">
+Host: `https://common.sandbox.unaport.com/api/v1/public/user/login`
+Content-Type: application/json
+
 {
-    "emailId": "siddhar****tty@hi2.in",
+    "emailId": "developer@unacores.com",
     "password": "*****"
 }
-```
-  |  Field Name          |   Values       |	Description	|
-  | ------------- |-------------|-------------|
-  | `emailId` | The keyclock username which can be alpha numeric | API request and response are in JSON format |
-  | `password` | The keyclock password which can be alpha numeric | API request and response are in JSON format |
+</pre>
+</div>
+ 
 
-Sample Response
-``` json
+<div id="Response" class="tabcontent">
+    <pre class="small-font">
+HTTP/1.1 200 OK
+Content-Type: application/json
+
 {
     "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ5TVczMnpfZ0stT2NSS3N2MkdsRV9EbFFmTy1JX3psaTVLTW0yMGE1VFFZIn0.eyJleHAiOjE3MTM4NTYzMzIsImlhdCI6MTcxMzg1NjAzMiwianRpIjoiMmZiY2I4Y2QtMGU1YS00NjUzLTg2MDMtYTUyMDk0M2Q1NjQ2IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zYW5kYm94LnVuYXBvcnQuY29tL2F1dGgvcmVhbG1zL0ZJVSIsInN1YiI6ImQxYThhOTdjLWM3YjUtNGI1Mi1hNzYxLTc0MjA2MGQ3MWQzMSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImZpdS1hZG1pbi1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiZmUyMTJlZTQtMjZhZC00NDI0LWE4ZmItZmM2ODQ2N2UwMTFmIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImVuZC11c2VyIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtYWEiXX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImZlMjEyZWU0LTI2YWQtNDQyNC1hOGZiLWZjNjg0NjdlMDExZiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJncm91cHMiOlsiL1BST0QvRklOVFJFRVVBVCIsIi9VQVQvVU5BQ09SRVMtRklVLVVBVCJdLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzaWRkaGFydGhzaGV0dHlAaGkyLmluIiwiZW1haWwiOiJzaWRkaGFydGhzaGV0dHlAaGkyLmluIiwiaXNTd2l0Y2hlZCI6dHJ1ZX0.gbe7jzYTUMrEDVLbEAJkB_-azqJuWjnVjSMYvbgAP57x1WX3eOE4kqqm_K3wYyYLdAXNgAoH_7w-SK9hs2Qdfdb1zO6XIpowKWNRjZqeOdphMDtKdqhJfm8w9Mt5zTMizqscpGMTlbjOq73cjFIrMh3SjYvj3K5zHgTG_Dj8vksURjyd26_LIBD1wp1_EACptqpNbIu0jIv7lLc_OdiPWP8NHYPL34ybF7Zt4TkyQLt9VmpOVy6OaamSu8u88sanAkKuXTgMr3jB7BqYvcMqXdL27BcsbRRzKM2mt7dhsq26Bt4xBKHeMizVSqNE_G6y83Nnbonb8bplY8N7D50fqA",
     "expires_in": 300,
@@ -47,9 +103,30 @@ Sample Response
     "scope": "email profile",
     "firstName": null,
     "lastName": null,
-    "emailId": "siddhar****etty@hi2.in"
+    "emailId": "developer@unacores.com"
 }
-```
+  </pre>
+</div>
+|  Field Name          |   Values       |	Description	|
+  | ------------- |-------------|-------------|
+  | `emailId` | Alpha numeric | JSON format |
+  | `password` | Alpha numeric |JSON format |
+
+### Get Organisation Details
+This API is used to get details about your organisation.
+
+API to call
+`https://common.sandbox.unaport.com/api/v1/FIU/getOrganisation`
+
+Method: `GET`
+
+####Headers
+
+  |  Key          |   Value       |	Description	|
+  | ------------- |-------------|-------------|
+  | `content-Type` | `application/json` | API request and response are in JSON format |
+  | `Authorization` | `Bearer {{token}}`  | The token to be used when calling the APIs | 
+
 ### Create a consent request
 This API is used to create a consent request. 
 
@@ -63,7 +140,7 @@ Below `HTTP` headers need to be set when calling the API
   |  Key          |   Value       |	Description	|
   | ------------- |-------------|-------------|
   | `content-Type` | `application/json` | API request and response are in JSON format |
-  | `Authorization` | `Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2NDUwNzMyNTksImp0aSI6InJ6THUzQWFEcjFqbTFHbTlxb0VLcXciLCJpYXQiOjE2MTM1MzcyNTksIm5iZiI6MTYxMzUzNzI1OSwic3ViIjoiZmludnVkZW1vIiwiYXpwIjoiZmludnVkZW1vIiwicm9sZXMiOiJhZG1pbiJ9.kCvdxxxdXi69Z8GudZB6JBfcPW6_aC9kTuAQjFUMVqKKxd_JExcqjbsiDRjWLcvhjrNpQZBSIEmQk3eflTnS7rYn7XT2E-jzqIe9j6aE5SsJfNpDp37r_LQK8PEmnOVHaOUnuHha5Hvw8qkKhOOi9Ck94EV4nm-pjWo0VvNEleGTGa1rAL25NJtjMY2MvTJ6dd3o_HaypnJVDmvCZi2LPv7hoiu8awhfc1PQAINtjA7Q9C8jhNhW9vq426ePA8-u3yOKaBw1Pe73IGJfAJzQEBDf-Jp67iBVrEHjUbAbECUst-kxhXKmkwbpD8R_UDzMyW14ze6cgW1S6XHx2kq0Jw`  | The token to be used when calling the APIs | 
+  | `Authorization` | `Bearer: {{token}}`  | The token to be used when calling the APIs | 
 
 Sample Consent creation Request
 ``` json
@@ -196,7 +273,7 @@ Below `HTTP` headers need to be set when calling the API
   |  Key          |   Value       |	Description	|
   | ------------- |-------------|-------------|
   | `content-Type` | `application/json` | API request and response are in JSON format |
-  | `Authorization` | `Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2NDUwNzMyNTksImp0aSI6InJ6THUzQWFEcjFqbTFHbTlxb0VLcXciLCJpYXQiOjE2MTM1MzcyNTksIm5iZiI6MTYxMzUzNzI1OSwic3ViIjoiZmludnVkZW1vIiwiYXpwIjoiZmludnVkZW1vIiwicm9sZXMiOiJhZG1pbiJ9.kCvdxxxdXi69Z8GudZB6JBfcPW6_aC9kTuAQjFUMVqKKxd_JExcqjbsiDRjWLcvhjrNpQZBSIEmQk3eflTnS7rYn7XT2E-jzqIe9j6aE5SsJfNpDp37r_LQK8PEmnOVHaOUnuHha5Hvw8qkKhOOi9Ck94EV4nm-pjWo0VvNEleGTGa1rAL25NJtjMY2MvTJ6dd3o_HaypnJVDmvCZi2LPv7hoiu8awhfc1PQAINtjA7Q9C8jhNhW9vq426ePA8-u3yOKaBw1Pe73IGJfAJzQEBDf-Jp67iBVrEHjUbAbECUst-kxhXKmkwbpD8R_UDzMyW14ze6cgW1S6XHx2kq0Jw`  | The token to be used when calling the APIs | 
+  | `Authorization` | `Bearer: {{token}}`  | The token to be used when calling the APIs | 
 
 Sample Response
 ``` json
@@ -246,7 +323,7 @@ Below `HTTP` headers need to be set when calling the API
   |  Key          |   Value       |	Description	|
   | ------------- |-------------|-------------|
   | `content-Type` | `application/json` | API request and response are in JSON format |
-  | `Authorization` | `Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2NDUwNzMyNTksImp0aSI6InJ6THUzQWFEcjFqbTFHbTlxb0VLcXciLCJpYXQiOjE2MTM1MzcyNTksIm5iZiI6MTYxMzUzNzI1OSwic3ViIjoiZmludnVkZW1vIiwiYXpwIjoiZmludnVkZW1vIiwicm9sZXMiOiJhZG1pbiJ9.kCvdxxxdXi69Z8GudZB6JBfcPW6_aC9kTuAQjFUMVqKKxd_JExcqjbsiDRjWLcvhjrNpQZBSIEmQk3eflTnS7rYn7XT2E-jzqIe9j6aE5SsJfNpDp37r_LQK8PEmnOVHaOUnuHha5Hvw8qkKhOOi9Ck94EV4nm-pjWo0VvNEleGTGa1rAL25NJtjMY2MvTJ6dd3o_HaypnJVDmvCZi2LPv7hoiu8awhfc1PQAINtjA7Q9C8jhNhW9vq426ePA8-u3yOKaBw1Pe73IGJfAJzQEBDf-Jp67iBVrEHjUbAbECUst-kxhXKmkwbpD8R_UDzMyW14ze6cgW1S6XHx2kq0Jw`  | The token to be used when calling the APIs | 
+  | `Authorization` | `Bearer: {{token}}`  | The token to be used when calling the APIs | 
 
 Sample Response
 ``` json
@@ -299,7 +376,7 @@ Below `HTTP` headers need to be set when calling the API
   |  Key          |   Value       |	Description	|
   | ------------- |-------------|-------------|
   | `content-Type` | `application/json` | API request and response are in JSON format |
-  | `Authorization` | `Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2NDUwNzMyNTksImp0aSI6InJ6THUzQWFEcjFqbTFHbTlxb0VLcXciLCJpYXQiOjE2MTM1MzcyNTksIm5iZiI6MTYxMzUzNzI1OSwic3ViIjoiZmludnVkZW1vIiwiYXpwIjoiZmludnVkZW1vIiwicm9sZXMiOiJhZG1pbiJ9.kCvdxxxdXi69Z8GudZB6JBfcPW6_aC9kTuAQjFUMVqKKxd_JExcqjbsiDRjWLcvhjrNpQZBSIEmQk3eflTnS7rYn7XT2E-jzqIe9j6aE5SsJfNpDp37r_LQK8PEmnOVHaOUnuHha5Hvw8qkKhOOi9Ck94EV4nm-pjWo0VvNEleGTGa1rAL25NJtjMY2MvTJ6dd3o_HaypnJVDmvCZi2LPv7hoiu8awhfc1PQAINtjA7Q9C8jhNhW9vq426ePA8-u3yOKaBw1Pe73IGJfAJzQEBDf-Jp67iBVrEHjUbAbECUst-kxhXKmkwbpD8R_UDzMyW14ze6cgW1S6XHx2kq0Jw`  | The token to be used when calling the APIs | 
+  | `Authorization` | `Bearer: {{token}}`  | The token to be used when calling the APIs | 
 
 Sample Response
 ``` json
