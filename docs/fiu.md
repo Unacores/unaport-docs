@@ -39,7 +39,7 @@ To start with the integration, follow the below steps :-
 5. The **Get Consent Templates List API** retrieves a collection of available consent templates from the system. This allows users to view, manage, and select predefined templates that can be utilized for data sharing agreements, ensuring consistency and compliance across various interactions.
 6. The **Create Consent without Template API** allows users to generate a new consent request independently of predefined templates. This provides flexibility for users to define specific parameters, such as data types and sharing purposes, facilitating customized consent agreements tailored to unique data-sharing scenarios.
 7.  The **Create Consent with Template API** allows users to generate a new consent request based on a predefined template. By leveraging existing templates, users can ensure compliance and consistency in consent agreements while easily specifying the relevant data types and sharing purposes for the intended data-sharing scenario.
-8. The **Check Consent Status API** allows users to verify the status and details of a specific consent request using its unique consent handle. This enables users to retrieve information about the consent's validity, scope, and associated data-sharing agreements, ensuring transparency and control over consented data access.
+8. The **Check Consent Status API**  allows users to verify the status and details of a specific consent request using its unique consent handle. This enables users to retrieve information about the consent's validity, scope, and associated data-sharing agreements, ensuring transparency and control over consented data access.
 
 ### Data Reports
 <img src="images/data.png" align="center" alt="Dashboard" width="300" />
