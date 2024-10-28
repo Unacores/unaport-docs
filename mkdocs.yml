@@ -24,24 +24,10 @@ extra:
 # Page tree
 nav:
   - "🏠  Overview": index.md
-  - "📁 API Documentation":
-      - "📁 Postman Collection": fiu.md
-      - "📁 Authentication":
-          - "📁 Generate Token (POST)": fiu.md
-      - "📁 Consents":
-          - "📁 Create Template (POST)": fiu.md
-          - "📁 List Template (GET)": fiu.md
-          - "📁 Create Consent (POST)": fiu.md
-          - "📁 Create Consent with Template (POST)": fiu.md
-      - "📁 Reports":
-          - "📁 Fetch Raw Data (POST)": fiu.md
-          - "📁 Generate Analytics (GET)": fiu.md
-          - "📁 Bank Statement Analytics (POST)": fiu.md
-      - "📁 SDK Documentation" :
-          - "📁 Bank Statement Analytics (POST)": fiu_sdk.md
-  - "📁 Self-Service Onboarding":
-      - "📁 Onboarding Guide": fiu_onboarding.md
-
+  - "📁 API Documentation": fiu.md
+  - "📁 SDK Documentation": fiu_sdk.md
+  - "📁 Self-Service Onboarding" : fiu_onboarding.md
+    
 
       
 

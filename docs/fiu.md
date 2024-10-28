@@ -18,8 +18,7 @@ function openTab(evt, tabName) {
 
 Welcome to the Unaport.ai API Reference. This guide provides all the information you need to integrate Unaport.ai services into your application, including generating user consent, retrieving user details, and accessing analyzed data and CAM sheets. The Unaport.ai APIs are fully RESTful, and all responses are delivered in JSON format.
 
-
-<img src="images/selection.png" align="center" alt="Dashboard" width="700" />
+<img src="https://unacores.github.io/unaport-docs/images/selection.png" align="center" alt="Dashboard" width="700" />
 
 ## Introduction
 
