@@ -25,7 +25,7 @@ extra:
 nav:
   - "🏠  Overview": index.md
   - "📁 API Documentation":
-      - "📁 Postman Collection1": fiu.md
+      - "📁 Postman Collection": fiu.md
       - "📁 Authentication":
           - "📁 Generate Token (POST)": fiu.md
       - "📁 Consents":
@@ -38,6 +38,7 @@ nav:
           - "📁 Generate Analytics (GET)": fiu.md
           - "📁 Bank Statement Analytics (POST)": fiu.md
       - "📁 SDK Documentation": fiu_sdk.md
+          - "📁 Bank Statement Analytics (POST)": fiu_sdk.md
   - "📁 Self-Service Onboarding":
       - "📁 Onboarding Guide": fiu_onboarding.md
 
