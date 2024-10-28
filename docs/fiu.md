@@ -41,7 +41,7 @@ To start with the integration, follow the below steps :-
 8. The **Check Consent Status API**  allows users to verify the status and details of a specific consent request using its unique consent handle. This enables users to retrieve information about the consent's validity, scope, and associated data-sharing agreements, ensuring transparency and control over consented data access.
 
 ### Data Reports
-<img src="https://unacores.github.io/unaport-docs/images/data.png" align="center" alt="Dashboard" width="300" />
+<img src="https://unacores.github.io/unaport-docs/images/Data.png" align="center" alt="Dashboard" width="300" />
 
 
 9. The **Fetch Data Status API** enables users to retrieve the current status of data sharing associated with a specific consent handle. This API provides insights into whether the consent is active, the data requested, and any updates on the data-sharing process, ensuring users can monitor and manage their consented data effectively.
