@@ -83,7 +83,7 @@ All our API responses are communicated via HTTP using the following status codes
 ## Postman 
 
 Get started faster with our Postman collection. Click Postman Collection below to download.<br><br>
-<a href="https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/PostmanCollections/FIU+third+party+integration.postman_collection.json" class="download-button" download>
+<a href="https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/PostmanCollections/Unaport.ai+Postman+Collection.postman_collection.json" class="download-button" download>
     <span class="icon">⬇️</span> Postman Collection
 </a>
 
