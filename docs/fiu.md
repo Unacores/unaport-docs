@@ -19,21 +19,21 @@ function openTab(evt, tabName) {
 Welcome to the Unaport.ai API Reference. This guide provides all the information you need to integrate Unaport.ai services into your application, including generating user consent, retrieving user details, and accessing analyzed data and CAM sheets. The Unaport.ai APIs are fully RESTful, and all responses are delivered in JSON format.
 
 
-<img src="/images/selection.png" align="center" alt="Dashboard" width="700" />
+<img src="images/selection.png" align="center" alt="Dashboard" width="700" />
 
 ## Introduction
 
 To start with the integration, follow the below steps :-
 ### Authentication 
 
-<img src="/images/Login.png" align="center" alt="Dashboard" width="500" />
+<img src="images/Login.png" align="center" alt="Dashboard" width="500" />
 
 1. **Login API**: All the API requests are authenticated using the Bearer token. To get this token, you will need to make a request to the login API using the credentials. The response will contain the token. Send the token in the header for all the requests.
 2. The **Refresh Token API** allows users to obtain a new access token by providing a valid refresh token. This ensures continued access to secured resources without requiring the user to re-authenticate, enhancing user experience and maintaining session continuity.
 3. The **Get Organisation Details API** retrieves information about a specific organization using its unique identifier. It provides essential details such as the organization's name, type, and contact information, enabling users to access relevant organizational data.
 
 ### Consents 
-<img src="/images/Consents.png" align="center" alt="Dashboard" width="400" />
+<img src="images/Consents.png" align="center" alt="Dashboard" width="400" />
 
 4. The **Create Consent Template API** enables users to create a standardized consent template for data sharing among service providers. By defining parameters such as purpose, data types, and expiration, it streamlines the consent management process, ensuring compliance and clarity in user agreements.
 5. The **Get Consent Templates List API** retrieves a collection of available consent templates from the system. This allows users to view, manage, and select predefined templates that can be utilized for data sharing agreements, ensuring consistency and compliance across various interactions.
@@ -42,7 +42,7 @@ To start with the integration, follow the below steps :-
 8. The **Check Consent Status API** allows users to verify the status and details of a specific consent request using its unique consent handle. This enables users to retrieve information about the consent's validity, scope, and associated data-sharing agreements, ensuring transparency and control over consented data access.
 
 ### Data Reports
-<img src="/images/data.png" align="center" alt="Dashboard" width="300" />
+<img src="images/data.png" align="center" alt="Dashboard" width="300" />
 
 
 9. The **Fetch Data Status API** enables users to retrieve the current status of data sharing associated with a specific consent handle. This API provides insights into whether the consent is active, the data requested, and any updates on the data-sharing process, ensuring users can monitor and manage their consented data effectively.
@@ -50,7 +50,7 @@ To start with the integration, follow the below steps :-
 
 ### Analytics 
 
-<img src="/images/analytics.png" align="center" alt="Dashboard" width="300" />
+<img src="images/analytics.png" align="center" alt="Dashboard" width="300" />
 
 11. The **Generate Analytics API** allows users to create detailed analytical reports based on the activities and data interactions associated with a specific session identified by its session ID. This API provides insights into user behavior, data usage patterns, and overall engagement, helping organizations make informed decisions and optimize their services.
 12. The **Get Account Details API** enables users to retrieve specific account information linked to a session identified by its unique session ID. This API provides access to essential account data, such as account balance, transaction history, and user details, facilitating effective account management and oversight within the context of the active session.
