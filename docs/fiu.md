@@ -154,8 +154,6 @@ The enables users to create a standardized consent template for data sharing amo
 
 ### Request Table
 
-### Request Table
-
 | Attribute                       | Description                                                                               | Type    |
 |---------------------------------|-------------------------------------------------------------------------------------------|---------|
 | `product_name`                  | Name of the product to be inserted                                                        | String  |
@@ -163,7 +161,7 @@ The enables users to create a standardized consent template for data sharing amo
 | `ConsentDetail.consentStart`    | Start date for consent in ISO 8601 format                                                 | String  |
 | `ConsentDetail.consentExpiry`   | Duration until consent expires, in months - `12`                                          | String  |
 | `ConsentDetail.consentMode`     | Enum for the type of consent. Possible values are `VIEW`, `STORE`, `QUERY`, `STREAM`                                               | String  |
-| `ConsentDetail.fetchType`       | Enum to specify either ONETIME or PERIODIC fetch of data.                                 | String  |
+| `ConsentDetail.fetchType`       | Enum to specify either `ONETIME` or `PERIODIC` fetch of data.                                 | String  |
 | `ConsentDetail.consentTypes`    | Types of consent requested, e.g., `PROFILE`, `SUMMARY`, `TRANSACTIONS`                    | Array   |
 | `ConsentDetail.fiTypes`         | Types of financial information, e.g., [FI Types](#fi-types)                     | Array   |
 | `ConsentDetail.DataConsumer.id` | ID of the FIU                                                                             | String  |
@@ -174,8 +172,8 @@ The enables users to create a standardized consent template for data sharing amo
 | `ConsentDetail.FIDataRange.from`| Start of the data range in months, negative for past dates - `-12`                               | Number  |
 | `ConsentDetail.FIDataRange.to`  | End of the data range in months - `12`                                                         | Number  |
 | `ConsentDetail.DataLife.unit`   | This is the time period for which you are allowed to store the data. Choose between `MONTH`, `YEAR`, `DAY`, `INF` as the unit.                                                  | String  |
-| `ConsentDetail.DataLife.value`  | Value for data life duration  - `1`                                                            | Number  |
-| `ConsentDetail.Frequency.unit`  | Frequency unit for data refresh, e.g., `MONTH`,`YEAR`,`DAY`,`INF`                                           | String  |
+| `ConsentDetail.DataLife.value`  | Define the value of unit of how long can consumer store the data.Value for data life duration  - `1`                                                            | Number  |
+| `ConsentDetail.Frequency.unit`  | Frequency unit for data refresh, e.g., `HOUR`,`MONTH`,`YEAR`,`DAY`,`INF`                                           | String  |
 | `ConsentDetail.Frequency.value` | Frequency value for data refresh e.g., `1`                                                          | Number  |
 | `ConsentDetail.DataFilter`      | Allows you to specify conditions for filtering the data being fetched. For example, fetch transactions where the TRANSACTIONAMOUNT is greater than or equal to INR 20,000. You can use the type, operator like >, <, <=, >= and value like 5000 keys to set the filters. | Array   |
 
@@ -205,4 +203,64 @@ The enables users to create a standardized consent template for data sharing amo
 |--------------|----------------------------------------------|---------|
 | `productId`  | Unique identifier for the inserted product   | String  |
 | `status`     | Status of the API operation, e.g., `SUCCESS` | String  |
+
+### Create Consent API without template
+
+The API allows users to generate a new consent request independently of predefined templates. This provides flexibility for users to define specific parameters, such as data types and sharing purposes, facilitating customized consent agreements tailored to unique data-sharing scenarios.
+
+### Request Table
+
+| Attribute               | Description                                                                                              | Type        |
+|-------------------------|----------------------------------------------------------------------------------------------------------|-------------|
+| `vuaId`                 | Virtual User ID representing the user within the consent framework                                       | String      |
+| `createdBy`             | Email of the user or developer initiating the consent request                                            | String      |
+| `trackingId`            | Tracking identifier for the consent request                                                              | String      |
+| `aaId`                  | Account Aggregator identifier for the request                                                            | String      |
+| `fiuId`                 | Financial Information User identifier                                                                   | String      |
+| `redirectUrl`           | URL to redirect after consent is processed                                                               | String      |
+| `fiuBaseUrl`            | Base URL for the Financial Information User API                                                          | String      |
+| `ConsentsRequest`       | Main object containing details of the consent request                                                    | Object      |
+| ├─ `ver`                | Version of the consent request                                                                           | String      |
+| ├─ `timestamp`          | Timestamp of the consent request                                                                         | String      |
+| ├─ `txnid`              | Transaction ID associated with the request                                                               | String      |
+| ├─ `ConsentDetail`      | Details of the consent                                                                                   | Object      |
+| │  ├─ `consentStart`    | Start date-time of the consent. This field would allow for Post-Dated consent.example: 2019-12-06T11:39:57.153Z                                                                 | String      |
+| │  ├─ `consentExpiry`   | Expiry date-time for the consent.example: 2019-12-06T11:39:57.153Z                                                                        | String      |
+| │  ├─ `consentMode`     | Mode of consent. Possible values are `VIEW`, `STORE`, `QUERY`, `STREAM`                                                                       | String      |
+| │  ├─ `fetchType`       | Enum to specify either `ONETIME` or `PERIODIC` fetch of data.                                                                       | String      |
+| │  ├─ `consentTypes`    | List of consent types (e.g., `PROFILE`, `SUMMARY`, `TRANSACTIONS`)                                      | Array       |
+| │  ├─ `fiTypes`         | List of Financial Information types.e.g., [FI Types](#fi-types)                                                 | Array       |
+| │  ├─ `DataConsumer`    | Information about the consumer of the data                                                               | Object      |
+| │  │  ├─ `id`           | Identifier of the FIU.                                                                          | String      |
+| │  │  ├─ `type`         | Type of data consumer (e.g., `FIU`)                                                                      | String      |
+| │  ├─ `Customer`        | Details of the customer associated with the consent                                                     | Object      |
+| │  │  ├─ `id`           | The identifier of the Customer can be generated during the registration with AA.example: customer_identifier@AA_identifier                                                                                      | String      |
+| │  │  ├─ `Identifiers`  | List of identifiers for the customer (e.g., mobile number)                                              | Array       |
+| │  ├─ `Purpose`         | Purpose of the data sharing [Purpose Code Definition](#purpose-code-definition)                                                                             | Object      |
+| │  │  ├─ `code`         | Purpose code (e.g., `103`)                                                                              | String      |
+| │  │  ├─ `refUri`       | Reference URI for purpose                                                                               | String      |
+| │  │  ├─ `text`         | Text description of the purpose                                                                         | String      |
+| │  │  ├─ `Category`     | Category for the purpose                                                                                | Object      |
+| │  │  │  ├─ `type`      | Type of category (e.g., `Financial Reporting`)                                                          | String      |
+| │  ├─ `FIDataRange`     | Date range for the financial information                                                                | Object      |
+| │  │  ├─ `from`         | Start date of the data range                                                                            | String      |
+| │  │  ├─ `to`           | End date of the data range                                                                              | String      |
+| │  ├─ `DataLife`        | Duration of data availability                                                                           | Object      |
+| │  │  ├─ `unit`         | Unit of time for data life (e.g., `MONTH`, `YEAR`, `DAY`, `INF` )                                                                | String      |
+| │  │  ├─ `value`        | Value associated with the data life unit                                                                | Integer     |
+| │  ├─ `Frequency`       | Frequency of data sharing                                                                               | Object      |
+| │  │  ├─ `unit`         | Unit of frequency (e.g., `HOUR`, `DAY`, `MONTH`, `YEAR`, `INF`)                                                                         | String      |
+| │  │  ├─ `value`        | Value associated with the frequency unit                                                                | Integer     |
+
+### Response Table
+
+| Attribute       | Description                                                                 | Type    |
+|-----------------|-----------------------------------------------------------------------------|---------|
+| `ver`           | Version of the consent API response                                        | String  |
+| `timestamp`     | Timestamp of when the consent response was generated                        | String  |
+| `txnid`         | Transaction ID associated with the consent request                         | String  |
+| `Customer.id`   | Unique identifier of the customer, usually in a virtual ID format (VUA)    | String  |
+| `ConsentHandle` | Unique handle ID representing the consent                                  | String  |
+| `success`       | Message indicating successful creation of the consent                      | String  |
+| `redirectUrl`   | URL to redirect the user to complete or view the consent                   | String  |
 

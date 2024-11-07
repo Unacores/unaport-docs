@@ -1,4 +1,5 @@
-site_name: " "
+site_name: Unaport.ai - API Documentation
+site_description: 
 # Copyright
 copyright: "Copyright &copy; Unacores Solutions Pvt Ltd."
 
@@ -7,6 +8,7 @@ extra_css:
   
 theme:
   name: "material"
+  favicon: 'images/unaport_u.ico'
   features:
     - navigation.footer
   logo: "images/unaport_logo.svg"
@@ -20,7 +22,7 @@ markdown_extensions:
 extra:
   generator: true
   toc: false
-  
+   
 # Page tree
 nav:
   - "🏠  Overview": index.md
