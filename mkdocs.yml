@@ -1,5 +1,6 @@
 site_name: Unaport.ai - API Documentation
-site_description: 
+site_description: "Unaport.ai provides a suite of APIs designed for seamless integration in financial services, enabling account aggregation, consent management, and data sharing. Our comprehensive API documentation guides developers through the features, authentication, and best practices for utilizing our platform to build secure and scalable financial applications."
+
 # Copyright
 copyright: "Copyright &copy; Unacores Solutions Pvt Ltd."
 
