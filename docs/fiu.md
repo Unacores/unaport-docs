@@ -80,7 +80,7 @@ All our API responses are communicated via HTTP using the following status codes
 
 <div class="line"></div>
 
-## Postman 
+## Postman
 
 Get started faster with our Postman collection. Click Postman Collection below to download.<br><br>
 <a href="https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/PostmanCollections/Unaport.ai+Postman+Collection.postman_collection.json" class="download-button" download>
@@ -365,4 +365,177 @@ This API allows users to generate a new consent request based on a predefined te
 | `ConsentHandle`    | Unique handle for the created consent.                               | String        |
 | `success`          | A message indicating the status of the consent creation.             | String        |
 | `redirectUrl`      | URL for redirect after consent is successfully created.              | String        |
+
+### Check Consent Status API
+
+The API allows users to verify the status and details of a specific consent request using its unique consent handle. This enables users to retrieve information about the consent's validity, scope, and associated data-sharing agreements, ensuring transparency and control over consented data access.
+
+### Request Table
+
+| **Attribute**     | **Description**                                                      | **Type**      |
+|-------------------|----------------------------------------------------------------------|---------------|
+| `Authorization`   | Bearer token for authenticating the API request.                     | String (Bearer Token) |
+| `Data`            | Empty request body, as this is a `GET` request.                      | N/A (Empty Body) |
+
+### Response Table
+
+| **Attribute**      | **Description**                                                      | **Type**      |
+|--------------------|----------------------------------------------------------------------|---------------|
+| `Data`             | Array of consent records.                                             | Array         |
+| `id`               | The unique identifier for the consent record.                        | Integer       |
+| `trackingId`       | The tracking ID for the consent request.                             | String        |
+| `vuaId`            | The ID of the user requesting consent.                               | String        |
+| `orgId`            | The ID of the organization associated with the consent.              | String        |
+| `consentHandle`    | The unique handle for the consent.                                   | String        |
+| `approveStatus`    | The approval status of the consent.                                  | String        |
+| `consentStatus`    | The current status of the consent (e.g., ACTIVE, INACTIVE).          | String        |
+| `fetchType`        | The type of consent (e.g., `ONETIME`).                               | String        |
+| `consentId`        | The unique consent ID associated with the consent.                   | String        |
+| `createdAt`        | The timestamp when the consent was created.                          | String (ISO 8601) |
+| `notificationDate` | The date when the consent notification was sent.                     | String (ISO 8601) |
+| `consentStart`     | The start date of the consent validity period.                       | String (ISO 8601) |
+| `consentExpried`   | The expiration date of the consent.                                  | String (ISO 8601) |
+| `lastRuntime`      | The last time the consent was executed.                              | String (ISO 8601) |
+| `nextRuntime`      | The next time the consent is expected to be executed.                | String (ISO 8601 or null) |
+| `updatedOn`        | The timestamp when the consent was last updated.                     | String (ISO 8601 or null) |
+| `createdBy`        | The user who created the consent.                                    | String        |
+| `aaId`             | The Account Aggregator ID associated with the consent.              | String        |
+| `consentsDetail`   | A detailed JSON string of the consent.                               | String (JSON) |
+| `signedConsent`    | The signed consent token.                                            | String        |
+| `consentidCalled`  | The count of times the consent was called.                           | Integer       |
+| `runCounter`       | The run counter for the consent.                                     | Integer       |
+| `consentidError`   | Any error associated with the consent call.                          | Null / String |
+
+<div class="line"></div>
+
+### Data Reports
+
+### Fetch Data Status API
+
+This API enables users to retrieve the current status of data sharing associated with a specific consent handle. This API provides insights into whether the consent is active, the data requested, and any updates on the data-sharing process, ensuring users can monitor and manage their consented data effectively.
+
+### Request Table
+
+
+| **Attribute**     | **Description**                                                      | **Type**      |
+|-------------------|----------------------------------------------------------------------|---------------|
+| `Authorization`   | Bearer token for authenticating the API request.                     | String (Bearer Token) |
+| `Data`            | Empty request body, as this is a `GET` request.                      | N/A (Empty Body) |
+
+### Response Table
+
+| **Attribute**                     | **Description**                                              | **Type**         |
+|-----------------------------------|--------------------------------------------------------------|------------------|
+| `data`                            | Array containing FIU notification details.                   | Array            |
+| `ver`                             | API version used for the notification.                       | String           |
+| `timestamp`                       | Timestamp of the notification.                               | String (ISO 8601) |
+| `txnid`                           | Unique transaction ID for the notification.                  | String           |
+| `Notifier.type`                   | Type of notifier (e.g., `AA` for Account Aggregator).        | String           |
+| `Notifier.id`                     | ID of the notifier (Account Aggregator ID).                  | String           |
+| `FIStatusNotification.sessionId`   | Session ID associated with the notification.                 | String           |
+| `FIStatusNotification.sessionStatus` | Status of the session (e.g., `COMPLETED`).                   | String           |
+| `FIStatusNotification.FIStatusResponse` | Array containing financial institution status responses. | Array            |
+| `FIStatusResponse.fipID`          | Financial institution provider ID.                           | String           |
+| `FIStatusResponse.Accounts`       | Array of account statuses for the financial institution.     | Array            |
+| `Accounts.linkRefNumber`          | Link reference number associated with the account.           | String           |
+| `Accounts.FIStatus`               | Status of financial information readiness (e.g., `READY`).   | String           |
+| `Accounts.description`            | Description of the FI status.                                | String           |
+| `status`                          | Overall status of the notification (e.g., `success`).        | String           |
+
+
+### Fetch Data API
+
+This allows users to retrieve data associated with a specific session identified by its unique session ID. This API provides access to the relevant information tied to the session, enabling users to track and manage data interactions seamlessly within their established sessions.
+
+### Request Table
+
+| **Attribute**       | **Description**                                                      | **Type**               |
+|---------------------|----------------------------------------------------------------------|------------------------|
+| `Authorization`     | Bearer token for authenticating the API request.                     | String (Bearer Token)  |
+| `sessionId`         | Unique session identifier for fetching financial data.               | Path Parameter         |
+
+### Response Table
+
+| **Attribute**                       | **Description**                                                  | **Type**           |
+|-------------------------------------|------------------------------------------------------------------|--------------------|
+| `tabs`                              | Array of tab names for different financial data types.           | Array of Objects   |
+| `tabs.name`                         | Type of financial information (e.g., "DEPOSIT").                 | String             |
+| `DEPOSIT`                           | Contains summary, account holder, and transaction details.       | Object             |
+
+---
+
+### `DEPOSIT` Object
+
+#### Summary Details
+
+| **Attribute**                  | **Description**                                               | **Type**           |
+|--------------------------------|---------------------------------------------------------------|--------------------|
+| `id`                            | Unique ID (can be null if not provided).                      | String or Null     |
+| `currentBalance`                | Current balance of the account.                               | String             |
+| `orgId`                         | Unique organization identifier.                               | String             |
+| `branch`                        | Branch code of the account.                                   | String             |
+| `status`                        | Status of the account (e.g., `ACTIVE`).                       | String             |
+| `currency`                      | Currency in which the account operates (e.g., `INR`).         | String             |
+| `fip`                            | Financial institution provider ID.                            | String             |
+| `accountNumber`                 | Masked account number.                                        | String             |
+| `sessionId`                     | Unique session identifier.                                    | String             |
+| `createdAt`                     | Timestamp when the account was created.                       | String (ISO 8601)  |
+| `facility`                      | Type of facility (e.g., `OD` for Overdraft).                  | String             |
+| `ifscCode`                      | IFSC code of the branch.                                      | String             |
+| `microCode`                     | Micro Code of the branch.                                     | String             |
+| `openingDate`                   | Date when the account was opened.                             | String (YYYY-MM-DD)|
+| `currentOdLimit`                | Current overdraft limit (if applicable).                      | String             |
+| `drawingLimit`                  | Current drawing limit.                                        | String             |
+| `accountType`                   | Type of account (e.g., `SAVINGS`).                            | String             |
+
+#### Account Holder Details
+
+| **Attribute**                  | **Description**                                               | **Type**           |
+|--------------------------------|---------------------------------------------------------------|--------------------|
+| `name`                          | Name of the account holder.                                   | String             |
+| `dob`                           | Date of birth of the account holder.                          | String (YYYY-MM-DD)|
+| `nominee`                       | Nominee status (e.g., `REGISTERED`).                          | String             |
+| `email`                         | Email of the account holder.                                  | String             |
+| `pan`                           | PAN number of the account holder.                             | String             |
+| `address`                       | Residential address of the account holder.                    | String             |
+| `mobile`                        | Mobile number of the account holder.                          | String             |
+| `fetchType`                     | Type of fetch (e.g., `deposit`).                              | String             |
+| `accountHoldertype`             | Account holder type (e.g., `SINGLE`).                         | String             |
+| `ckycCompliance`                | CKYC compliance status.                                       | String             |
+
+#### Transactions
+
+| **Attribute**                  | **Description**                                               | **Type**           |
+|--------------------------------|---------------------------------------------------------------|--------------------|
+| `tranTimestamp`                 | Timestamp of the transaction.                                 | String (ISO 8601)  |
+| `narration`                     | Description or note for the transaction.                      | String             |
+| `amount`                        | Transaction amount.                                           | String             |
+| `type`                          | Type of transaction (`DEBIT` or `CREDIT`).                    | String             |
+| `mode`                          | Transaction mode (e.g., `OTHERS`).                            | String             |
+| `currentBalance`                | Balance after the transaction.                                | String             |
+| `txnId`                         | Unique transaction ID.                                        | String             |
+| `reference`                     | Reference number for the transaction.                         | String             |
+
+<div class="line"></div>
+
+### Analytics
+
+### Generate Analytics API
+
+The API allows users to create detailed analytical reports based on the activities and data interactions associated with a specific session identified by its session ID. This API provides insights into user behavior, data usage patterns, and overall engagement, helping organizations make informed decisions and optimize their services.
+
+### Request Table
+
+| **Attribute**       | **Description**                                                         | **Type**               |
+|---------------------|-------------------------------------------------------------------------|------------------------|
+| `Authorization`     | Bearer token for authenticating the API request.                        | String (Bearer Token)  |
+| `sessionId`         | Unique session identifier used to fetch analytics data.                 | Path Parameter         |
+| `reportId`          | Static part of the endpoint that appears before the `sessionId`         | String (UUID)          |
+
+### Response Structure
+
+| **Attribute**       | **Description**                                           | **Type**       |
+|---------------------|-----------------------------------------------------------|----------------|
+| `reportId`          | Unique identifier for the analytics report.               | String (UUID)  |
+| `status`            | HTTP status code indicating the success of the request.   | String         |
 
