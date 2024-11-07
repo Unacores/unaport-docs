@@ -24,12 +24,12 @@ extra:
   generator: true
   toc: false
 
+
 # Page tree
 nav:
   - "🏠 Overview": index.md
   - "API Documentation":
       - "Overview": fiu.md
-     
   - "SDK Documentation":
       - "Introduction": fiu_sdk.md
   - "Self-Service Onboarding":
