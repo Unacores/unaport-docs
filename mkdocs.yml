@@ -6,7 +6,7 @@ copyright: "Copyright &copy; Unacores Solutions Pvt Ltd."
 
 extra_css:
   - css/custom.css
-  
+
 theme:
   name: "material"
   favicon: 'images/unaport_u.ico'
@@ -23,19 +23,13 @@ markdown_extensions:
 extra:
   generator: true
   toc: false
-   
+
 # Page tree
 nav:
-  - "🏠  Overview": index.md
-  - "📁 API Documentation": fiu.md
-  - "📁 SDK Documentation": fiu_sdk.md
-  - "📁 Self-Service Onboarding" : fiu_onboarding.md
-    
-
-      
-
-
-  
-
-
-
+  - "🏠 Overview": index.md
+  - "API Documentation":
+      - "Overview": fiu.md
+  - "SDK Documentation":
+      - "Introduction": fiu_sdk.md
+  - "Self-Service Onboarding":
+      - "Steps": fiu_onboarding.md
