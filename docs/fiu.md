@@ -145,6 +145,78 @@ Allows users to obtain a new access token by providing a valid refresh token. Th
 | `lastName`           | Last name of the user (if available)                   | String |
 | `emailId`            | Email ID of the authenticated user                     | String |
 
+### Get Organisation Details API
+
+The API retrieves information about a specific organization using its unique identifier. It provides essential details such as the organization's name, type, and contact information, enabling users to access relevant organizational data
+
+### Request Table
+
+- **URL:** `https://common.sandbox.unaport.com/api/v1/FIU/getOrganisation`
+- **HTTP Method:** `GET` 
+- **Headers:**
+  - **Authorization:** Bearer token for authenticating the request.
+  - **Content-Type:** Specifies the request body format (JSON).
+
+### Response Table
+
+| Attribute                            | Description                                                                                     | Type    |
+|--------------------------------------|-------------------------------------------------------------------------------------------------|---------|
+| `data.id`                            | Unique identifier for the consent record                                                         | String  |
+| `data.fiuId`                         | Unique identifier for the Financial Information User (FIU)                                        | String  |
+| `data.fiuLive`                       | Live status of the FIU (currently `null`)                                                         | Null    |
+| `data.registeredEmail`               | Registered email address of the FIU (currently `null`)                                            | Null    |
+| `data.contactNumber`                 | Contact number of the FIU (currently `null`)                                                      | Null    |
+| `data.businessPAN`                   | PAN number associated with the business (currently `null`)                                        | Null    |
+| `data.nameAsPerPAN`                  | Business name as per PAN (currently `null`)                                                       | Null    |
+| `data.pan`                            | PAN number (currently `null`)                                                                     | Null    |
+| `data.businessName`                  | Name of the business (currently `null`)                                                           | Null    |
+| `data.businessType`                  | Type of business (currently `null`)                                                               | Null    |
+| `data.businessModel`                 | Business model (currently `null`)                                                                 | Null    |
+| `data.businessDescription`           | Description of the business (currently `null`)                                                    | Null    |
+| `data.purposeOfUsingAccountAggregator`| Purpose of using an Account Aggregator (currently `null`)                                         | Null    |
+| `data.certificateOfRegistrationFIU`  | Certificate of registration for FIU (currently `null`)                                           | Null    |
+| `data.llpinCIN`                      | LL Pin or CIN details (currently `null`)                                                          | Null    |
+| `data.gstin`                         | GSTIN details (currently `null`)                                                                  | Null    |
+| `data.gstinNumber`                   | GSTIN number (currently `null`)                                                                   | Null    |
+| `data.gst`                            | GST information (currently `null`)                                                                | Null    |
+| `data.businessAddress`               | Business address (currently `null`)                                                               | Null    |
+| `data.city`                           | City of the business (currently `null`)                                                           | Null    |
+| `data.pinCode`                        | Pin code of the business (currently `null`)                                                      | Null    |
+| `data.state`                          | State where the business is located (currently `null`)                                            | Null    |
+| `data.country`                        | Country where the business is located (currently `null`)                                          | Null    |
+| `data.businessRegisteredName`        | Registered business name (currently `null`)                                                      | Null    |
+| `data.accountNumber`                 | Account number (currently `null`)                                                                 | Null    |
+| `data.ifscCode`                      | IFSC code of the business account (currently `null`)                                              | Null    |
+| `data.cancelledCheque`               | Cancelled cheque details (currently `null`)                                                       | Null    |
+| `data.participationTerms`            | Participation terms (currently `null`)                                                            | Null    |
+| `data.fiuAAAgreement`                | Agreement details for the FIU (currently `null`)                                                  | Null    |
+| `data.operation`                     | Status of the operation, `0` indicates no operation or pending state                             | Integer |
+| `data.status`                        | Status of the consent process (e.g., `PENDING`)                                                  | String  |
+| `data.annualTurnoverAccordingToGST`  | Annual turnover according to GST (currently `0`)                                                  | Integer |
+| `data.createdAt`                     | Creation timestamp (currently `null`)                                                             | Null    |
+| `data.contactDetailsCompleted`       | Indicates whether contact details are completed (`false` in this case)                            | Boolean |
+| `data.pancompleted`                  | Indicates whether PAN details are completed (`false` in this case)                               | Boolean |
+| `data.businessDetailsCompleted`      | Indicates whether business details are completed (`false` in this case)                           | Boolean |
+| `data.gstcompleted`                  | Indicates whether GST details are completed (`false` in this case)                               | Boolean |
+| `data.gstbussiness`                  | Indicates whether GST business is completed (`false` in this case)                               | Boolean |
+| `fiulive`                            | Current live status of FIU (currently `null`)                                                    | Null    |
+| `fiutest.id`                         | ID of the FIU (same as `fiuId`)                                                                   | String  |
+| `fiutest.fiuId`                      | FIU ID                                                                                             | String  |
+| `fiutest.fiuName`                    | Name of the FIU                                                                                  | String  |
+| `fiutest.fiuLogUrl`                  | URL for FIU documentation logs                                                                    | String  |
+| `fiutest.version`                    | Version of the FIU                                                                                 | String  |
+| `fiutest.fiuStatus`                  | Status of the FIU (e.g., `ACTIVE`)                                                                | String  |
+| `fiutest.contactPersonName`          | Name of the contact person for the FIU                                                           | String  |
+| `fiutest.contactPersonNumber`        | Contact number of the FIU contact person                                                          | String  |
+| `fiutest.contactPersonEmail`         | Contact email of the FIU contact person                                                           | String  |
+| `fiutest.assigned`                   | Whether the FIU is assigned (`false` in this case)                                                | Boolean |
+| `fiutest.baseUrl`                    | Base URL for FIU API calls                                                                        | String  |
+| `fiutest.secretkey`                  | FIU secret key (currently `null`)                                                                  | Null    |
+| `fiutest.redirectUrl`                | Redirect URL for consent process                                                                  | String  |
+| `fiutest.billingPlan.id`             | ID for the FIU's billing plan                                                                     | String  |
+| `fiutest.billingPlan.planName`       | Name of the billing plan (e.g., `Basic Plan`)                                                     | String  |
+| `status`                             | Overall status of the API response (`success` in this case)                                       | String  |
+
 <div class="line"></div>
 
 
@@ -263,4 +335,34 @@ The API allows users to generate a new consent request independently of predefin
 | `ConsentHandle` | Unique handle ID representing the consent                                  | String  |
 | `success`       | Message indicating successful creation of the consent                      | String  |
 | `redirectUrl`   | URL to redirect the user to complete or view the consent                   | String  |
+
+### Create Consent with Template API
+
+This API allows users to generate a new consent request based on a predefined template. By leveraging existing templates, users can ensure compliance and consistency in consent agreements while easily specifying the relevant data types and sharing purposes for the intended data-sharing scenario.
+
+### Request Table
+
+| **Attribute**      | **Description**                                                      | **Type**      |
+|--------------------|----------------------------------------------------------------------|---------------|
+| `vuaId`            | User’s unique identifier for AA (Account Aggregator).                | String        |
+| `mobileNumber`     | The mobile number associated with the consent request.               | String        |
+| `createdBy`        | The email address of the person or system creating the consent.      | String        |
+| `trackingId`       | Unique ID used to track the consent request.                         | String        |
+| `aaId`             | The ID of the Account Aggregator initiating the consent request.     | String        |
+| `fiuId`            | The ID of the Financial Information User (FIU).                      | String        |
+| `redirectUrl`      | URL where the user will be redirected after consent is given.       | String        |
+| `fiuBaseUrl`       | The base URL of the FIU API.                                         | String        |
+| `productId`        | The ID of the product for which consent is requested.                | String        |
+
+### Response Table
+
+| **Attribute**      | **Description**                                                      | **Type**      |
+|--------------------|----------------------------------------------------------------------|---------------|
+| `ver`              | The version of the response.                                          | String        |
+| `timestamp`        | The timestamp of the response.                                        | String (ISO 8601) |
+| `txnid`            | Unique transaction ID for tracking the consent process.               | String        |
+| `Customer.id`      | The unique ID of the customer who provided consent.                  | String        |
+| `ConsentHandle`    | Unique handle for the created consent.                               | String        |
+| `success`          | A message indicating the status of the consent creation.             | String        |
+| `redirectUrl`      | URL for redirect after consent is successfully created.              | String        |
 
