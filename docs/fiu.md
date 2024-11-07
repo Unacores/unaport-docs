@@ -154,8 +154,6 @@ The enables users to create a standardized consent template for data sharing amo
 
 ### Request Table
 
-Here’s the MkDocs table for the request attributes for the `InsertProduct` API:
-
 ### Request Table
 
 | Attribute                       | Description                                                                               | Type    |
@@ -167,19 +165,39 @@ Here’s the MkDocs table for the request attributes for the `InsertProduct` API
 | `ConsentDetail.consentMode`     | Enum for the type of consent. Possible values are `VIEW`, `STORE`, `QUERY`, `STREAM`                                               | String  |
 | `ConsentDetail.fetchType`       | Enum to specify either ONETIME or PERIODIC fetch of data.                                 | String  |
 | `ConsentDetail.consentTypes`    | Types of consent requested, e.g., `PROFILE`, `SUMMARY`, `TRANSACTIONS`                    | Array   |
-| `ConsentDetail.fiTypes`         | Types of financial information, e.g., `DEPOSIT` , `EQUITIES` and more                     | Array   |
+| `ConsentDetail.fiTypes`         | Types of financial information, e.g., [FI Types](#fi-types)                     | Array   |
 | `ConsentDetail.DataConsumer.id` | ID of the FIU                                                                             | String  |
-| `ConsentDetail.Purpose.code`    | Purpose code of the consent - `101—Wealth management service` and more                    | String  |
+| `ConsentDetail.Purpose.code`    | Purpose code of the consent - [Purpose Code Definition](#purpose-code-definition)         | String  |
 | `ConsentDetail.Purpose.refUri`  | Reference URI for purpose definition - `https://api.rebit.org.in/aa/purpose/101.xml`                                                     | String  |
-| `ConsentDetail.Purpose.text`    | Text description of the purpose `Wealth management service` and more                                                           | String  |
+| `ConsentDetail.Purpose.text`    | Text description of the purpose `Wealth management service`.                                                            | String  |
 | `ConsentDetail.Purpose.Category.type` | Category type of the purpose, e.g., `Personal Finance`                          | String  |
 | `ConsentDetail.FIDataRange.from`| Start of the data range in months, negative for past dates - `-12`                               | Number  |
 | `ConsentDetail.FIDataRange.to`  | End of the data range in months - `12`                                                         | Number  |
 | `ConsentDetail.DataLife.unit`   | This is the time period for which you are allowed to store the data. Choose between `MONTH`, `YEAR`, `DAY`, `INF` as the unit.                                                  | String  |
-| `ConsentDetail.DataLife.value`  | Value for data life duration                                                              | Number  |
+| `ConsentDetail.DataLife.value`  | Value for data life duration  - `1`                                                            | Number  |
 | `ConsentDetail.Frequency.unit`  | Frequency unit for data refresh, e.g., `MONTH`,`YEAR`,`DAY`,`INF`                                           | String  |
 | `ConsentDetail.Frequency.value` | Frequency value for data refresh e.g., `1`                                                          | Number  |
 | `ConsentDetail.DataFilter`      | Allows you to specify conditions for filtering the data being fetched. For example, fetch transactions where the TRANSACTIONAMOUNT is greater than or equal to INR 20,000. You can use the type, operator like >, <, <=, >= and value like 5000 keys to set the filters. | Array   |
+
+#### Purpose Code Definition
+
+| Code | Service Description                                      | Category Code | Category                     |
+|------|----------------------------------------------------------|---------------|-------------------------------|
+| 101  | Wealth management service                                | 01            | Personal Finance              |
+| 102  | Customer spending patterns, budget or other reportings   | 01            | Personal Finance              |
+| 103  | Aggregated statement                                     | 02            | Financial Reporting           |
+| 104  | Explicit consent for monitoring of the accounts          | 03            | Account Query and Monitoring  |
+| 105  | Explicit one-time consent for the accounts               | 03            | Account Query and Monitoring  |
+
+#### FI TYPES
+
+| Category    | FI Types                                 |
+|-------------|------------------------------------------|
+| Bank        | DEPOSIT, TERM_DEPOSIT, RECURRING_DEPOSIT |
+| Investment  | MUTUAL_FUNDS, ETF, EQUITIES, NPS         |
+| Insurance   | INSURANCE_POLICIES                       |
+| GST         | GSTR1_3B                                 |
+
 
 ### Response Table
 
