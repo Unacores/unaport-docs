@@ -96,12 +96,10 @@ All the API requests are authenticated using the Bearer token. To get this token
 
 #### Request Table
 
-| Attribute  | Description                   | Type   |
-|------------|-------------------------------|--------|
-| `emailId`  | User's email address          | String |
-| `password` | User's password for login     | String |
-
-
+| Attribute   | Description                | Length | Datatype | Mandatory/Optional | 
+|-------------|----------------------------|--------|----------|---------------------|
+| `emailId`   | User's email address       | 254    | String   | Mandatory          |
+| `password`  | User's password for login  | 8-64   | String   | Mandatory          |
 
 #### Response Table
 
@@ -125,9 +123,10 @@ Allows users to obtain a new access token by providing a valid refresh token. Th
 
 ### Request Table
 
-| Attribute       | Description                     | Type   |
-|-----------------|---------------------------------|--------|
-| `refresh_token` | The refresh token for renewing access | String |
+
+| Attribute       | Description                      | Length | Datatype | Mandatory/Optional |
+|-----------------|----------------------------------|--------|----------|---------------------|
+| `refresh_token` | The refresh token for renewing access | 255    | String   | Mandatory          |
 
 ### Response Table
 
@@ -225,29 +224,28 @@ The API retrieves information about a specific organization using its unique ide
 The enables users to create a standardized consent template for data sharing among service providers. By defining parameters such as purpose, data types, and expiration, it streamlines the consent management process, ensuring compliance and clarity in user agreements.
 
 ### Request Table
-
-| Attribute                       | Description                                                                               | Type    |
-|---------------------------------|-------------------------------------------------------------------------------------------|---------|
-| `product_name`                  | Name of the product to be inserted                                                        | String  |
-| `ConsentDetail`                 | Contains details of the user’s consent                                                    | Object  |
-| `ConsentDetail.consentStart`    | Start date for consent in ISO 8601 format                                                 | String  |
-| `ConsentDetail.consentExpiry`   | Duration until consent expires, in months - `12`                                          | String  |
-| `ConsentDetail.consentMode`     | Enum for the type of consent. Possible values are `VIEW`, `STORE`, `QUERY`, `STREAM`                                               | String  |
-| `ConsentDetail.fetchType`       | Enum to specify either `ONETIME` or `PERIODIC` fetch of data.                                 | String  |
-| `ConsentDetail.consentTypes`    | Types of consent requested, e.g., `PROFILE`, `SUMMARY`, `TRANSACTIONS`                    | Array   |
-| `ConsentDetail.fiTypes`         | Types of financial information, e.g., [FI Types](#fi-types)                     | Array   |
-| `ConsentDetail.DataConsumer.id` | ID of the FIU                                                                             | String  |
-| `ConsentDetail.Purpose.code`    | Purpose code of the consent - [Purpose Code Definition](#purpose-code-definition)         | String  |
-| `ConsentDetail.Purpose.refUri`  | Reference URI for purpose definition - `https://api.rebit.org.in/aa/purpose/101.xml`                                                     | String  |
-| `ConsentDetail.Purpose.text`    | Text description of the purpose `Wealth management service`.                                                            | String  |
-| `ConsentDetail.Purpose.Category.type` | Category type of the purpose, e.g., `Personal Finance`                          | String  |
-| `ConsentDetail.FIDataRange.from`| Start of the data range in months, negative for past dates - `-12`                               | Number  |
-| `ConsentDetail.FIDataRange.to`  | End of the data range in months - `12`                                                         | Number  |
-| `ConsentDetail.DataLife.unit`   | This is the time period for which you are allowed to store the data. Choose between `MONTH`, `YEAR`, `DAY`, `INF` as the unit.                                                  | String  |
-| `ConsentDetail.DataLife.value`  | Define the value of unit of how long can consumer store the data.Value for data life duration  - `1`                                                            | Number  |
-| `ConsentDetail.Frequency.unit`  | Frequency unit for data refresh, e.g., `HOUR`,`MONTH`,`YEAR`,`DAY`,`INF`                                           | String  |
-| `ConsentDetail.Frequency.value` | Frequency value for data refresh e.g., `1`                                                          | Number  |
-| `ConsentDetail.DataFilter`      | Allows you to specify conditions for filtering the data being fetched. For example, fetch transactions where the TRANSACTIONAMOUNT is greater than or equal to INR 20,000. You can use the type, operator like >, <, <=, >= and value like 5000 keys to set the filters. | Array   |
+| Attribute                          | Description                                                                                          | Length | Datatype | Mandatory/Optional |
+|------------------------------------|------------------------------------------------------------------------------------------------------|--------|----------|---------------------|
+| `product_name`                     | Name of the product to be inserted                                                                   | 100    | String   | Mandatory          |
+| `ConsentDetail`                    | Contains details of the user’s consent                                                               | -      | Object   | Mandatory          |
+| `ConsentDetail.consentStart`       | Start date for consent in ISO 8601 format                                                            | 20     | String   | Mandatory          |
+| `ConsentDetail.consentExpiry`      | Duration until consent expires, in months - `12`                                                     | 2      | String   | Mandatory          |
+| `ConsentDetail.consentMode`        | Enum for the type of consent. Possible values are `VIEW`, `STORE`, `QUERY`, `STREAM`                 | 10     | String   | Mandatory          |
+| `ConsentDetail.fetchType`          | Enum to specify either `ONETIME` or `PERIODIC` fetch of data                                         | 8      | String   | Mandatory          |
+| `ConsentDetail.consentTypes`       | Types of consent requested, e.g., `PROFILE`, `SUMMARY`, `TRANSACTIONS`                               | 15      | String    | Mandatory          |
+| `ConsentDetail.fiTypes`            | Types of financial information, e.g., [FI Types](#fi-types)                                         | 15      | String    | Mandatory          |
+| `ConsentDetail.DataConsumer.id`    | ID of the FIU                                                                                        | 50     | String   | Mandatory          |
+| `ConsentDetail.Purpose.code`       | Purpose code of the consent - [Purpose Code Definition](#purpose-code-definition)                    | 10     | String   | Mandatory          |
+| `ConsentDetail.Purpose.refUri`     | Reference URI for purpose definition - `https://api.rebit.org.in/aa/purpose/101.xml`                 | 255    | String   | Optional           |
+| `ConsentDetail.Purpose.text`       | Text description of the purpose, e.g., `Wealth management service`                                   | 255    | String   | Optional           |
+| `ConsentDetail.Purpose.Category.type` | Category type of the purpose, e.g., `Personal Finance`                                             | 50     | String   | Optional           |
+| `ConsentDetail.FIDataRange.from`   | Start of the data range in months, negative for past dates - `-12`                                   | 4      | Number   | Mandatory          |
+| `ConsentDetail.FIDataRange.to`     | End of the data range in months - `12`                                                               | 4      | Number   | Mandatory          |
+| `ConsentDetail.DataLife.unit`      | Time period for data storage. Options: `MONTH`, `YEAR`, `DAY`, `INF`                                 | 5      | String   | Mandatory          |
+| `ConsentDetail.DataLife.value`     | Value defining the duration for data life - `1`                                                      | 3      | Number   | Mandatory          |
+| `ConsentDetail.Frequency.unit`     | Frequency unit for data refresh, e.g., `HOUR`, `MONTH`, `YEAR`, `DAY`, `INF`                         | 5      | String   | Mandatory          |
+| `ConsentDetail.Frequency.value`    | Frequency value for data refresh, e.g., `1`                                                          | 3      | Number   | Mandatory          |
+| `ConsentDetail.DataFilter`         | Conditions for filtering the data being fetched                                                      | -      | Array    | Optional           |
 
 #### Purpose Code Definition
 
@@ -280,49 +278,47 @@ The enables users to create a standardized consent template for data sharing amo
 
 The API allows users to generate a new consent request independently of predefined templates. This provides flexibility for users to define specific parameters, such as data types and sharing purposes, facilitating customized consent agreements tailored to unique data-sharing scenarios.
 
-### Request Table
-
-| Attribute               | Description                                                                                              | Type        |
-|-------------------------|----------------------------------------------------------------------------------------------------------|-------------|
-| `vuaId`                 | Virtual User ID representing the user within the consent framework                                       | String      |
-| `createdBy`             | Email of the user or developer initiating the consent request                                            | String      |
-| `trackingId`            | Tracking identifier for the consent request                                                              | String      |
-| `aaId`                  | Account Aggregator identifier for the request                                                            | String      |
-| `fiuId`                 | Financial Information User identifier                                                                   | String      |
-| `redirectUrl`           | URL to redirect after consent is processed                                                               | String      |
-| `fiuBaseUrl`            | Base URL for the Financial Information User API                                                          | String      |
-| `ConsentsRequest`       | Main object containing details of the consent request                                                    | Object      |
-| ├─ `ver`                | Version of the consent request                                                                           | String      |
-| ├─ `timestamp`          | Timestamp of the consent request                                                                         | String      |
-| ├─ `txnid`              | Transaction ID associated with the request                                                               | String      |
-| ├─ `ConsentDetail`      | Details of the consent                                                                                   | Object      |
-| │  ├─ `consentStart`    | Start date-time of the consent. This field would allow for Post-Dated consent.example: 2019-12-06T11:39:57.153Z                                                                 | String      |
-| │  ├─ `consentExpiry`   | Expiry date-time for the consent.example: 2019-12-06T11:39:57.153Z                                                                        | String      |
-| │  ├─ `consentMode`     | Mode of consent. Possible values are `VIEW`, `STORE`, `QUERY`, `STREAM`                                                                       | String      |
-| │  ├─ `fetchType`       | Enum to specify either `ONETIME` or `PERIODIC` fetch of data.                                                                       | String      |
-| │  ├─ `consentTypes`    | List of consent types (e.g., `PROFILE`, `SUMMARY`, `TRANSACTIONS`)                                      | Array       |
-| │  ├─ `fiTypes`         | List of Financial Information types.e.g., [FI Types](#fi-types)                                                 | Array       |
-| │  ├─ `DataConsumer`    | Information about the consumer of the data                                                               | Object      |
-| │  │  ├─ `id`           | Identifier of the FIU.                                                                          | String      |
-| │  │  ├─ `type`         | Type of data consumer (e.g., `FIU`)                                                                      | String      |
-| │  ├─ `Customer`        | Details of the customer associated with the consent                                                     | Object      |
-| │  │  ├─ `id`           | The identifier of the Customer can be generated during the registration with AA.example: customer_identifier@AA_identifier                                                                                      | String      |
-| │  │  ├─ `Identifiers`  | List of identifiers for the customer (e.g., mobile number)                                              | Array       |
-| │  ├─ `Purpose`         | Purpose of the data sharing [Purpose Code Definition](#purpose-code-definition)                                                                             | Object      |
-| │  │  ├─ `code`         | Purpose code (e.g., `103`)                                                                              | String      |
-| │  │  ├─ `refUri`       | Reference URI for purpose                                                                               | String      |
-| │  │  ├─ `text`         | Text description of the purpose                                                                         | String      |
-| │  │  ├─ `Category`     | Category for the purpose                                                                                | Object      |
-| │  │  │  ├─ `type`      | Type of category (e.g., `Financial Reporting`)                                                          | String      |
-| │  ├─ `FIDataRange`     | Date range for the financial information                                                                | Object      |
-| │  │  ├─ `from`         | Start date of the data range                                                                            | String      |
-| │  │  ├─ `to`           | End date of the data range                                                                              | String      |
-| │  ├─ `DataLife`        | Duration of data availability                                                                           | Object      |
-| │  │  ├─ `unit`         | Unit of time for data life (e.g., `MONTH`, `YEAR`, `DAY`, `INF` )                                                                | String      |
-| │  │  ├─ `value`        | Value associated with the data life unit                                                                | Integer     |
-| │  ├─ `Frequency`       | Frequency of data sharing                                                                               | Object      |
-| │  │  ├─ `unit`         | Unit of frequency (e.g., `HOUR`, `DAY`, `MONTH`, `YEAR`, `INF`)                                                                         | String      |
-| │  │  ├─ `value`        | Value associated with the frequency unit                                                                | Integer     |
+| Attribute                   | Description                                                                                              | Length | Datatype | Mandatory/Optional |
+|-----------------------------|----------------------------------------------------------------------------------------------------------|--------|----------|---------------------|
+| `vuaId`                     | Virtual User ID representing the user within the consent framework                                       | 50     | String   | Mandatory          |
+| `createdBy`                 | Email of the user or developer initiating the consent request                                            | 100    | String   | Mandatory          |
+| `trackingId`                | Tracking identifier for the consent request                                                              | 50     | String   | Mandatory          |
+| `aaId`                      | Account Aggregator identifier for the request                                                            | 50     | String   | Mandatory          |
+| `fiuId`                     | Financial Information User identifier                                                                   | 50     | String   | Mandatory          |
+| `redirectUrl`               | URL to redirect after consent is processed                                                               | 255    | String   | Optional           |
+| `fiuBaseUrl`                | Base URL for the Financial Information User API                                                          | 255    | String   | Mandatory          |
+| `ConsentsRequest`           | Main object containing details of the consent request                                                    | -      | Object   | Mandatory          |
+| ├─ `ver`                    | Version of the consent request                                                                           | 5      | String   | Mandatory          |
+| ├─ `timestamp`              | Timestamp of the consent request                                                                         | 25     | String   | Mandatory          |
+| ├─ `txnid`                  | Transaction ID associated with the request                                                               | 50     | String   | Mandatory          |
+| ├─ `ConsentDetail`          | Details of the consent                                                                                   | -      | Object   | Mandatory          |
+| │  ├─ `consentStart`        | Start date-time of the consent (e.g., 2019-12-06T11:39:57.153Z)                                         | 24     | String   | Mandatory          |
+| │  ├─ `consentExpiry`       | Expiry date-time for the consent (e.g., 2019-12-06T11:39:57.153Z)                                       | 24     | String   | Mandatory          |
+| │  ├─ `consentMode`         | Mode of consent. Possible values are `VIEW`, `STORE`, `QUERY`, `STREAM`                                 | 10     | String   | Mandatory          |
+| │  ├─ `fetchType`           | Enum to specify either `ONETIME` or `PERIODIC` fetch of data                                            | 8      | String   | Mandatory          |
+| │  ├─ `consentTypes`        | List of consent types (e.g., `PROFILE`, `SUMMARY`, `TRANSACTIONS`)                                      | -      | Array    | Mandatory          |
+| │  ├─ `fiTypes`             | List of Financial Information types (e.g., [FI Types](#fi-types))                                       | -      | Array    | Mandatory          |
+| │  ├─ `DataConsumer`        | Information about the consumer of the data                                                               | -      | Object   | Mandatory          |
+| │  │  ├─ `id`               | Identifier of the FIU                                                                                   | 50     | String   | Mandatory          |
+| │  │  ├─ `type`             | Type of data consumer (e.g., `FIU`)                                                                      | 10     | String   | Mandatory          |
+| │  ├─ `Customer`            | Details of the customer associated with the consent                                                     | -      | Object   | Mandatory          |
+| │  │  ├─ `id`               | Identifier of the Customer (e.g., customer_identifier@AA_identifier)                                    | 100    | String   | Mandatory          |
+| │  │  ├─ `Identifiers`      | List of identifiers for the customer (e.g., mobile number)                                              | -      | Array    | Optional           |
+| │  ├─ `Purpose`             | Purpose of the data sharing                                                                             | -      | Object   | Mandatory          |
+| │  │  ├─ `code`             | Purpose code (e.g., `103`)                                                                              | 10     | String   | Mandatory          |
+| │  │  ├─ `refUri`           | Reference URI for purpose                                                                               | 255    | String   | Optional           |
+| │  │  ├─ `text`             | Text description of the purpose                                                                         | 255    | String   | Optional           |
+| │  │  ├─ `Category`         | Category for the purpose                                                                                | -      | Object   | Optional           |
+| │  │  │  ├─ `type`          | Type of category (e.g., `Financial Reporting`)                                                          | 50     | String   | Optional           |
+| │  ├─ `FIDataRange`         | Date range for the financial information                                                                | -      | Object   | Mandatory          |
+| │  │  ├─ `from`             | Start date of the data range                                                                            | 24     | String   | Mandatory          |
+| │  │  ├─ `to`               | End date of the data range                                                                              | 24     | String   | Mandatory          |
+| │  ├─ `DataLife`            | Duration of data availability                                                                           | -      | Object   | Mandatory          |
+| │  │  ├─ `unit`             | Unit of time for data life (e.g., `MONTH`, `YEAR`, `DAY`, `INF`)                                       | 5      | String   | Mandatory          |
+| │  │  ├─ `value`            | Value associated with the data life unit                                                                | 3      | Integer  | Mandatory          |
+| │  ├─ `Frequency`           | Frequency of data sharing                                                                               | -      | Object   | Mandatory          |
+| │  │  ├─ `unit`             | Unit of frequency (e.g., `HOUR`, `DAY`, `MONTH`, `YEAR`, `INF`)                                        | 5      | String   | Mandatory          |
+| │  │  ├─ `value`            | Value associated with the frequency unit                                                                | 3      | Integer  | Mandatory          |
 
 ### Response Table
 
@@ -342,17 +338,17 @@ This API allows users to generate a new consent request based on a predefined te
 
 ### Request Table
 
-| **Attribute**      | **Description**                                                      | **Type**      |
-|--------------------|----------------------------------------------------------------------|---------------|
-| `vuaId`            | User’s unique identifier for AA (Account Aggregator).                | String        |
-| `mobileNumber`     | The mobile number associated with the consent request.               | String        |
-| `createdBy`        | The email address of the person or system creating the consent.      | String        |
-| `trackingId`       | Unique ID used to track the consent request.                         | String        |
-| `aaId`             | The ID of the Account Aggregator initiating the consent request.     | String        |
-| `fiuId`            | The ID of the Financial Information User (FIU).                      | String        |
-| `redirectUrl`      | URL where the user will be redirected after consent is given.       | String        |
-| `fiuBaseUrl`       | The base URL of the FIU API.                                         | String        |
-| `productId`        | The ID of the product for which consent is requested.                | String        |
+| Attribute      | Description                                                      | Length | Datatype | Mandatory/Optional |
+|----------------|------------------------------------------------------------------|--------|----------|---------------------|
+| `vuaId`        | User’s unique identifier for AA (Account Aggregator)             | 50     | String   | Mandatory          |
+| `mobileNumber` | The mobile number associated with the consent request            | 15     | String   | Mandatory          |
+| `createdBy`    | The email address of the person or system creating the consent   | 100    | String   | Mandatory          |
+| `trackingId`   | Unique ID used to track the consent request                      | 50     | String   | Mandatory          |
+| `aaId`         | The ID of the Account Aggregator initiating the consent request  | 50     | String   | Mandatory          |
+| `fiuId`        | The ID of the Financial Information User (FIU)                   | 50     | String   | Mandatory          |
+| `redirectUrl`  | URL where the user will be redirected after consent is given     | 255    | String   | Optional           |
+| `fiuBaseUrl`   | The base URL of the FIU API                                      | 255    | String   | Mandatory          |
+| `productId`    | The ID of the product for which consent is requested             | 50     | String   | Mandatory          |
 
 ### Response Table
 
@@ -370,7 +366,7 @@ This API allows users to generate a new consent request based on a predefined te
 
 The API allows users to verify the status and details of a specific consent request using its unique consent handle. This enables users to retrieve information about the consent's validity, scope, and associated data-sharing agreements, ensuring transparency and control over consented data access.
 
-### Request Table
+### Header Table
 
 | **Attribute**     | **Description**                                                      | **Type**      |
 |-------------------|----------------------------------------------------------------------|---------------|
@@ -414,7 +410,7 @@ The API allows users to verify the status and details of a specific consent requ
 
 This API enables users to retrieve the current status of data sharing associated with a specific consent handle. This API provides insights into whether the consent is active, the data requested, and any updates on the data-sharing process, ensuring users can monitor and manage their consented data effectively.
 
-### Request Table
+### Header Table
 
 
 | **Attribute**     | **Description**                                                      | **Type**      |
@@ -447,7 +443,7 @@ This API enables users to retrieve the current status of data sharing associated
 
 This allows users to retrieve data associated with a specific session identified by its unique session ID. This API provides access to the relevant information tied to the session, enabling users to track and manage data interactions seamlessly within their established sessions.
 
-### Request Table
+### Header Table
 
 | **Attribute**       | **Description**                                                      | **Type**               |
 |---------------------|----------------------------------------------------------------------|------------------------|
@@ -524,7 +520,7 @@ This allows users to retrieve data associated with a specific session identified
 
 The API allows users to create detailed analytical reports based on the activities and data interactions associated with a specific session identified by its session ID. This API provides insights into user behavior, data usage patterns, and overall engagement, helping organizations make informed decisions and optimize their services.
 
-### Request Table
+### Header Table
 
 | **Attribute**       | **Description**                                                         | **Type**               |
 |---------------------|-------------------------------------------------------------------------|------------------------|
