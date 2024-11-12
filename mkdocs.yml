@@ -30,5 +30,5 @@ nav:
   - "🏠 Overview": index.md
   - "API Documentation": fiu.md
   - "SDK Documentation": fiu_sdk.md
-  - "Self-Service Onboarding": fiu_onboarding.md
+  - "FIU Onboarding": fiu_onboarding.md
 
