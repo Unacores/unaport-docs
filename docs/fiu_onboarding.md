@@ -14,7 +14,12 @@ Before starting the onboarding process, please make sure you have the following 
       6. Authorized Signatory Board Resolution
       7. Unaport.ai – FIU Agreement
       8. FIU – INK-AA (Account Aggregator) Agreement
+      9. Sahamati Participation Terms
+      10. Sahamati - Legal Framework Guidelines Checklist
+      11. Sahamati - Customer Experience Guidelines Checklist
+      12. Compliance confirmation for use of Purpose Code 
 
+<!--
 ## Steps to Onboard
 
 ### Step 1: Visit the Website
@@ -65,3 +70,5 @@ Before starting the onboarding process, please make sure you have the following 
 
 ## Support
 If you encounter any issues during the onboarding process or need assistance, please contact our support team at **[connect@ink-aa.com](mailto:connect@ink-aa.com)** or **[+91 73048 06127](tel:+917304806127)**.
+
+-->
