@@ -28,9 +28,7 @@ extra:
 # Page tree
 nav:
   - "🏠 Overview": index.md
-  - "API Documentation":
-      - "Overview": fiu.md
-  - "SDK Documentation":
-      - "Introduction": fiu_sdk.md
-  - "Self-Service Onboarding":
-      - "Documents": fiu_onboarding.md
+  - "API Documentation": fiu.md
+  - "SDK Documentation": fiu_sdk.md
+  - "Self-Service Onboarding": fiu_onboarding.md
+
