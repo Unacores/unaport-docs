@@ -1,23 +1,25 @@
-# User Manual for Onboarding Financial Information Users (FIUs) on Unaport.ai
+#### <span style="color: #007bff;">Provide the following documents by email at <a href="mailto:connect@ink-aa.com">connect@ink-aa.com</a> with your Company Name:</span>
 
-## Introduction
-Welcome to our website! This manual will guide you through the process of onboarding as a Financial Information User (FIU). To complete the onboarding process, you will need to provide specific documentation. Follow the steps below to ensure a smooth onboarding experience.
+- <strong>Certificate of Incorporation</strong>: Provide the certificate of incorporation of your company.
+- <strong>TSP Agreement</strong>: Provide the duly filled agreement with Unacores Solutions Private Limited and the Company. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Unaport+Agreement.docx)
+- <strong>INK Account Aggregator Agreement</strong>: Provide the duly filled agreement with Unacores AA Solutions Private Limited and the Company. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/INKAA+and+FIU+Agreement.docx)
+- <strong>Finvu Account Aggregator Agreement</strong>: Provide the duly filled agreement with Unacores AA Solutions Private Limited and the Company. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Finvu+AA+-+FIU+Agreement.docx)
+- <strong>GST Certificate</strong>: Ensure the certificate is clear and legible.
+- <strong>PAN Card</strong>: Scanned copy of your PAN card.
+- <strong>Cancelled Cheque</strong>: Ensure the cheque is clearly marked as cancelled.
+- <strong>NBFC Certificate</strong>: Scanned copy of your NBFC certificate.
+- <strong>Authorized Signatory Board Resolution</strong>: Scanned copy of the board resolution document authorizing the signatory.
+- <strong>Sahamati Participation Terms</strong> [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Participation+Terms+Sahamati.docx)
+- <strong>Sahamati - Legal Framework Guidelines Checklist</strong> [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Legal+Framework+Guidelines.xlsx)
+- <strong>Sahamati - Customer Experience Guidelines Checklist</strong> [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Customer+Experience+Guidelines.xlsx)
+- <strong>Compliance confirmation for use of Purpose Code</strong>: See Purpose code below for more info. [<span style="color: #28a745;">Template</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Confirmation+of+Purpose+Code.docx)
 
-## Required Documentation
-Before starting the onboarding process, please make sure you have the following documents ready:
+#### <span style="color: #007bff;">Information</span>
+- <strong>Purpose Code</strong> - Purpose codes alignment with specific financial and regulatory use cases, clarifying the intent behind data requests in the Account Aggregator ecosystem. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Purpose+Code+template.xlsx)
+- <strong>FIU Agreement with Technology Service Provider (TSP) - Unacores Solutions Private Limited</strong>: This agreement outlines the terms and conditions under which Unacores Solutions Private Limited will provide technology services to the Financial Information User (FIU).
+- <strong>FIU Agreement with Account Aggregator</strong>: This agreement establishes the framework for the FIU’s interaction with the Account Aggregator (AA) to access consented financial data from customers.
 
-      1. GST Certificate
-      2. PAN Card
-      3. Cancelled Cheque
-      4. NBFC Certificate
-      5. Certificate of Incorporation
-      6. Authorized Signatory Board Resolution
-      7. Unaport.ai – FIU Agreement
-      8. FIU – INK-AA (Account Aggregator) Agreement
-      9. Sahamati Participation Terms
-      10. Sahamati - Legal Framework Guidelines Checklist
-      11. Sahamati - Customer Experience Guidelines Checklist
-      12. Compliance confirmation for use of Purpose Code 
+
 
 <!--
 ## Steps to Onboard

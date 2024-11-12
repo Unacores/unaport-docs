@@ -33,4 +33,4 @@ nav:
   - "SDK Documentation":
       - "Introduction": fiu_sdk.md
   - "Self-Service Onboarding":
-      - "Steps": fiu_onboarding.md
+      - "Documents": fiu_onboarding.md
