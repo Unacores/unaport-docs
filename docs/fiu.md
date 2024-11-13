@@ -83,7 +83,7 @@ All API responses are communicated via HTTP using the following status codes:
 ## <span style="color: #2ecc71;">Postman</span>
 
 Get started faster with our Postman collection. Click the button below to download.<br><br>
-<a href="https://unacores.github.io/unaport-docs/json/Unaport.ai+Postman+Collection.postman_collection.json" class="download-button" download>
+<a href="https://unacores.github.io/unaport-docs/json/collection.json" class="download-button" download>
     <span style="color: #fff; background-color: #3498db; padding: 8px 16px; border-radius: 5px; text-decoration: none;">⬇️ Download Postman Collection</span>
 </a>
 
