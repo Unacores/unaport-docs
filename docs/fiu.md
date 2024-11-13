@@ -56,6 +56,7 @@ To start with the integration, follow the steps below:
 
 9. **Fetch Data Status API**: Retrieve the current status of data sharing associated with a consent handle.
 10. **Fetch Data API**: Retrieve data associated with a specific session, identified by its session ID.
+11. **Export Data API**: Export data associated with a specific session, identified by its session ID.
 
 ### <span style="color: #3498db;">Analytics</span>
 
@@ -63,9 +64,10 @@ To start with the integration, follow the steps below:
   <img src="https://unacores.github.io/unaport-docs/images/analytics.png" alt="Dashboard" width="300">
 </p>
 
-11. **Generate Analytics API**: Create detailed analytical reports based on activities within a session.
-12. **Get Account Details API**: Retrieve specific account information, such as balance and transaction history, linked to a session.
-13. **Fetch Analytics API**: Retrieve detailed analytics data associated with a specific analytic ID.
+12. **Generate Analytics API**: Create detailed analytical reports based on activities within a session.
+13. **Get Account Details API**: Retrieve specific account information, such as balance and transaction history, linked to a session.
+14. **Fetch Analytics API**: Retrieve detailed analytics data associated with a specific analytic ID.
+15. **Export Analytics API**: Export detailed analytics data associated with a specific analytic ID.
 
 ## <span style="color: #e74c3c;">Response Status Codes</span>
 
