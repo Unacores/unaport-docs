@@ -4,6 +4,14 @@
     color: black;
 }
 
+/* Light green background for footnotes */
+.footnote-ref, .footnote {
+  background-color: #e0f7e9; /* light green color */
+  padding: 5px;
+  border-radius: 3px;
+}
+
+
 img[src="images/agreement.png"] {
   width: 300px;
   height: auto;

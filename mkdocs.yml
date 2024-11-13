@@ -20,6 +20,11 @@ markdown_extensions:
   - admonition
   - codehilite
   - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
 extra:
   generator: true
   toc: false

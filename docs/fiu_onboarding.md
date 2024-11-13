@@ -3,7 +3,7 @@
     Only entities that are registered and regulated by the four Financial Regulators—**RBI, SEBI, IRDAI, and PFRDA**—are eligible to participate as a FIU in the Account Aggregator Framework.
 
 
-#### <span style="color: #007bff;">Provide the following documents by email at <a href="mailto:connect@ink-aa.com">connect@ink-aa.com</a> with your Company Name:</span>
+#### <span style="color: #007bff;">Provide the following document by email at <a href="mailto:connect@ink-aa.com">connect@ink-aa.com</a> with your Company Name:</span>
 
 - <strong>Certificate of Incorporation</strong>: Provide the certificate of incorporation of your company.
 - <strong>TSP Agreement</strong>: Provide the duly filled agreement with Unacores Solutions Private Limited and the Company. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Unaport+Agreement.docx)
@@ -19,11 +19,11 @@
 - <strong>Sahamati - Customer Experience Guidelines Checklist</strong> [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Customer+Experience+Guidelines.xlsx)
 - <strong>Compliance confirmation for use of Purpose Code</strong>: See Purpose code below for more info. [<span style="color: #28a745;">Template</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Confirmation+of+Purpose+Code.docx)
 
+
 #### <span style="color: #007bff;">Information</span>
 - <strong>Purpose Code</strong> - Purpose codes alignment with specific financial and regulatory use cases, clarifying the intent behind data requests in the Account Aggregator ecosystem. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Purpose+Code+template.xlsx)
 - <strong>FIU Agreement with Technology Service Provider (TSP) - Unacores Solutions Private Limited</strong>: This agreement outlines the terms and conditions under which Unacores Solutions Private Limited will provide technology services to the Financial Information User (FIU).
 - <strong>FIU Agreement with Account Aggregator</strong>: This agreement establishes the framework for the FIU’s interaction with the Account Aggregator (AA) to access consented financial data from customers.
-
 
 
 <!--

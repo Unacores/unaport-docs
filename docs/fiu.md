@@ -12,6 +12,14 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";  
   evt.currentTarget.className += " active";
 }
+
+/* Light green background for footnotes */
+.footnote-ref, .footnote {
+    background-color: #e0f7e9; /* light green color */
+    padding: 5px;
+    border-radius: 3px;
+}
+
 </script>
 
 # <span style="color: #2c3e50;">Unaport.ai API</span>
@@ -83,10 +91,9 @@ All API responses are communicated via HTTP using the following status codes:
 <div class="line"></div>
 
 ## <span style="color: #2ecc71;">Postman</span>
-
 Get started faster with our Postman collection. Click the button below to download.<br><br>
-<a href="https://unacores.github.io/unaport-docs/json/postmancollection_1.7.json" class="download-button" download>
-    <span style="color: #fff; background-color: #3498db; padding: 8px 16px; border-radius: 5px; text-decoration: none;">⬇️ Download Postman Collection v1.7</span>
+<a href="https://unacores.github.io/unaport-docs/json/postmancollection_1.8.json" class="download-button" download>
+    <span style="color: #fff; background-color: #3498db; padding: 8px 16px; border-radius: 5px; text-decoration: none;">⬇️ Download Postman Collection v1.8</span>
 </a>
 
 <div class="line"></div>
