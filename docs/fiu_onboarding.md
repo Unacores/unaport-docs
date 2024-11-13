@@ -1,3 +1,8 @@
+
+!!! note
+    Only entities that are registered and regulated by the four Financial Regulators—**RBI, SEBI, IRDAI, and PFRDA**—are eligible to participate as a FIU in the Account Aggregator Framework.
+
+
 #### <span style="color: #007bff;">Provide the following documents by email at <a href="mailto:connect@ink-aa.com">connect@ink-aa.com</a> with your Company Name:</span>
 
 - <strong>Certificate of Incorporation</strong>: Provide the certificate of incorporation of your company.
