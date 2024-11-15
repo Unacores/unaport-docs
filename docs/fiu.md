@@ -29,8 +29,8 @@ function openTab(evt, tabName) {
     We have released version 2.0.0 of Unaport FIU API. All new consumers are advised to use the v2.0.0 API for the latest features and improvements. 
     <div class="line"></div>
 
-    <a href="https://unacores.github.io/unaport-docs/json/postmancollection_1.8.json" class="download-button" download>
-    <span style="color: #fff; background-color: #2ecc71; padding: 3px 3px; border-radius: 5px; text-decoration: none; display: inline-block; width: auto;">⬇️ Postman Collection v2.0</span>
+    <a href="https://unacores.github.io/unaport-docs/json/postman.json" class="download-button" download>
+    <span> Postman Collection v2.0</span>
     </a>
 
 

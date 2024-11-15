@@ -32,13 +32,13 @@ img[src="images/agreement.png"] {
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: #007bff; /* Primary button color */
+    background-color: #2ecc71; /* Primary button color */
     color: #fff!important;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+   
 }
 
 .line {
@@ -46,9 +46,6 @@ img[src="images/agreement.png"] {
     margin: 10px 0;
 }
 
-.download-button:hover {
-    background-color: #0056b3; /* Darker color on hover */
-}
 
 .download-button .icon {
     margin-right: 8px; /* Space between icon and text */
