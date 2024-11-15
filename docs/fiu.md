@@ -67,6 +67,7 @@ Welcome to the **Unaport.ai API Reference**. This guide provides all the informa
 6. **Create Consent without Template API**: Allows creation of a new consent request without predefined templates, supporting customized consent agreements.
 7. **Create Consent with Template API**: Generate consent requests based on predefined templates, ensuring compliance and consistency.
 8. **Check Consent Status API**: Verify the status and details of a specific consent request using its unique consent handle.
+9. **Consent Notification API**:This API is intended to be used by AA to notify FIU about the change in consent status due to the consent management operations performed by the Customer.
 
 ### <span style="color: #3498db;">Data Reports Description</span>
 
@@ -77,6 +78,7 @@ Welcome to the **Unaport.ai API Reference**. This guide provides all the informa
 9. **Fetch Data Status API**: Retrieve the current status of data sharing associated with a consent handle.
 10. **Fetch Data API**: Retrieve data associated with a specific session, identified by its session ID.
 11. **Export Data API**: Export data associated with a specific session, identified by its session ID.
+12. **Data Notification API**:This API can be used by AAs to send notifications related to Financial Information (FI) fetch to FIU/AA Client.
 
 ### <span style="color: #3498db;">Analytics Description</span>
 
@@ -99,9 +101,6 @@ All API responses are communicated via HTTP using the following status codes:
 - **401: Unauthorized** – No valid API key provided.
 - **403: Forbidden** – Insufficient permissions.
 - **500: Server Errors** – Issue on Unaport.ai's server.
-
-
-
 
 ### Login
 
@@ -370,9 +369,71 @@ The API allows users to verify the status and details of a specific consent requ
 | `runCounter`       | The run counter for the consent.                                     | Integer       |
 | `consentidError`   | Any error associated with the consent call.                          | Null / String |
 
+
+### Consent Notification API
+
+This API is intended to be used by AA to notify FIU about the change in consent status due to the consent management operations performed by the Customer.
+
+FIU need to implement on your server and expose to receive notifications from Unaport.ai. These notifications are webhooks from Unaport based on the events that occur during the consent and data flow.
+
+The base_url is the server URL you share with us to receive notifications.
+
+### Request Body
+
+Here's the table reflecting the attributes from the provided output:
+
+| Attribute               | Description                                                 | Type   |
+|-------------------------|-------------------------------------------------------------|--------|
+| `ver`                   | API version                                                 | String |
+| `timestamp`             | The timestamp of the response                               | String |
+| `txnid`                 | Unique transaction identifier                               | String |
+| `Notifier`              | Notifier details                                            | Object |
+| `type`                  | Type of notifier (e.g., AA)                                 | String |
+| `id`                    | Notifier identifier                                         | String |
+| `FIStatusNotification`  | Financial Information (FI) status notification details     | Object |
+| `sessionId`             | Session identifier                                          | String |
+| `sessionStatus`         | Current status of the session (e.g., ACTIVE)               | String |
+| `FIStatusResponse`      | List of FI status responses                                 | Array  |
+| `fipID`                 | Identifier of the financial information provider (FIP)     | String |
+| `Accounts`              | List of account status details                              | Array  |
+| `linkRefNumber`         | Reference number linking the account                       | String |
+| `FIStatus`              | Status of the financial information (e.g., READY)          | String |
+| `description`           | Additional description or details                          | String |
+
+
 <div class="line"></div>
 
 ### Data
+
+### Data Notification API
+
+This API can be used by AAs to send notifications related to Financial Information (FI) fetch to FIU/AA Client.
+
+FIU need to implement on your server and expose to receive notifications from Unaport.ai. These notifications are webhooks from Unaport based on the events that occur during the consent and data flow.
+
+The base_url is the server URL you share with us to receive notifications.
+
+### Request Body
+
+Here’s the table representation of the provided JSON structure:
+
+| **Key**                  | **Description**                                             | **Value/Type**            |
+|--------------------------|-------------------------------------------------------------|---------------------------|
+| `ver`                    | API version                                                 | `2.0.0` (String)          |
+| `timestamp`              | Timestamp of the response                                   | `2023-06-26T11:39:57.153Z` (String) |
+| `txnid`                  | Unique transaction identifier                               | `0b811819-9044-4856-b0ee-8c88035f8858` (String) |
+| `Notifier`               | Notifier details                                            | Object                    |
+| `Notifier.type`          | Type of notifier                                            | `AA` (String)             |
+| `Notifier.id`            | Notifier identifier                                         | `AA-1` (String)           |
+| `FIStatusNotification`   | Financial Information (FI) status notification details     | Object                    |
+| `FIStatusNotification.sessionId` | Session identifier                                   | `XXXX0-XXXX-XXXX` (String) |
+| `FIStatusNotification.sessionStatus` | Current session status                          | `ACTIVE` (String)         |
+| `FIStatusNotification.FIStatusResponse` | List of FI status responses                  | Array                     |
+| `FIStatusResponse[0].fipID` | Financial Information Provider (FIP) ID                   | `FIP-1` (String)          |
+| `FIStatusResponse[0].Accounts` | List of accounts for the FI                           | Array                     |
+| `Accounts[0].linkRefNumber` | Account reference number                                  | `XXXX-XXXX-XXXX` (String) |
+| `Accounts[0].FIStatus`   | Financial information status                                | `READY` (String)          |
+| `Accounts[0].description`| Additional details or description                           | Empty string (`""`)       |
 
 ### Fetch Data Status API
 
