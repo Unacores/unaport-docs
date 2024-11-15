@@ -33,7 +33,8 @@ extra:
 # Page tree
 nav:
   - "🏠 Overview": index.md
+  - "FIU Onboarding": fiu_onboarding.md
   - "API Documentation": fiu.md
   - "SDK Documentation": fiu_sdk.md
-  - "FIU Onboarding": fiu_onboarding.md
+ 
 
