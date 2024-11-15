@@ -30,11 +30,16 @@ extra:
   toc: false
 
 
-# Page tree
 nav:
   - "🏠 Overview": index.md
-  - "FIU Onboarding": fiu_onboarding.md
-  - "API Documentation": fiu.md
-  - "SDK Documentation": fiu_sdk.md
- 
+  - "💼 FIU Onboarding": fiu_onboarding.md
+  - "📚 API Documentation":
+      - "🔑 Postman Collection": fiu#postman
+      - "📝 Introduction": fiu#introduction
+      - "🔒 Authentication API": fiu#login
+      - "📑 Consents API": fiu#consents
+      - "📊 Data API": fiu#data
+      - "📈 Analytics API": fiu#analytics
+  - "🛠 SDK Documentation": fiu_sdk.md
+
 

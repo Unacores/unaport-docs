@@ -28,11 +28,13 @@ function openTab(evt, tabName) {
 
     We have released version 2.0.0 of Unaport FIU API. All new consumers are advised to use the v2.0.0 API for the latest features and improvements. 
     <div class="line"></div>
-
-    <a href="https://unacores.github.io/unaport-docs/json/postman.json" class="download-button" download>
+     <a href="https://unacores.github.io/unaport-docs/json/postman.json" class="download-button" download>
     <span> Postman Collection v2.0</span>
     </a>
 
+## <span style="color: #2980b9;">Introduction</span>
+
+To start with the integration, follow the steps below:
 
 # <span style="color: #2c3e50;">Unaport.ai API</span>
 
@@ -42,9 +44,7 @@ Welcome to the **Unaport.ai API Reference**. This guide provides all the informa
   <img src="https://unacores.github.io/unaport-docs/images/selection.png" alt="Dashboard" width="700">
 </p>
 
-## <span style="color: #2980b9;">Introduction</span>
 
-To start with the integration, follow the steps below:
 
 ### <span style="color: #3498db;">Authentication</span>
 
@@ -56,7 +56,7 @@ To start with the integration, follow the steps below:
 2. **Refresh Token API**: Obtain a new access token by providing a valid refresh token, allowing users to maintain access to secured resources.
 3. **Get Organisation Details API**: Retrieves information about a specific organization, including its name, type, and contact information.
 
-### <span style="color: #3498db;">Consents</span>
+### <span style="color: #3498db;">Consents Description</span>
 
 <p align="center">
   <img src="https://unacores.github.io/unaport-docs/images/Consents.png" alt="Dashboard" width="400">
@@ -68,7 +68,7 @@ To start with the integration, follow the steps below:
 7. **Create Consent with Template API**: Generate consent requests based on predefined templates, ensuring compliance and consistency.
 8. **Check Consent Status API**: Verify the status and details of a specific consent request using its unique consent handle.
 
-### <span style="color: #3498db;">Data Reports</span>
+### <span style="color: #3498db;">Data Reports Description</span>
 
 <p align="center">
   <img src="https://unacores.github.io/unaport-docs/images/Data.png" alt="Dashboard" width="300">
@@ -78,7 +78,7 @@ To start with the integration, follow the steps below:
 10. **Fetch Data API**: Retrieve data associated with a specific session, identified by its session ID.
 11. **Export Data API**: Export data associated with a specific session, identified by its session ID.
 
-### <span style="color: #3498db;">Analytics</span>
+### <span style="color: #3498db;">Analytics Description</span>
 
 <p align="center">
   <img src="https://unacores.github.io/unaport-docs/images/analytics.png" alt="Dashboard" width="300">
@@ -103,7 +103,7 @@ All API responses are communicated via HTTP using the following status codes:
 
 
 
-### Login API
+### Login
 
 All the API requests are authenticated using the Bearer token. To get this token, you will need to make a request to the login API using the credentials. The response will contain the token. Send the token in the header for all the requests.
 
@@ -180,6 +180,7 @@ The API retrieves information about a specific organization using its unique ide
 
 <div class="line"></div>
 
+### Consents
 
 ### Create Consent Template API
 
@@ -371,7 +372,7 @@ The API allows users to verify the status and details of a specific consent requ
 
 <div class="line"></div>
 
-### Data Reports
+### Data
 
 ### Fetch Data Status API
 
