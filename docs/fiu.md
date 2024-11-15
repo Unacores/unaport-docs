@@ -22,6 +22,18 @@ function openTab(evt, tabName) {
 
 </script>
 
+
+!!! note "API Version Update - v2.0.0"
+    **Release Date:** 15th November 2024
+
+    We have released version 2.0.0 of Unaport FIU API. All new consumers are advised to use the v2.0.0 API for the latest features and improvements. 
+    <div class="line"></div>
+
+    <a href="https://unacores.github.io/unaport-docs/json/postmancollection_1.8.json" class="download-button" download>
+    <span style="color: #fff; background-color: #2ecc71; padding: 3px 3px; border-radius: 5px; text-decoration: none; display: inline-block; width: auto;">⬇️ Postman Collection v2.0</span>
+    </a>
+
+
 # <span style="color: #2c3e50;">Unaport.ai API</span>
 
 Welcome to the **Unaport.ai API Reference**. This guide provides all the information you need to integrate Unaport.ai services into your application, including generating user consent, retrieving user details, and accessing analyzed data and CAM sheets. The Unaport.ai APIs are fully RESTful, and all responses are delivered in JSON format.
@@ -88,15 +100,7 @@ All API responses are communicated via HTTP using the following status codes:
 - **403: Forbidden** – Insufficient permissions.
 - **500: Server Errors** – Issue on Unaport.ai's server.
 
-<div class="line"></div>
 
-## <span style="color: #2ecc71;">Postman</span>
-Get started faster with our Postman collection. Click the button below to download.<br><br>
-<a href="https://unacores.github.io/unaport-docs/json/postmancollection_1.8.json" class="download-button" download>
-    <span style="color: #fff; background-color: #3498db; padding: 8px 16px; border-radius: 5px; text-decoration: none;">⬇️ Download Postman Collection v1.8</span>
-</a>
-
-<div class="line"></div>
 
 
 ### Login API
@@ -114,17 +118,14 @@ All the API requests are authenticated using the Bearer token. To get this token
 
 | Attribute            | Description                                            | Type   |
 |----------------------|--------------------------------------------------------|--------|
-| `access_token`       | Access token for authenticated user                    | String |
+| `timestamp`          | The timestamp of the response                          | String |
+| `txnId`              | Unique transaction identifier                          | String |
+| `version`            | API version                                            | String |
+| `access_token`       | Access token for the authenticated user                | String |
 | `expires_in`         | Duration (in seconds) before the access token expires  | Number |
 | `refresh_expires_in` | Duration (in seconds) before the refresh token expires | Number |
-| `refresh_token`      | Token to obtain a new access token                     | String |
-| `token_type`         | Type of token issued, usually "Bearer"                 | String |
-| `not-before-policy`  | Timestamp for the policy enforced by the token         | Number |
-| `session_state`      | Unique ID for the session state                        | String |
-| `scope`              | Authorized scope of access for the user                | String |
-| `firstName`          | First name of the user (if available)                  | String |
-| `lastName`           | Last name of the user (if available)                   | String |
-| `emailId`            | Email ID of the authenticated user                     | String |
+| `refresh_token`      | Token used to refresh the access token                 | String |
+| `token_type`         | Type of token, typically "Bearer"                      | String |
 
 ### Refresh Token API 
 
@@ -141,25 +142,22 @@ Allows users to obtain a new access token by providing a valid refresh token. Th
 
 | Attribute            | Description                                            | Type   |
 |----------------------|--------------------------------------------------------|--------|
-| `access_token`       | New access token for the user                          | String |
-| `expires_in`         | Duration (in seconds) before the new access token expires | Number |
+| `timestamp`          | The timestamp of the response                          | String |
+| `txnId`              | Unique transaction identifier                          | String |
+| `version`            | API version                                            | String |
+| `access_token`       | Access token for the authenticated user                | String |
+| `expires_in`         | Duration (in seconds) before the access token expires  | Number |
 | `refresh_expires_in` | Duration (in seconds) before the refresh token expires | Number |
-| `refresh_token`      | New refresh token                                      | String |
-| `token_type`         | Type of token issued, usually "Bearer"                 | String |
-| `not-before-policy`  | Timestamp for the policy enforced by the token         | Number |
-| `session_state`      | Unique ID for the session state                        | String |
-| `scope`              | Authorized scope of access for the user                | String |
-| `firstName`          | First name of the user (if available)                  | String |
-| `lastName`           | Last name of the user (if available)                   | String |
-| `emailId`            | Email ID of the authenticated user                     | String |
+| `refresh_token`      | Token used to refresh the access token                 | String |
+| `token_type`         | Type of token, typically "Bearer"                      | String |
 
-### Get Organisation Details API
+### Get FIU Organisation Details API
 
 The API retrieves information about a specific organization using its unique identifier. It provides essential details such as the organization's name, type, and contact information, enabling users to access relevant organizational data
 
 ### Request Table
 
-- **URL:** `https://common.sandbox.unaport.com/api/v1/FIU/getOrganisation`
+- **URL:** `https://common.sandbox.unaport.com/api/v1/FIU/getClientOrganisation`
 - **HTTP Method:** `GET` 
 - **Headers:**
   - **Authorization:** Bearer token for authenticating the request.
@@ -167,63 +165,18 @@ The API retrieves information about a specific organization using its unique ide
 
 ### Response Table
 
-| Attribute                            | Description                                                                                     | Type    |
-|--------------------------------------|-------------------------------------------------------------------------------------------------|---------|
-| `data.id`                            | Unique identifier for the consent record                                                         | String  |
-| `data.fiuId`                         | Unique identifier for the Financial Information User (FIU)                                        | String  |
-| `data.fiuLive`                       | Live status of the FIU (currently `null`)                                                         | Null    |
-| `data.registeredEmail`               | Registered email address of the FIU (currently `null`)                                            | Null    |
-| `data.contactNumber`                 | Contact number of the FIU (currently `null`)                                                      | Null    |
-| `data.businessPAN`                   | PAN number associated with the business (currently `null`)                                        | Null    |
-| `data.nameAsPerPAN`                  | Business name as per PAN (currently `null`)                                                       | Null    |
-| `data.pan`                            | PAN number (currently `null`)                                                                     | Null    |
-| `data.businessName`                  | Name of the business (currently `null`)                                                           | Null    |
-| `data.businessType`                  | Type of business (currently `null`)                                                               | Null    |
-| `data.businessModel`                 | Business model (currently `null`)                                                                 | Null    |
-| `data.businessDescription`           | Description of the business (currently `null`)                                                    | Null    |
-| `data.purposeOfUsingAccountAggregator`| Purpose of using an Account Aggregator (currently `null`)                                         | Null    |
-| `data.certificateOfRegistrationFIU`  | Certificate of registration for FIU (currently `null`)                                           | Null    |
-| `data.llpinCIN`                      | LL Pin or CIN details (currently `null`)                                                          | Null    |
-| `data.gstin`                         | GSTIN details (currently `null`)                                                                  | Null    |
-| `data.gstinNumber`                   | GSTIN number (currently `null`)                                                                   | Null    |
-| `data.gst`                            | GST information (currently `null`)                                                                | Null    |
-| `data.businessAddress`               | Business address (currently `null`)                                                               | Null    |
-| `data.city`                           | City of the business (currently `null`)                                                           | Null    |
-| `data.pinCode`                        | Pin code of the business (currently `null`)                                                      | Null    |
-| `data.state`                          | State where the business is located (currently `null`)                                            | Null    |
-| `data.country`                        | Country where the business is located (currently `null`)                                          | Null    |
-| `data.businessRegisteredName`        | Registered business name (currently `null`)                                                      | Null    |
-| `data.accountNumber`                 | Account number (currently `null`)                                                                 | Null    |
-| `data.ifscCode`                      | IFSC code of the business account (currently `null`)                                              | Null    |
-| `data.cancelledCheque`               | Cancelled cheque details (currently `null`)                                                       | Null    |
-| `data.participationTerms`            | Participation terms (currently `null`)                                                            | Null    |
-| `data.fiuAAAgreement`                | Agreement details for the FIU (currently `null`)                                                  | Null    |
-| `data.operation`                     | Status of the operation, `0` indicates no operation or pending state                             | Integer |
-| `data.status`                        | Status of the consent process (e.g., `PENDING`)                                                  | String  |
-| `data.annualTurnoverAccordingToGST`  | Annual turnover according to GST (currently `0`)                                                  | Integer |
-| `data.createdAt`                     | Creation timestamp (currently `null`)                                                             | Null    |
-| `data.contactDetailsCompleted`       | Indicates whether contact details are completed (`false` in this case)                            | Boolean |
-| `data.pancompleted`                  | Indicates whether PAN details are completed (`false` in this case)                               | Boolean |
-| `data.businessDetailsCompleted`      | Indicates whether business details are completed (`false` in this case)                           | Boolean |
-| `data.gstcompleted`                  | Indicates whether GST details are completed (`false` in this case)                               | Boolean |
-| `data.gstbussiness`                  | Indicates whether GST business is completed (`false` in this case)                               | Boolean |
-| `fiulive`                            | Current live status of FIU (currently `null`)                                                    | Null    |
-| `fiutest.id`                         | ID of the FIU (same as `fiuId`)                                                                   | String  |
-| `fiutest.fiuId`                      | FIU ID                                                                                             | String  |
-| `fiutest.fiuName`                    | Name of the FIU                                                                                  | String  |
-| `fiutest.fiuLogUrl`                  | URL for FIU documentation logs                                                                    | String  |
-| `fiutest.version`                    | Version of the FIU                                                                                 | String  |
-| `fiutest.fiuStatus`                  | Status of the FIU (e.g., `ACTIVE`)                                                                | String  |
-| `fiutest.contactPersonName`          | Name of the contact person for the FIU                                                           | String  |
-| `fiutest.contactPersonNumber`        | Contact number of the FIU contact person                                                          | String  |
-| `fiutest.contactPersonEmail`         | Contact email of the FIU contact person                                                           | String  |
-| `fiutest.assigned`                   | Whether the FIU is assigned (`false` in this case)                                                | Boolean |
-| `fiutest.baseUrl`                    | Base URL for FIU API calls                                                                        | String  |
-| `fiutest.secretkey`                  | FIU secret key (currently `null`)                                                                  | Null    |
-| `fiutest.redirectUrl`                | Redirect URL for consent process                                                                  | String  |
-| `fiutest.billingPlan.id`             | ID for the FIU's billing plan                                                                     | String  |
-| `fiutest.billingPlan.planName`       | Name of the billing plan (e.g., `Basic Plan`)                                                     | String  |
-| `status`                             | Overall status of the API response (`success` in this case)                                       | String  |
+| Attribute   | Description                                            | Type   |
+|-------------|--------------------------------------------------------|--------|
+| `ver`       | API version                                            | String |
+| `fiulive`   | Live FIU entity information                            | Object |
+| `entityId`  | Identifier of the FIU entity in live mode              | String |
+| `id`        | Unique identifier for the FIU entity in live mode      | String |
+| `fiutest`   | Test FIU entity details                                | Object |
+| `entityId`  | Identifier of the FIU entity in test mode              | String |
+| `id`        | Unique identifier for the FIU entity in test mode      | String |
+| `orgId`     | Organization identifier                                | String |
+| `timestamp` | The timestamp of the response                          | String |
+| `txnId`     | Unique transaction identifier                          | String |
 
 <div class="line"></div>
 
@@ -278,10 +231,13 @@ The enables users to create a standardized consent template for data sharing amo
 
 ### Response Table
 
-| Attribute    | Description                                  | Type    |
-|--------------|----------------------------------------------|---------|
-| `productId`  | Unique identifier for the inserted product   | String  |
-| `status`     | Status of the API operation, e.g., `SUCCESS` | String  |
+| Attribute     | Description                          | Type   |
+|---------------|--------------------------------------|--------|
+| `version`     | API version                          | String |
+| `txnId`       | Unique transaction identifier        | String |
+| `productId`   | Product identifier                   | String |
+| `productName` | Name of the product                  | String |
+| `timestamp`   | The timestamp of the response        | String |
 
 ### Create Consent API without template
 
@@ -331,15 +287,16 @@ The API allows users to generate a new consent request independently of predefin
 
 ### Response Table
 
-| Attribute       | Description                                                                 | Type    |
-|-----------------|-----------------------------------------------------------------------------|---------|
-| `ver`           | Version of the consent API response                                        | String  |
-| `timestamp`     | Timestamp of when the consent response was generated                        | String  |
-| `txnid`         | Transaction ID associated with the consent request                         | String  |
-| `Customer.id`   | Unique identifier of the customer, usually in a virtual ID format (VUA)    | String  |
-| `ConsentHandle` | Unique handle ID representing the consent                                  | String  |
-| `success`       | Message indicating successful creation of the consent                      | String  |
-| `redirectUrl`   | URL to redirect the user to complete or view the consent                   | String  |
+| Attribute       | Description                                      | Type   |
+|-----------------|--------------------------------------------------|--------|
+| `ver`           | API version                                      | String |
+| `timestamp`     | The timestamp of the response                    | String |
+| `txnid`         | Unique transaction identifier                    | String |
+| `Customer`      | Customer details                                 | Object |
+| `id`            | Customer identifier                              | String |
+| `ConsentHandle` | Unique identifier for the consent handle         | String |
+| `success`       | Status message indicating success of the action  | String |
+| `redirectUrl`   | URL for redirecting after consent creation       | String |
 
 ### Create Consent with Template API
 
@@ -361,15 +318,16 @@ This API allows users to generate a new consent request based on a predefined te
 
 ### Response Table
 
-| **Attribute**      | **Description**                                                      | **Type**      |
-|--------------------|----------------------------------------------------------------------|---------------|
-| `ver`              | The version of the response.                                          | String        |
-| `timestamp`        | The timestamp of the response.                                        | String (ISO 8601) |
-| `txnid`            | Unique transaction ID for tracking the consent process.               | String        |
-| `Customer.id`      | The unique ID of the customer who provided consent.                  | String        |
-| `ConsentHandle`    | Unique handle for the created consent.                               | String        |
-| `success`          | A message indicating the status of the consent creation.             | String        |
-| `redirectUrl`      | URL for redirect after consent is successfully created.              | String        |
+| Attribute       | Description                                      | Type   |
+|-----------------|--------------------------------------------------|--------|
+| `ver`           | API version                                      | String |
+| `timestamp`     | The timestamp of the response                    | String |
+| `txnid`         | Unique transaction identifier                    | String |
+| `Customer`      | Customer details                                 | Object |
+| `id`            | Customer identifier                              | String |
+| `ConsentHandle` | Unique identifier for the consent handle         | String |
+| `success`       | Status message indicating success of the action  | String |
+| `redirectUrl`   | URL for redirecting after consent creation       | String |
 
 ### Check Consent Status API
 
@@ -463,6 +421,9 @@ This allows users to retrieve data associated with a specific session identified
 
 | **Attribute**                       | **Description**                                                  | **Type**           |
 |-------------------------------------|------------------------------------------------------------------|--------------------|
+| `version`   | API version                          | String |
+| `txnId`     | Unique transaction identifier        | String |
+| `timestamp` | The timestamp of the response        | String |
 | `tabs`                              | Array of tab names for different financial data types.           | Array of Objects   |
 | `tabs.name`                         | Type of financial information (e.g., "DEPOSIT").                 | String             |
 | `DEPOSIT`                           | Contains summary, account holder, and transaction details.       | Object             |
