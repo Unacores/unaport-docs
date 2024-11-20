@@ -586,6 +586,19 @@ The API allows users to create detailed analytical reports based on the activiti
 
 | **Attribute**       | **Description**                                           | **Type**       |
 |---------------------|-----------------------------------------------------------|----------------|
-| `reportId`          | Unique identifier for the analytics report.               | String (UUID)  |
+| `reportId`          | Unique identifier for the analytics report.               | String (Integer)  |
 | `status`            | HTTP status code indicating the success of the request.   | String         |
 
+
+### Analytics Notification API
+
+The Analytics Notification API is designed to notify the client about the status and details of analytics-related sessions and transactions. This API provides critical information regarding the progress and success of analytic operations, including unique identifiers for tracking, timestamps for accurate logging, and session information for context.
+
+| **Key**          | **Description**                           | **Value/Type**                      |
+|-------------------|-------------------------------------------|-------------------------------------|
+| `version`         | API version                              | `2.0.0` (String)                   |
+| `txnId`           | Unique transaction identifier            | `85939887-8067-491f-8149-c90b054ff0ee` (String) |
+| `timestamp`       | Timestamp of the response                | `2024-11-20T09:31:59.801Z` (String) |
+| `sessionId`       | Unique session identifier                | `248c487f-fd9e-4522-9fb6-c50af4dbcb5f` (String) |
+| `analyticId`      | List of analytic IDs                     | `[524]` (Array of integers)         |
+| `status`          | Status of the operation                  | `SUCCESS` (String)                  |
