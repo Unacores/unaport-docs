@@ -23,13 +23,17 @@ function openTab(evt, tabName) {
 </script>
 
 
-!!! note "API Version Update - v2.0.0"
-    **Release Date:** 15th November 2024
+!!! note "🚀 API Version Update - v2.0.0 🚀"
+    **📅 Release Date:** *15th November 2024*
 
-    We have released version 2.0.0 of Unaport FIU API. All new consumers are advised to use the v2.0.0 API for the latest features and improvements. 
+    We’re thrilled to announce the launch of **Unaport FIU API v2.0.0**!  
+    👉 **New consumers, please use this version to access the latest features and improvements.**
+
     <div class="line"></div>
-     <a href="https://unacores.github.io/unaport-docs/json/postman.json" class="download-button" download>
-    <span> Postman Collection v2.0</span>
+
+    🎯 **Get started now!**  
+    <a href="https://unacores.github.io/unaport-docs/json/postman.json" class="download-button" download>
+        ⬇️ **Postman Collection v2.0**
     </a>
 
 ## <span style="color: #2980b9;">Introduction</span>
