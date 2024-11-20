@@ -6,6 +6,7 @@ copyright: "Copyright &copy; Unacores Solutions Pvt Ltd."
 
 extra_css:
   - css/custom.css
+  - https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap
 
 theme:
   name: "material"
