@@ -36,75 +36,93 @@ function openTab(evt, tabName) {
         ⬇️ **Postman Collection v2.0**
     </a>
 
-## <span style="color: #2980b9;">Introduction</span>
+## 🌟 **Introduction**  
 
-To start with the integration, follow the steps below:
+To start with the integration, follow the steps below:  
 
-# <span style="color: #2c3e50;">Unaport.ai API</span>
+# 🔗 **Unaport.ai API**  
 
-Welcome to the **Unaport.ai API Reference**. This guide provides all the information you need to integrate Unaport.ai services into your application, including generating user consent, retrieving user details, and accessing analyzed data and CAM sheets. The Unaport.ai APIs are fully RESTful, and all responses are delivered in JSON format.
+Welcome to the **Unaport.ai API Reference**!  
+This guide provides everything you need to integrate Unaport.ai services into your application, including:  
+
+- Generating user consent  
+- Retrieving user details  
+- Accessing analyzed data and CAM sheets  
+
+The Unaport.ai APIs are fully RESTful, and all responses are delivered in **JSON** format.  
 
 <p align="center">
   <img src="https://unacores.github.io/unaport-docs/images/selection.png" alt="Dashboard" width="700">
-</p>
+</p>  
 
+---
 
-
-### <span style="color: #3498db;">Authentication</span>
+### 🔐 **Authentication**  
 
 <p align="center">
   <img src="https://unacores.github.io/unaport-docs/images/Login.png" alt="Dashboard" width="500">
-</p>
+</p>  
 
-1. **Login API**: All API requests are authenticated using the Bearer token. Make a request to the login API with your credentials to obtain this token. Send it in the header for all requests.
-2. **Refresh Token API**: Obtain a new access token by providing a valid refresh token, allowing users to maintain access to secured resources.
-3. **Get Organisation Details API**: Retrieves information about a specific organization, including its name, type, and contact information.
+1. **Login API**: Authenticate requests using the Bearer token obtained via the Login API.  
+2. **Refresh Token API**: Get a new access token with a valid refresh token.  
+3. **Get Organisation Details API**: Retrieve organizational details such as name, type, and contact information.  
 
-### <span style="color: #3498db;">Consents Description</span>
+---
 
-<p align="center">
-  <img src="https://unacores.github.io/unaport-docs/images/Consents.png" alt="Dashboard" width="400">
-</p>
-
-4. **Create Consent Template API**: Enables users to create a standardized consent template, defining parameters like purpose, data types, and expiration.
-5. **Get Consent Templates List API**: Retrieves available consent templates, allowing users to view and manage predefined templates.
-6. **Create Consent without Template API**: Allows creation of a new consent request without predefined templates, supporting customized consent agreements.
-7. **Create Consent with Template API**: Generate consent requests based on predefined templates, ensuring compliance and consistency.
-8. **Check Consent Status API**: Verify the status and details of a specific consent request using its unique consent handle.
-9. **Consent Notification API**:This API is intended to be used by AA to notify FIU about the change in consent status due to the consent management operations performed by the Customer.
-
-### <span style="color: #3498db;">Data Reports Description</span>
+### 📝 **Consents Description**  
 
 <p align="center">
-  <img src="https://unacores.github.io/unaport-docs/images/Data.png" alt="Dashboard" width="300">
-</p>
+  <img src="https://unacores.github.io/unaport-docs/images/Consents.png" alt="Consents" width="400">
+</p>  
 
-9. **Fetch Data Status API**: Retrieve the current status of data sharing associated with a consent handle.
-10. **Fetch Data API**: Retrieve data associated with a specific session, identified by its session ID.
-11. **Export Data API**: Export data associated with a specific session, identified by its session ID.
-12. **Data Notification API**:This API can be used by AAs to send notifications related to Financial Information (FI) fetch to FIU/AA Client.
+4. **Create Consent Template API**: Create standardized consent templates with parameters like purpose, data types, and expiration.  
+5. **Get Consent Templates List API**: View and manage predefined templates.  
+6. **Create Consent without Template API**: Customize consent requests without using templates.  
+7. **Create Consent with Template API**: Generate consent requests based on predefined templates.  
+8. **Check Consent Status API**: Verify the status and details of a specific consent request.  
+9. **Consent Notification API**: Notify FIUs about consent status changes.  
 
-### <span style="color: #3498db;">Analytics Description</span>
+---
+
+### 📊 **Data Reports Description**  
 
 <p align="center">
-  <img src="https://unacores.github.io/unaport-docs/images/analytics.png" alt="Dashboard" width="300">
-</p>
+  <img src="https://unacores.github.io/unaport-docs/images/Data.png" alt="Data" width="300">
+</p>  
 
-12. **Generate Analytics API**: Create detailed analytical reports based on activities within a session.
-13. **Get Account Details API**: Retrieve specific account information, such as balance and transaction history, linked to a session.
-14. **Fetch Analytics API**: Retrieve detailed analytics data associated with a specific analytic ID.
-15. **Export Analytics API**: Export detailed analytics data associated with a specific analytic ID.
+10. **Fetch Data Status API**: Check the status of data sharing for a consent handle.  
+11. **Fetch Data API**: Retrieve session-specific data using a session ID.  
+12. **Export Data API**: Export session-specific data.  
+13. **Data Notification API**: Notify FIUs/AA clients about Financial Information fetch statuses.  
 
-## <span style="color: #e74c3c;">Response Status Codes</span>
+---
 
-All API responses are communicated via HTTP using the following status codes:
+### 📈 **Analytics Description**  
 
-- **200: OK** – Successful request.
-- **201: Created** – New resource created.
-- **400: Bad Request** – Invalid request, often due to missing parameters.
-- **401: Unauthorized** – No valid API key provided.
-- **403: Forbidden** – Insufficient permissions.
-- **500: Server Errors** – Issue on Unaport.ai's server.
+<p align="center">
+  <img src="https://unacores.github.io/unaport-docs/images/analytics.png" alt="Analytics" width="300">
+</p>  
+
+14. **Generate Analytics API**: Create detailed analytical reports.  
+15. **Get Account Details API**: Retrieve account information, including balance and transactions.  
+16. **Fetch Analytics API**: Retrieve analytics data for a specific analytic ID.  
+17. **Export Analytics API**: Export detailed analytics data.  
+
+---
+
+## 🛠️ **Response Status Codes**  
+
+API responses are communicated via HTTP using the following status codes:  
+
+- **200: OK** – Successful request.  
+- **201: Created** – New resource created.  
+- **400: Bad Request** – Invalid request, often due to missing parameters.  
+- **401: Unauthorized** – No valid API key provided.  
+- **403: Forbidden** – Insufficient permissions.  
+- **500: Server Errors** – Issue on Unaport.ai's server.  
+
+---
+
 
 ### Login
 
