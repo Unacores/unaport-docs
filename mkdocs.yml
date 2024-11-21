@@ -42,5 +42,6 @@ nav:
       - "📊 Data API": fiu#data
       - "📈 Analytics API": fiu#analytics
   - "🛠 SDK Documentation": fiu_sdk.md
+  - "📜 Consent Relationship": fiu#consent-overview
 
 
