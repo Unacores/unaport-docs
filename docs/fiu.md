@@ -38,7 +38,7 @@ function openTab(evt, tabName) {
     </a>
 
     <a href="https://unacores.github.io/unaport-docs/json/Unaport.postman_environment.json"  download Environment>
-        Download **Environment Variables**
+        **Download Environment Variables**
     </a>
 
 ## 🌟 **Introduction**  
@@ -575,7 +575,7 @@ This allows users to retrieve data associated with a specific session identified
 
 ### Analytics
 
-### Generate Analytics API
+### Generate Analytics API - ( Sync & ASync)
 
 The API allows users to create detailed analytical reports based on the activities and data interactions associated with a specific session identified by its session ID. This API provides insights into user behavior, data usage patterns, and overall engagement, helping organizations make informed decisions and optimize their services.
 
