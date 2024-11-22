@@ -431,7 +431,7 @@ The API allows users to verify the status and details of a specific consent requ
 | `consentidError`   | Any error associated with the consent call.                          | Null / String |
 
 
-### Consent Notification API
+### Consent-Notification-API
 
 This API is intended to be used by AA to notify FIU about the change in consent status due to the consent management operations performed by the Customer.
 
@@ -466,7 +466,7 @@ Here's the table reflecting the attributes from the provided output:
 
 ### Data
 
-### Data Notification API
+### Data-Notification-API
 
 This API can be used by AAs to send notifications related to Financial Information (FI) fetch to FIU/AA Client.
 
@@ -629,7 +629,7 @@ The API allows users to create detailed analytical reports based on the activiti
 | `status`            | HTTP status code indicating the success of the request.   | String         |
 
 
-### Analytics Notification API
+### Analytics-Notification-Api
 
 The Analytics Notification API is designed to notify the client about the status and details of analytics-related sessions and transactions. This API provides critical information regarding the progress and success of analytic operations, including unique identifiers for tracking, timestamps for accurate logging, and session information for context.
 

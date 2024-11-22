@@ -41,7 +41,12 @@ nav:
       - "📑 Consents API": fiu#consents
       - "📊 Data API": fiu#data
       - "📈 Analytics API": fiu#analytics
+      - "🔔 Notification API":
+          - "📝 Consent": fiu#consent-notification-api
+          - "📊 Data": fiu#data-notification-api
+          - "📈 Analytics": fiu#analytics-notification-api
   - "🛠 SDK Documentation": fiu_sdk.md
   - "📜 Consent Relationship": fiu#consent-overview
+
 
 
