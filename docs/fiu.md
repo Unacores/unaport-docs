@@ -266,10 +266,11 @@ The relationship between the consent status, consent handle, and consent ID for 
 |-------------------------------------------------|--------------|--------------------------|----------------------------|----------------|---------------------|
 | **Consent Approval Status**                             |              |                          |                            |                |                     |
 | Consent Request raised by FIU                   | PENDING      | AA                       | Customer                   | Null           | Available           |
-| Customer rejects the consent at AA Client       | REJECTED     | AA                       | FIU                        | Null           | Available           |
-| Consent is approved by customer                 | APPROVED     | AA                       | FIU, FIP                   | Available      | Available           |
+| Customer rejects the consent at AA Client       | FAILED     | AA                       | FIU                        | Null           | Available           |
+| Consent is approved/paused/revoked by customer                 | READY     | AA                       | FIU, FIP                   | Available      | Available           |
 | Consent request is expired at AA                | EXPIRED      | AA                       | FIU                        | Null           | Available           |
 | **Consent Status**                            |              |                          |                            |                |                     |
+| Consent Request raised by FIU                 | CREATED       | AA                       | Customer                   | Null      | Available           |
 | Consent is approved by customer                 | ACTIVE       | AA                       | FIU, FIP                   | Available      | Available           |
 | Customer revokes the consent using AA client    | REVOKED      | AA                       | FIU, FIP                   | Available      | Available           |
 | Customer initiates revoke consent from FIP      | REVOKED      | FIP                      | AA                         | Available      | NA                  |
