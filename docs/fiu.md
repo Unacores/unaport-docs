@@ -429,23 +429,16 @@ The base_url is the server URL you share with us to receive notifications.
 
 Here's the table reflecting the attributes from the provided output:
 
-| Attribute               | Description                                                 | Type   |
-|-------------------------|-------------------------------------------------------------|--------|
-| `ver`                   | API version                                                 | String |
-| `timestamp`             | The timestamp of the response                               | String |
-| `txnid`                 | Unique transaction identifier                               | String |
-| `Notifier`              | Notifier details                                            | Object |
-| `type`                  | Type of notifier (e.g., AA)                                 | String |
-| `id`                    | Notifier identifier                                         | String |
-| `FIStatusNotification`  | Financial Information (FI) status notification details     | Object |
-| `sessionId`             | Session identifier                                          | String |
-| `sessionStatus`         | Current status of the session (e.g., ACTIVE)               | String |
-| `FIStatusResponse`      | List of FI status responses                                 | Array  |
-| `fipID`                 | Identifier of the financial information provider (FIP)     | String |
-| `Accounts`              | List of account status details                              | Array  |
-| `linkRefNumber`         | Reference number linking the account                       | String |
-| `FIStatus`              | Status of the financial information (e.g., READY)          | String |
-| `description`           | Additional description or details                          | String |
+| **Attribute**                  | **Description**                     | **Type**       |
+|--------------------------------|-------------------------------------|----------------|
+| `ver`                          | Version of the notification         | String         |
+| `timestamp`                    | Timestamp of the notification       | ISO 8601 DateTime |
+| `txnid`                        | Unique transaction ID               | UUID           |
+| `Notifier.type`                | Type of the notifier (e.g., `AA`)   | String         |
+| `Notifier.id`                  | Identifier for the notifier         | String         |
+| `ConsentStatusNotification.consentId` | ID of the consent                    | String         |
+| `ConsentStatusNotification.consentHandle` | Handle associated with the consent  | String         |
+| `ConsentStatusNotification.consentStatus` | Status of the consent (`PAUSED`)   | String         |
 
 
 <div class="line"></div>
