@@ -404,32 +404,33 @@ The API allows users to verify the status and details of a specific consent requ
 
 ### Response Table
 
-| *Attribute*      | *Description*                                                      | *Type*      |
+| **Attribute**      | **Description**                                                      | **Type**      |
 |--------------------|----------------------------------------------------------------------|---------------|
-| Data             | Array of consent records.                                             | Array         |
-| id               | The unique identifier for the consent record.                        | Integer       |
-| trackingId       | The tracking ID for the consent request.                             | String        |
-| vuaId            | The ID of the user requesting consent.                               | String        |
-| orgId            | The ID of the organization associated with the consent.              | String        |
-| consentHandle    | The unique handle for the consent.                                   | String        |
-| approveStatus    | The approval status of the consent.                                  | String        |
-| consentStatus    | The current status of the consent (e.g., ACTIVE, INACTIVE).          | String        |
-| fetchType        | The type of consent (e.g., ONETIME).                               | String        |
-| consentId        | The unique consent ID associated with the consent.                   | String        |
-| createdAt        | The timestamp when the consent was created.                          | String (ISO 8601) |
-| notificationDate | The date when the consent notification was sent.                     | String (ISO 8601) |
-| consentStart     | The start date of the consent validity period.                       | String (ISO 8601) |
-| consentExpried   | The expiration date of the consent.                                  | String (ISO 8601) |
-| lastRuntime      | The last time the consent was executed.                              | String (ISO 8601) |
-| nextRuntime      | The next time the consent is expected to be executed.                | String (ISO 8601 or null) |
-| updatedOn        | The timestamp when the consent was last updated.                     | String (ISO 8601 or null) |
-| createdBy        | The user who created the consent.                                    | String        |
-| aaId             | The Account Aggregator ID associated with the consent.              | String        |
-| consentsDetail   | A detailed JSON string of the consent.                               | String (JSON) |
-| signedConsent    | The signed consent token.                                            | String        |
-| consentidCalled  | The count of times the consent was called.                           | Integer       |
-| runCounter       | The run counter for the consent.                                     | Integer       |
-| consentidError   | Any error associated with the consent call.                          | Null / String |
+| `Data`             | Array of consent records.                                             | Array         |
+| `id`               | The unique identifier for the consent record.                        | Integer       |
+| `trackingId`       | The tracking ID for the consent request.                             | String        |
+| `vuaId`            | The ID of the user requesting consent.                               | String        |
+| `orgId`            | The ID of the organization associated with the consent.              | String        |
+| `consentHandle`    | The unique handle for the consent.                                   | String        |
+| `approveStatus`    | The approval status of the consent.                                  | String        |
+| `consentStatus`    | The current status of the consent (e.g., ACTIVE, INACTIVE).          | String        |
+| `fetchType`        | The type of consent (e.g., `ONETIME`).                               | String        |
+| `consentId`        | The unique consent ID associated with the consent.                   | String        |
+| `createdAt`        | The timestamp when the consent was created.                          | String (ISO 8601) |
+| `notificationDate` | The date when the consent notification was sent.                     | String (ISO 8601) |
+| `consentStart`     | The start date of the consent validity period.                       | String (ISO 8601) |
+| `consentExpried`   | The expiration date of the consent.                                  | String (ISO 8601) |
+| `lastRuntime`      | The last time the consent was executed.                              | String (ISO 8601) |
+| `nextRuntime`      | The next time the consent is expected to be executed.                | String (ISO 8601 or null) |
+| `updatedOn`        | The timestamp when the consent was last updated.                     | String (ISO 8601 or null) |
+| `createdBy`        | The user who created the consent.                                    | String        |
+| `aaId`             | The Account Aggregator ID associated with the consent.              | String        |
+| `consentsDetail`   | A detailed JSON string of the consent.                               | String (JSON) |
+| `signedConsent`    | The signed consent token.                                            | String        |
+| `consentidCalled`  | The count of times the consent was called.                           | Integer       |
+| `runCounter`       | The run counter for the consent.                                     | Integer       |
+| `consentidError`   | Any error associated with the consent call.                          | Null / String |
+
 
 
 
