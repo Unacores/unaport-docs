@@ -87,7 +87,8 @@ The Unaport.ai APIs are fully RESTful, and all responses are delivered in **JSON
 6. **Create Consent without Template API**: Customize consent requests without using templates.  
 7. **Create Consent with Template API**: Generate consent requests based on predefined templates.  
 8. **Check Consent Status API**: Verify the status and details of a specific consent request.  
-9. **Consent Notification API**: Notify FIUs about consent status changes.  
+9. **Revoke Consent API**: FIUs can revoke already approved consent status.  
+10. **Consent Notification API**: Notify FIUs about consent status changes.  
 
 ---
 
@@ -434,6 +435,15 @@ The API allows users to verify the status and details of a specific consent requ
 | `consentidError`   | Any error associated with the consent call.                          | Null / String |
 
 
+### Revoke Consent 
+
+This API allows users to revoke a already approved consent request.
+
+#### Path Parameters:
+| **Parameter** | **Description**                 | **Type**   |
+|---------------|---------------------------------|------------|
+| `org_id`      | The unique identifier of the organization. | String    |
+| `consentId`   | The unique identifier of the consent to be revoked. | String |
 
 
 ### Consent-Notification-API
