@@ -41,6 +41,8 @@ function openTab(evt, tabName) {
         **Download Environment Variables**
     </a>
 
+      *(Ensure you add the following Unaport IP addresses for notifications:)*  - **UAT**: `15.206.247.111` **Production**: `13.234.23.251`  
+
 ## 🌟 **Introduction**  
 
 To start with the integration, follow the steps below:  
