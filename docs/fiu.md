@@ -22,8 +22,7 @@ function openTab(evt, tabName) {
 
 </script>
 
-
-!!! note "🚀 API Version Update - v2.0.0 🚀"
+!!! note "🚀 API Version Update - v2.1.0 🚀"
     **📅 Release Date:** *9th December 2024*
 
     We’re thrilled to announce the launch of **Unaport FIU API v2.0.0**!  
