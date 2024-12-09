@@ -34,7 +34,7 @@ function openTab(evt, tabName) {
     🎯 **Get started now!**  
 
     <a href="https://unacores.github.io/unaport-docs/json/postman.json" class="download-button" download>
-        ⬇️ **Postman Collection v2.0**
+        ⬇️ **Postman Collection v2.1**
     </a>
 
     <a href="https://unacores.github.io/unaport-docs/json/Unaport.postman_environment.json"  download Environment>
