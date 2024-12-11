@@ -110,12 +110,12 @@ The Unaport.ai APIs are fully RESTful, and all responses are delivered in **JSON
   <img src="https://unacores.github.io/unaport-docs/images/analytics.png" alt="Analytics" width="300">
 </p>  
 
-14. **Single Account - Generate Analytics API (Sync and Async)**: Create detailed analytical reports.  
+14. **Single Account - Generate Analytics API (Sync and Async)**: Create detailed aggregateanalytical reports.  
 15. **Single Account - Fetch Analytics API**: Retrieve analytics data for a specific analytic ID.  
 16. **Single Account - Export Analytics API**: Export detailed analytics data.  
-17. **Aggregate Account - Generate Analytics API (Sync and Async)**: Create detailed analytical reports.  
+17. **Aggregate Account - Generate Analytics API (Sync and Async)**: Create detailed aggregate analytical reports.  
 18. **Aggregate Account - Fetch Analytics API**: Retrieve analytics data for a specific Session ID.  
-19. **Aggregate Account - Export Analytics API**: Export detailed analytics data. 
+19. **Aggregate Account - Export Analytics API**: Export detailed analytics data for a specific Session ID.  . 
 ---
 
 ## 🛠️ **Response Status Codes**  
@@ -615,7 +615,7 @@ This allows users to retrieve data associated with a specific session identified
 
 <div class="line"></div>
 
-### Analytics
+### Single Bank Account Analytics
 
 ### Generate Analytics API - ( Sync & ASync)
 
@@ -637,7 +637,7 @@ The API allows users to create detailed analytical reports based on the activiti
 | `status`            | HTTP status code indicating the success of the request.   | String         |
 
 
-### Analytics-Notification-Api
+### Single Analytics-Notification-Api
 
 The Analytics Notification API is designed to notify the client about the status and details of analytics-related sessions and transactions. This API provides critical information regarding the progress and success of analytic operations, including unique identifiers for tracking, timestamps for accurate logging, and session information for context.
 
@@ -649,3 +649,23 @@ The Analytics Notification API is designed to notify the client about the status
 | `sessionId`       | Unique session identifier                | `248c487f-fd9e-4522-9fb6-c50af4dbcb5f` (String) |
 | `analyticId`      | List of analytic IDs                     | `[524]` (Array of integers)         |
 | `status`          | Status of the operation                  | `SUCCESS` (String)                  |
+
+### Aggregate Analytics API - ( Sync & ASync)
+
+The API allows users to create detailed analytical reports based on the activities and data interactions associated with a specific session identified by its session ID. This API provides insights into user behavior, data usage patterns, and overall engagement, helping organizations make informed decisions and optimize their services.
+
+### Header Table
+
+| **Attribute**       | **Description**                                                         | **Type**               |
+|---------------------|-------------------------------------------------------------------------|------------------------|
+| `Authorization`     | Bearer token for authenticating the API request.                        | String (Bearer Token)  |
+| `OrgID`          | Organisation ID         | String (UUID)  
+| `sessionId`         | Unique session identifier used to fetch analytics data.                 | Path Parameter         |
+        |
+
+### Response Structure
+
+| **Attribute**       | **Description**                                           | **Type**       |
+|---------------------|-----------------------------------------------------------|----------------|
+| `reportId`          | Unique identifier for the analytics report.               | String (Integer)  |
+| `status`            | HTTP status code indicating the success of the request.   | String         |
