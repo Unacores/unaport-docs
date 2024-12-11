@@ -17,6 +17,10 @@ theme:
   palette:
     primary: "white"
     accent: "blue"
+    
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
 markdown_extensions:
   - admonition
   - codehilite
@@ -29,7 +33,7 @@ markdown_extensions:
 extra:
   generator: true
   toc: false
-
+ 
 
 nav:
   - "🏠 Overview": index.md
