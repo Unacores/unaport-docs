@@ -110,11 +110,12 @@ The Unaport.ai APIs are fully RESTful, and all responses are delivered in **JSON
   <img src="https://unacores.github.io/unaport-docs/images/analytics.png" alt="Analytics" width="300">
 </p>  
 
-14. **Generate Analytics API**: Create detailed analytical reports.  
-15. **Get Account Details API**: Retrieve account information, including balance and transactions.  
-16. **Fetch Analytics API**: Retrieve analytics data for a specific analytic ID.  
-17. **Export Analytics API**: Export detailed analytics data.  
-
+14. **Single Account - Generate Analytics API (Sync and Async)**: Create detailed analytical reports.  
+15. **Single Account - Fetch Analytics API**: Retrieve analytics data for a specific analytic ID.  
+16. **Single Account - Export Analytics API**: Export detailed analytics data.  
+17. **Aggregate Account - Generate Analytics API (Sync and Async)**: Create detailed analytical reports.  
+18. **Aggregate Account - Fetch Analytics API**: Retrieve analytics data for a specific Session ID.  
+19. **Aggregate Account - Export Analytics API**: Export detailed analytics data. 
 ---
 
 ## 🛠️ **Response Status Codes**  
