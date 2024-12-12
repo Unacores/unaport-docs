@@ -1,9 +1,11 @@
 
-!!! note
-    Only entities that are registered and regulated by the four Financial Regulators—**RBI, SEBI, IRDAI, and PFRDA**—are eligible to participate as a FIU in the Account Aggregator Framework.
+!!! note 
+<div style="background-color: #f9f9f9; border-left: 5px solid #007bff; padding: 15px; font-size: 1rem; line-height: 1.5;"> <ol> <li><strong>Only entities that are registered and regulated by the four Financial Regulators</strong>—<span style="color: #007bff;">RBI, SEBI, IRDAI, and PFRDA</span>—are eligible to participate as a Financial Information User (FIU) in the Account Aggregator Framework.</li> <li><strong style="color: #dc3545;">Ensure all agreements are executed on ₹500 stamp paper.</strong></li> </ol> </div>
 
 
 #### <span style="color: #007bff;">Provide the following document by email at <a href="mailto:connect@ink-aa.com">connect@ink-aa.com</a> with your Company Name:</span>
+
+
 
 - <strong>Certificate of Incorporation</strong>: Provide the certificate of incorporation of your company.
 - <strong>TSP Agreement</strong>: Provide the duly filled agreement with Unacores Solutions Private Limited and the Company. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Unaport+Agreement.docx)
