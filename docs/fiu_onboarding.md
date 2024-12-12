@@ -1,6 +1,6 @@
 
 !!! note 
-<div style="background-color: #f9f9f9; border-left: 5px solid #007bff; padding: 15px; font-size: 1rem; line-height: 1.5;"> <ol> <li><strong>Only entities that are registered and regulated by the four Financial Regulators</strong>—<span style="color: #007bff;">RBI, SEBI, IRDAI, and PFRDA</span>—are eligible to participate as a Financial Information User (FIU) in the Account Aggregator Framework.</li> <li><strong style="color: #dc3545;">Ensure all agreements are executed on ₹500 stamp paper.</strong></li> </ol> </div>
+<div style="background-color: #f9f9f9; border-left: 5px solid #007bff; padding: 15px; font-size: 1rem; line-height: 1;"> <ol> <li><strong>Only entities that are registered and regulated by the four Financial Regulators</strong>—<span style="color: #007bff;">RBI, SEBI, IRDAI, and PFRDA</span>—are eligible to participate as a Financial Information User (FIU) in the Account Aggregator Framework.</li> <li><strong style="color: #dc3545;">Ensure all agreements are executed on ₹500 stamp paper.</strong></li> </ol> </div>
 
 
 #### <span style="color: #007bff;">Provide the following document by email at <a href="mailto:connect@ink-aa.com">connect@ink-aa.com</a> with your Company Name:</span>
