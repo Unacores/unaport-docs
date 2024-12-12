@@ -1,25 +1,43 @@
 
 !!! note 
+
 <div style="background-color: #f9f9f9; border-left: 5px solid #007bff; padding: 15px; font-size: 0.8rem; line-height: 1.5;"> <ol> <li><strong>Only entities that are registered and regulated by the four Financial Regulators</strong>—<span style="color: #007bff;">RBI, SEBI, IRDAI, and PFRDA</span>—are eligible to participate as a Financial Information User (FIU) in the Account Aggregator Framework.</li> <li><strong style="color: #dc3545;">Ensure all agreements are executed on ₹500 stamp paper.</strong></li> </ol> </div>
 
+#### Required Documents for Onboarding
+Please provide the following documents to complete the onboarding process:
+### **Account Aggregator Agreements**  
+Provide the duly filled agreements with the respective Account Aggregators and the Company. 
+You may select one or more agreements, but it is preferable to choose at least two :
 
-#### <span style="color: #007bff;">Provide the following document by email at <a href="mailto:connect@ink-aa.com">connect@ink-aa.com</a> with your Company Name:</span>
+- **INK Account Aggregator Agreement**: Agreement with **Unacores AA Solutions Private Limited** and the Company.  
+  [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/INKAA+and+FIU+Agreement.docx)
+  
+- **Finvu Account Aggregator Agreement**: Agreement with **Finvu AA** and the Company.  
+  [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Finvu+AA+-+FIU+Agreement.docx)
 
+- **One Money Account Aggregator Agreement**: Agreement with **One Money AA** and the Company.  
+  [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/OneMoney2.docx)
 
+- **Protean Account Aggregator Agreement**: Agreement with **Protean AA** and the Company.  
+  [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Protean2.docx)
 
-- <strong>Certificate of Incorporation</strong>: Provide the certificate of incorporation of your company.
-- <strong>TSP Agreement</strong>: Provide the duly filled agreement with Unacores Solutions Private Limited and the Company. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Unaport+Agreement.docx)
-- <strong>INK Account Aggregator Agreement</strong>: Provide the duly filled agreement with Unacores AA Solutions Private Limited and the Company. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/INKAA+and+FIU+Agreement.docx)
-- <strong>Finvu Account Aggregator Agreement</strong>: Provide the duly filled agreement with Unacores AA Solutions Private Limited and the Company. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Finvu+AA+-+FIU+Agreement.docx)
-- <strong>GST Certificate</strong>: Ensure the certificate is clear and legible.
-- <strong>PAN Card</strong>: Scanned copy of your PAN card.
-- <strong>Cancelled Cheque</strong>: Ensure the cheque is clearly marked as cancelled.
-- <strong>NBFC Certificate</strong>: Scanned copy of your NBFC certificate.
-- <strong>Authorized Signatory Board Resolution</strong>: Scanned copy of the board resolution document authorizing the signatory.
-- <strong>Sahamati Participation Terms</strong> [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Participation+Terms+Sahamati.docx)
-- <strong>Sahamati - Legal Framework Guidelines Checklist</strong> [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Legal+Framework+Guidelines.xlsx)
-- <strong>Sahamati - Customer Experience Guidelines Checklist</strong> [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Customer+Experience+Guidelines.xlsx)
-- <strong>Compliance confirmation for use of Purpose Code</strong>: See Purpose code below for more info. [<span style="color: #28a745;">Template</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Confirmation+of+Purpose+Code.docx)
+### **Company KYC Documentation**  
+
+- **Certificate of Incorporation**: Provide the certificate of incorporation of your company.
+- **TSP Agreement**: Provide the duly filled agreement with **Unacores Solutions Private Limited** and the Company.  
+  [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Unaport+Agreement.docx)
+- **GST Certificate**: Ensure the certificate is clear and legible.
+- **PAN Card**: Scanned copy of your PAN card.
+- **Cancelled Cheque**: Ensure the cheque is clearly marked as cancelled.
+- **NBFC Certificate**: Scanned copy of your NBFC certificate.
+- **Authorized Signatory Board Resolution**: Scanned copy of the board resolution document authorizing the signatory.
+- **Sahamati Participation Terms** [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Participation+Terms+Sahamati.docx)
+  
+- **Sahamati - Legal Framework Guidelines Checklist**  [<span style="color: #28a745;">Download the Guidelines</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Legal+Framework+Guidelines.xlsx)
+  
+- **Sahamati - Customer Experience Guidelines Checklist**  [<span style="color: #28a745;">Download the Checklist</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Customer+Experience+Guidelines.xlsx)
+  
+- **Compliance confirmation for use of Purpose Code**: See Purpose code below for more info. [<span style="color: #28a745;">Template</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Confirmation+of+Purpose+Code.docx)
 
 
 #### <span style="color: #007bff;">Information</span>
