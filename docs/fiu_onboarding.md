@@ -23,6 +23,23 @@ You may select one or more agreements, but it is preferable to choose at least t
 
 ### **Company KYC Documentation**  
 
+<script type="text/javascript">
+function zforms_open_window(url, height, width){
+    var leftPos = 0;
+    var topPos = 0;
+    if(screen){
+        leftPos = (screen.width - width) / 2;
+        topPos = (screen.height - height) / 2;
+        window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+    }
+}
+</script>
+
+Please ensure you have the following information ready before completing the Customer Onboarding form:
+
+<a href='https://forms.zohopublic.com/Unaport/form/CustomerOnboarding/formperma/jBtah5h7uM3Lsq_Stp-9TKHhZwjnyfj88tRu3V0kcnE' title="Client Onboarding" target='_blank' onclick="zforms_open_window(this.href, 648, 700); return false">Client Onboarding Form</a>
+
+
 - **Certificate of Incorporation**: Provide the certificate of incorporation of your company.
 - **TSP Agreement**: Provide the duly filled agreement with **Unacores Solutions Private Limited** and the Company.  
   [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Unaport+Agreement.docx)
