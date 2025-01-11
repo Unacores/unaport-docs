@@ -27,7 +27,7 @@ You may select one or more agreements, but it is preferable to choose at least t
   [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Unaport+Agreement.docx)
 
 ### **Sahamati Participation Terms Agreement**
-- **Sahamati Participation Terms** [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Participation+Terms+Sahamati.docx)
+- [<span style="color: #28a745;">Download the Agreement</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Participation+Terms+Sahamati.docx)
   
 
 
