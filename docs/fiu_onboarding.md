@@ -60,11 +60,11 @@ Please ensure you have the following information ready before completing the Cus
 
 
 #### <span style="color: #007bff;">Information</span>
-- <strong>Purpose Code</strong> - Purpose codes alignment with specific financial and regulatory use cases, clarifying the intent behind data requests in the Account Aggregator ecosystem. [<span style="color: #28a745;">Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Purpose+Code+template.xlsx)
+- <strong>Purpose Code</strong> - Purpose codes alignment with specific financial and regulatory use cases, clarifying the intent behind data requests in the Account Aggregator ecosystem. [<span style="color: #28a745;"> Download</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Purpose+Code+template.xlsx)
 - <strong>*FIU Agreement with Technology Service Provider (TSP) - Unacores Solutions Private Limited</strong>: This agreement outlines the terms and conditions under which Unacores Solutions Private Limited will provide technology services to the Financial Information User (FIU).
 - <strong>**FIU Agreement with Account Aggregator</strong>: This agreement establishes the framework for the FIU’s interaction with the Account Aggregator (AA) to access consented financial data from customers.
-- **Sahamati - Legal Framework Guidelines Checklist**  [<span style="color: #28a745;">Download the Guidelines</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Legal+Framework+Guidelines.xlsx)
-- **Sahamati - Customer Experience Guidelines Checklist**  [<span style="color: #28a745;">Download the Checklist</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Customer+Experience+Guidelines.xlsx)
+- **Sahamati - Legal Framework Guidelines Checklist**  [<span style="color: #28a745;"> Download the Guidelines</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Legal+Framework+Guidelines.xlsx)
+- **Sahamati - Customer Experience Guidelines Checklist**  [<span style="color: #28a745;"> Download the Checklist</span>](https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/FIU-Onboarding-Docs/Customer+Experience+Guidelines.xlsx)
 
 
 <!--
