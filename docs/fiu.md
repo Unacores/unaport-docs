@@ -22,10 +22,20 @@ function openTab(evt, tabName) {
 
 </script>
 
-!!! note "🚀 API Version Update - v2.1.0 🚀"
-    **📅 Release Date:** *9th December 2024*
+!!! note "🚀 API Version Update - v2.0.0 🚀"
+    **📅 Release Date:** *28th January 2025*
 
-    We’re thrilled to announce the launch of **Unaport FIU API v2.0.0**!  
+    We’re thrilled to announce the launch of **Unaport FIU API v2.0.0**! 
+
+    ### New Functionality
+
+    #### Multi Account Aggregator Support
+    - Our APIs now support integration with multiple Account Aggregators (AAs).
+    - **Key features:**
+        - Flexible configuration to add or manage multiple AAs.
+        - Improved routing logic to ensure seamless data flow from different AAs.
+        - Enhanced error handling and logging mechanisms for multi-AA interactions.
+     
     👉 **New consumers, please use this version to access the latest features and improvements.**
 
     <div class="line"></div>
@@ -33,7 +43,7 @@ function openTab(evt, tabName) {
     🎯 **Get started now!**  
 
     <a href="https://unacores.github.io/unaport-docs/json/postman.json" class="download-button" download>
-        ⬇️ **Postman Collection v2.1**
+        ⬇️ **Postman Collection v2.0**
     </a>
 
     <a href="https://unacores.github.io/unaport-docs/json/Unaport.postman_environment.json"  download Environment>
