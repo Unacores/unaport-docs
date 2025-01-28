@@ -637,7 +637,7 @@ The API allows users to create detailed analytical reports based on the activiti
 | `status`            | HTTP status code indicating the success of the request.   | String         |
 
 
-### Single Analytics-Notification-Api
+### Analytics-Notification-Api
 
 The Analytics Notification API is designed to notify the client about the status and details of analytics-related sessions and transactions. This API provides critical information regarding the progress and success of analytic operations, including unique identifiers for tracking, timestamps for accurate logging, and session information for context.
 
