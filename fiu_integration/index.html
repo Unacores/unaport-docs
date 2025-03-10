@@ -1,0 +1,1425 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Unaport.ai provides a suite of APIs designed for seamless integration in financial services, enabling account aggregation, consent management, and data sharing. Our comprehensive API documentation guides developers through the features, authentication, and best practices for utilizing our platform to build secure and scalable financial applications.">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../images/unaport_u.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Unaport.ai API Documentation - Unaport.ai - API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unaportai-api-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Unaport.ai - API Documentation" class="md-header__button md-logo" aria-label="Unaport.ai - API Documentation" data-md-component="logo">
+      
+  <img src="../images/unaport_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Unaport.ai - API Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unaport.ai API Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Unaport.ai - API Documentation" class="md-nav__button md-logo" aria-label="Unaport.ai - API Documentation" data-md-component="logo">
+      
+  <img src="../images/unaport_logo.svg" alt="logo">
+
+    </a>
+    Unaport.ai - API Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏠 Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu_onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💼 FIU Onboarding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📚 API Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📚 API Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#postman" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔑 Postman Collection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#introduction" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📝 Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#login" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒 Authentication API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#consents" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📑 Consents API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#data" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊 Data API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#analytics" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📈 Analytics API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🔔 Notification API
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            🔔 Notification API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#consent-notification-api" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📝 Consent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#data-notification-api" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊 Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#analytics-notification-api" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📈 Analytics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu_web_sdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛠 SDK Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#consent-overview" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📜 Consent Relationship
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#postman-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postman collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-organisation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Organisation Details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Organisation Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-consent-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a consent request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-consent-using-consent-handle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Consent using consent handle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-fi-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get FI Notification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fetch-data-using-sessionid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fetch Data using sessionId
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unaportai-api-documentation">Unaport.ai API Documentation</h1>
+<p>Welcome to the Unaport.ai API Reference. This guide provides all the information you need to integrate Unaport.ai services into your application, including generating user consent, retrieving user details, and accessing analyzed data and CAM sheets. The Unaport.ai APIs are fully RESTful, and all responses are delivered in JSON format.</p>
+<h3 id="postman-collection">Postman collection</h3>
+<p>You can also access the APIs below by importing our Postman collection from this link:: <a href="https://sandbox-fiu-public-docs.s3.ap-south-1.amazonaws.com/PostmanCollections/FIU+third+party+integration.postman_collection.json">Download</a></p>
+<style>
+.tab-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc; /* Optional: add a border for aesthetics */
+}
+
+.tabcontent {
+  display: none; /* Hidden by default */
+ padding: 5px 15px; /* Reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+
+   overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.tablink {
+  background-color: #f1f1f1;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.small-font {
+  font-size: 0.7em; /* Adjust this value for desired size */
+  line-height: 1.2; /* Adjust line height for readability */
+
+.tablink:hover {
+  background-color: #ddd;
+}
+
+.tablink.active {
+  background-color: #ccc;
+}
+</style>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";  
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";  
+  evt.currentTarget.className += " active";
+}
+
+</script>
+
+<h3 id="authentication">Authentication</h3>
+<div>
+
+  <button class="tablink" onclick="openTab(event, 'Request')" >Request</button>
+  <button class="tablink" onclick="openTab(event, 'Response')">Response</button>
+</div>
+
+<div id="Request" class="tabcontent">
+  <pre class="small-font">
+Host: `https://common.sandbox.unaport.com/api/v1/public/user/login`
+Content-Type: application/json
+
+{
+    "emailId": "developer@unacores.com",
+    "password": "*****"
+}
+</pre>
+</div>
+
+<div id="Response" class="tabcontent">
+    <pre class="small-font">
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ5TVczMnpfZ0stT2NSS3N2MkdsRV9EbFFmTy1JX3psaTVLTW0yMGE1VFFZIn0.eyJleHAiOjE3MTM4NTYzMzIsImlhdCI6MTcxMzg1NjAzMiwianRpIjoiMmZiY2I4Y2QtMGU1YS00NjUzLTg2MDMtYTUyMDk0M2Q1NjQ2IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zYW5kYm94LnVuYXBvcnQuY29tL2F1dGgvcmVhbG1zL0ZJVSIsInN1YiI6ImQxYThhOTdjLWM3YjUtNGI1Mi1hNzYxLTc0MjA2MGQ3MWQzMSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImZpdS1hZG1pbi1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiZmUyMTJlZTQtMjZhZC00NDI0LWE4ZmItZmM2ODQ2N2UwMTFmIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImVuZC11c2VyIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtYWEiXX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImZlMjEyZWU0LTI2YWQtNDQyNC1hOGZiLWZjNjg0NjdlMDExZiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJncm91cHMiOlsiL1BST0QvRklOVFJFRVVBVCIsIi9VQVQvVU5BQ09SRVMtRklVLVVBVCJdLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzaWRkaGFydGhzaGV0dHlAaGkyLmluIiwiZW1haWwiOiJzaWRkaGFydGhzaGV0dHlAaGkyLmluIiwiaXNTd2l0Y2hlZCI6dHJ1ZX0.gbe7jzYTUMrEDVLbEAJkB_-azqJuWjnVjSMYvbgAP57x1WX3eOE4kqqm_K3wYyYLdAXNgAoH_7w-SK9hs2Qdfdb1zO6XIpowKWNRjZqeOdphMDtKdqhJfm8w9Mt5zTMizqscpGMTlbjOq73cjFIrMh3SjYvj3K5zHgTG_Dj8vksURjyd26_LIBD1wp1_EACptqpNbIu0jIv7lLc_OdiPWP8NHYPL34ybF7Zt4TkyQLt9VmpOVy6OaamSu8u88sanAkKuXTgMr3jB7BqYvcMqXdL27BcsbRRzKM2mt7dhsq26Bt4xBKHeMizVSqNE_G6y83Nnbonb8bplY8N7D50fqA",
+    "expires_in": 300,
+    "refresh_expires_in": 1800,
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmZDA4M2JiOC1mOTBlLTRjNTItYWZjZi1iZDQxNzEwNGIwNGQifQ.eyJleHAiOjE3MTM4NTc4MzIsImlhdCI6MTcxMzg1NjAzMiwianRpIjoiMzE2YTYxMDEtMTg3YS00YTNhLTg4Y2MtZDU3YzMxZTNjYjY0IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zYW5kYm94LnVuYXBvcnQuY29tL2F1dGgvcmVhbG1zL0ZJVSIsImF1ZCI6Imh0dHBzOi8va2V5Y2xvYWsuc2FuZGJveC51bmFwb3J0LmNvbS9hdXRoL3JlYWxtcy9GSVUiLCJzdWIiOiJkMWE4YTk3Yy1jN2I1LTRiNTItYTc2MS03NDIwNjBkNzFkMzEiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoiZml1LWFkbWluLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJmZTIxMmVlNC0yNmFkLTQ0MjQtYThmYi1mYzY4NDY3ZTAxMWYiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJmZTIxMmVlNC0yNmFkLTQ0MjQtYThmYi1mYzY4NDY3ZTAxMWYifQ.ft2E614o5L3c4cZtw1Z7zt-2wH8zcU0qExN3uIQiFAM",
+    "token_type": "Bearer",
+    "not-before-policy": 0,
+    "session_state": "fe212ee4-26ad-4424-a8fb-fc68467e011f",
+    "scope": "email profile",
+    "firstName": null,
+    "lastName": null,
+    "emailId": "developer@unacores.com"
+}
+  </pre>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>emailId</code></td>
+<td>Alpha numeric</td>
+<td>JSON format</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>Alpha numeric</td>
+<td>JSON format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-organisation-details">Get Organisation Details</h3>
+<p>This API is used to get details about your organisation.</p>
+<p>API to call
+<code>https://common.sandbox.unaport.com/api/v1/FIU/getOrganisation</code></p>
+<p>Method: <code>GET</code></p>
+<h4 id="headers">Headers</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer {{token}}</code></td>
+<td>The token to be used when calling the APIs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-a-consent-request">Create a consent request</h3>
+<p>This API is used to create a consent request. </p>
+<p>API to call
+<code>https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/Consents/{orgId}</code></p>
+<p>Method: <code>POST</code></p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: {{token}}</code></td>
+<td>The token to be used when calling the APIs</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Consent creation Request</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;vuaId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9867****13@ink&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;createdBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;siddharths****y@hi2.in&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;trackingId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test-m&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;aaId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UNACORES-AA-UAT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fiuId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UNACORES-FIU-UAT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;redirectUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://console.sandbox.unaport.com/admin/consent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fiuBaseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.sandbox.unaport.com/backend/api/v1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ConsentsRequest&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;ver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0.0&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-28T05:04:39.821Z&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;txnid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00b6c131-bf74-4296-b489-0febc0136b9f&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ConsentDetail&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;consentStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-28T00:00:00.000Z&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentExpiry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-28T00:00:00.000Z&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;STORE&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fetchType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ONETIME&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentTypes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;PROFILE&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;SUMMARY&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;TRANSACTIONS&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;fiTypes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;DEPOSIT&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;DataConsumer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UNACORES-FIU-UAT&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;Customer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9867902913@ink&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;Purpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;101&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;refUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.rebit.org.in/aa/purpose/101.xml&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Wealth management service&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;Category&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Personal Finance&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;FIDataRange&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-09-28T00:00:00.000Z&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-28T00:00:00.000Z&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;DataLife&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;unit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;Frequency&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;unit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vuaId</code></td>
+<td>The customer aa account name which can be alpha numeric</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>createdBy</code></td>
+<td>Created By who is logged in and creating the cosent request which can be alpha numeric</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>trackingId</code></td>
+<td>The tracking id should be unique identifier of consent request which can be alpha numeric</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>aaId</code></td>
+<td>AA entity id which can be alpha numeric</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>fiuId</code></td>
+<td>FIU entity id which can be alpha numeric</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>redirectUrl</code></td>
+<td>AA login url where consent creater login and approve the consent which can be url</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>fiuBaseUrl</code></td>
+<td>FIU backend url which can be url</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>ver</code></td>
+<td>Consent request version number</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>Consent request current timestamp format yyyy-MM-dd'T'HH:mm:ss.SSS'Z'</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>txnid</code></td>
+<td>Consent unique id which is UUID</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>consentMode</code></td>
+<td>Allowed values: <code>STORE</code> , <code>VIEW</code>, <code>QUERY</code></td>
+<td>Specifies whether the consent mode is view only, store or query.</td>
+</tr>
+<tr>
+<td><code>consentTypes</code></td>
+<td>Allowed values: <code>PROFILE</code>, <code>TRANSACTIONS</code>, <code>SUMMARY</code></td>
+<td>Specifies the account information that can be fetched with this consent i.e. account profile or summary or transactions</td>
+</tr>
+<tr>
+<td><code>fiTypes</code></td>
+<td>Refer to the ReBIT FITypes for possible values <a href="https://api.rebit.org.in/schema">ReBIT Schema</a></td>
+<td>This specifies the type of Financial Information that can be fetched with this consent. e.g. Deposit accounts (Savings, Current), recurring deposit, etc.</td>
+</tr>
+<tr>
+<td><code>Purpose</code></td>
+<td>Possible values of the Purpose/”code” and Purpose/”text” is given in <a href="https://api.rebit.org.in/purpose">ReBIT Purpose Codes</a></td>
+<td>The consent purpose or purpose for which data is being fetched.</td>
+</tr>
+<tr>
+<td><code>fetchType</code></td>
+<td>Allowed values: <code>ONETIME</code> or <code>PERIODIC</code></td>
+<td>This specifies if the consent can be used once or multiple times i.e. multiple data request can be done or only once</td>
+</tr>
+<tr>
+<td>if <code>ONETIME</code> , then data can be fetched once only.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>if <code>PERIODIC</code>, this consent can be used for multiple data fetches and will be based on the frequency information.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Frequency</code></td>
+<td><code>unit</code> valid values are HOUR, DAY, MONTH, YEAR <code>value</code> needs to be numeric</td>
+<td>This specifies the frequency of consent usage i.e. the frequency of data requests that can be done.  This is specified with 2 components i.e <code>UNIT</code> and <code>VALUE</code> . e.g. if <code>UNIT</code> is <code>HOUR</code> and value is 4 that means data requests can be done 4 times in a HOUR.</td>
+</tr>
+<tr>
+<td><code>DataLife</code></td>
+<td><code>unit</code> valid values are <code>DAY</code>, <code>MONTH</code>, <code>YEAR</code>, <code>INF</code>  .  <code>value</code> needs to be numeric</td>
+<td>This signifies for how long can data be stored. Value of <code>INF</code> means forever.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Calculated values for Fields</p>
+<p>Since this is a product and some of the values need to be calculated when raising a consent request, hence absolute values cannot be provided. For which we have provided fields that help you to define the necessary information for calculation at runtime. </p>
+<p>Fields such as the <code>consent expiry</code>, <code>consent start date</code>, <code>data range</code> are calculated based on when the consent request is raised.  </p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConsentExpiry</code></td>
+<td><code>unit</code> valid values are DAY, MONTH, YEAR <code>value</code> needs to be numeric</td>
+<td>Specifies when the consent will expire and is controlled by the two fields <code>unit</code> and <code>value</code> e.g. If <code>UNIT</code> is YEAR and <code>VALUE</code> is 5, the consent will expire after 5 years. The consentExpiry field in the consent request will have a date and time of 5 years ahead from the instant that the consent is requested.</td>
+</tr>
+<tr>
+<td><code>consentStartDays</code></td>
+<td>This has to be a numeric value . (Value of '0' will be taken as current date for the consent request)</td>
+<td>This specifies after how many days the consent will start. This gets calculated  when the consent request is raised.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dataRangeStartMonths</code></td>
+<td><code>dataRangeEndMonths</code></td>
+<td>The datarange field is used to specify the data range of the financial information that will be requested. As part of the consent request the data range should be within the consent start and expiry dates. Both these fields are used in conjunction with each other and specify the data range.</td>
+</tr>
+</tbody>
+</table>
+<p>Example: <code>dataRangeStartMonths</code> if 0 and <code>dataRangeEndMonths</code> if 5 is interpreted as the dataRangeStart from currentMonth and until next 5 months in future. </p>
+<p>A data range to get last 6 months historic data plus for the next 12 months in the future values can be as below <br />
+<code>dataRangeStartMonths</code> = 6 and <code>dataRangeEndMonths</code> = 12      </p>
+<p>Sample Response</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;ver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2018-12-06T11:39:57.153Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;txnid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Customer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer_identifier@AA_identifier&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;ConsentHandle&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;39e108fe-9243-11e8-b9f2-0256d88baae8&quot;</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;Consent created successfully&quot;</span>
+<span class="w">  </span><span class="nt">&quot;redirectUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.sandbox.unaport.com/backend/api/v1/redirect/dfdESWW23dx&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="get-consent-using-consent-handle">Get Consent using consent handle</h3>
+<p>This API retrieves the consent details.</p>
+<p>API to call
+<code>https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/GetConsent/{consentHandle}</code></p>
+<p>Method: <code>GET</code>
+PARAMETERS:
+<code>consentHandle</code> The consentHandleId when raising a consent Request</p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: {{token}}</code></td>
+<td>The token to be used when calling the APIs</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Response</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1122</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;trackingId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0021&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;vuaId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;865****266@ink&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;orgId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4509dd7b-9ebc-4d93-b1bd-0c2ca7025149&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentHandle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8d0b4a94-39c2-4108-95e9-206cb956c926&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;approveStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;READY&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ACTIVE&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fetchType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ONETIME&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ef129007-7a9b-4418-ac89-482e18367149&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T07:05:23.089+00:00&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;notificationDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T07:05:43.058+00:00&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T00:00:00.000+00:00&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentExpried&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-05-18T00:00:00.000+00:00&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;lastRuntime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T07:05:43.000+00:00&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;nextRuntime&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;updatedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;createdBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;siddhar****etty@hi2.in&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;aaId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UNACORES-AA-UAT&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentsDetail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{\&quot;ver\&quot;:\&quot;2.0.0\&quot;,\&quot;timestamp\&quot;:\&quot;2024-04-18T07:05:23.089Z\&quot;,\&quot;txnid\&quot;:\&quot;b9580a96-bb7e-4b08-8881-da540ccbd27b\&quot;,\&quot;ConsentDetail\&quot;:{\&quot;consentStart\&quot;:\&quot;2024-04-18T00:00:00.000Z\&quot;,\&quot;consentExpiry\&quot;:\&quot;2024-05-18T00:00:00.000Z\&quot;,\&quot;consentMode\&quot;:\&quot;STORE\&quot;,\&quot;fetchType\&quot;:\&quot;ONETIME\&quot;,\&quot;consentTypes\&quot;:[\&quot;PROFILE\&quot;,\&quot;TRANSACTIONS\&quot;,\&quot;SUMMARY\&quot;],\&quot;fiTypes\&quot;:[\&quot;NPS\&quot;],\&quot;DataConsumer\&quot;:{\&quot;id\&quot;:\&quot;UNACORES-FIU-UAT\&quot;,\&quot;type\&quot;:\&quot;FIU\&quot;},\&quot;Customer\&quot;:{\&quot;id\&quot;:\&quot;865****266@ink\&quot;},\&quot;Purpose\&quot;:{\&quot;code\&quot;:\&quot;101\&quot;,\&quot;refUri\&quot;:\&quot;https://api.rebit.org.in/aa/purpose/101.xml\&quot;,\&quot;text\&quot;:\&quot;Wealth management service\&quot;,\&quot;Category\&quot;:{\&quot;type\&quot;:\&quot;Personal Finance\&quot;}},\&quot;FIDataRange\&quot;:{\&quot;from\&quot;:\&quot;2022-10-18T00:00:00.000Z\&quot;,\&quot;to\&quot;:\&quot;2024-04-18T00:00:00.000Z\&quot;},\&quot;DataLife\&quot;:{\&quot;unit\&quot;:\&quot;DAY\&quot;,\&quot;value\&quot;:2},\&quot;Frequency\&quot;:{\&quot;unit\&quot;:\&quot;DAY\&quot;,\&quot;value\&quot;:2}}}&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentidCalled&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;runCounter&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;consentidError&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="get-fi-notification">Get FI Notification</h3>
+<p>This API retrieves the consent details.</p>
+<p>API to call
+<code>https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/FINotification/{consentHandle}</code></p>
+<p>Method: <code>GET</code>
+PARAMETERS:
+<code>consentHandle</code> The consentHandleId when raising a consent Request</p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: {{token}}</code></td>
+<td>The token to be used when calling the APIs</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Response</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;ver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0.0&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-22T06:00:31.696+00:00&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;txnid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d0d3cf8a-54c0-4865-9b42-ad7b2e17e07e&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Notifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AA&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UNACORES-AA-UAT&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;FIStatusNotification&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;e24d453a-fc14-4152-aee3-e5246ae29eb9&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;sessionStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;COMPLETED&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;FIStatusResponse&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;fipID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kfinnps-fip-uat&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;Accounts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                            </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">&quot;linkRefNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;e8a3e99a-4e8c-4dec-a8b5-c27799d5d218&quot;</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">&quot;FIStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;READY&quot;</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Data is ready&quot;</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">]</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="fetch-data-using-sessionid">Fetch Data using sessionId</h3>
+<p>This API retrieves the account details.</p>
+<p>API to call
+<code>https://api.sandbox.unaport.com/backend-v2/api/v2/FIU/FifetchDataBySessionId/{sessionId}</code></p>
+<p>Method: <code>GET</code>
+PARAMETERS:
+<code>sessionId</code> The sessionId must be included in the webhook API calls.</p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: {{token}}</code></td>
+<td>The token to be used when calling the APIs</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Response</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;tabs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEPOSIT&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;DEPOSIT&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;currentBalance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;101401773.000&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;orgId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4509dd7b-9ebc-4d93-b1bd-0c2ca7025149&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;branch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;41101&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ACTIVE&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INR&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;fip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;IDFC-FIP&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;accountNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XXXXXXX1046&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f8d0f98d-165f-4d28-a134-c0acee4d0992&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;fetchType&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;exchangeRate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;consentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;04586e55-d950-4a11-b7bb-ffee54ca61f7&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;balanceDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T06:59:24.663+00:00&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;facility&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OD&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;ifscCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;IDFB0041101&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;microCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;461751505&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;openingDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-08-17&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;currentOdLimit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;drawingLimit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;accountType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SAVINGS&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;compoundingFrequency&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;currentValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;interestComputation&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;interestOnMaturity&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;interestPayout&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;interestPeriodicPayoutAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;interestRate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;maturityAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;maturityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;principalAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;tenureDays&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;tenureMonths&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;tenureYears&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;accountHolder&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;consentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;04586e55-d950-4a11-b7bb-ffee54ca61f7&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;orgId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4509dd7b-9ebc-4d93-b1bd-0c2ca7025149&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ms. Priyanka  Jalan&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;dob&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1991-08-01&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;nominee&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOT-REGISTERED&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;priyanka.jalan@idfcfirstbank.com&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;pan&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GGGGG1111Q&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AIROLI,,,Mumbai,400001&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;mobile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;919748783710&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;fip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;IDFC-FIP&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;accountNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XXXXXXX1046&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f8d0f98d-165f-4d28-a134-c0acee4d0992&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;fetchType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;deposit&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;accountType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SAVINGS&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;accountHoldertype&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SINGLE&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;ckycCompliance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T06:59:24.663+00:00&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;transactions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;orgId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4509dd7b-9ebc-4d93-b1bd-0c2ca7025149&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;tranTimestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-16T15:39:30+05:30&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f8d0f98d-165f-4d28-a134-c0acee4d0992&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;narration&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TEST2&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;220022.0&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;consentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;04586e55-d950-4a11-b7bb-ffee54ca61f7&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CREDIT&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OTHERS&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;currentBalance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;220022.00&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;txnId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;valueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;accountNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XXXXXXX1046&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;transactionDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T06:59:24.663+00:00&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;orgId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4509dd7b-9ebc-4d93-b1bd-0c2ca7025149&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;tranTimestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-16T15:39:33+05:30&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f8d0f98d-165f-4d28-a134-c0acee4d0992&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;narration&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TEST1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0E8&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;consentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;04586e55-d950-4a11-b7bb-ffee54ca61f7&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CREDIT&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OTHERS&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;currentBalance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100220022.00&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;txnId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;valueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;accountNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XXXXXXX1046&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;transactionDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T06:59:24.663+00:00&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;orgId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4509dd7b-9ebc-4d93-b1bd-0c2ca7025149&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;tranTimestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-31T22:20:45+05:30&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f8d0f98d-165f-4d28-a134-c0acee4d0992&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;narration&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MONTHLY SAVINGS INTEREST CREDIT&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;480844.0&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;consentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;04586e55-d950-4a11-b7bb-ffee54ca61f7&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CREDIT&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OTHERS&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;currentBalance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;101401773.00&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;txnId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;valueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;accountNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XXXXXXX1046&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;transactionDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T06:59:24.663+00:00&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Unacores Solutions Pvt Ltd.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

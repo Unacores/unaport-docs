@@ -1,0 +1,974 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Unaport.ai provides a suite of APIs designed for seamless integration in financial services, enabling account aggregation, consent management, and data sharing. Our comprehensive API documentation guides developers through the features, authentication, and best practices for utilizing our platform to build secure and scalable financial applications.">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../images/unaport_u.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Fiu sdk - Unaport.ai - API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Unaport.ai - API Documentation" class="md-header__button md-logo" aria-label="Unaport.ai - API Documentation" data-md-component="logo">
+      
+  <img src="../images/unaport_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Unaport.ai - API Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiu sdk
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Unaport.ai - API Documentation" class="md-nav__button md-logo" aria-label="Unaport.ai - API Documentation" data-md-component="logo">
+      
+  <img src="../images/unaport_logo.svg" alt="logo">
+
+    </a>
+    Unaport.ai - API Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏠 Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu_onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💼 FIU Onboarding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📚 API Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📚 API Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#postman" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔑 Postman Collection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#introduction" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📝 Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#login" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒 Authentication API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#consents" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📑 Consents API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#data" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊 Data API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#analytics" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📈 Analytics API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🔔 Notification API
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            🔔 Notification API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#consent-notification-api" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📝 Consent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#data-notification-api" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊 Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#analytics-notification-api" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📈 Analytics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu_web_sdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛠 SDK Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#consent-overview" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📜 Consent Relationship
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Fiu sdk</h1>
+
+<!-- # FIU - Integration with Unaport FIU
+
+## This document provides details for an FIU web SDK to integrate with the Account Aggregator framework via the Unaport FIU solution.
+
+## Introduction
+
+Ink is an RBI-licensed account aggregator, transforming the way individuals and businesses manage their financial data in India. As Ink AA, we offer a secure and streamlined method to consolidate all your financial information in one place. Our service ensures that your data is always accessible, enabling you to manage your finances more efficiently.
+
+Unaport FIU collaborates with Ink to provide comprehensive financial information and insights. With Unaport FIU's cutting-edge technology and Ink's user-friendly interface, you gain a powerful tool that empowers you to make informed financial decisions. Together, Ink and Unaport FIU are transforming financial management in India.
+
+## Web endpoint
+
+Endpoint: [https://websdk.sandbox.unaport.com/unaport](https://websdk.sandbox.unaport.com/unaport)
+
+## SDK config:
+
+<table>
+  <tr>
+   <td><strong>Field</strong>
+   </td>
+   <td><strong>Mandatory (M)  \
+Optional (O)</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>mobileNumber
+   </td>
+   <td>M
+   </td>
+   <td>String
+   </td>
+   <td>Mobile number of the individual whose data needs to be fetched. Without international code. 10 digits.
+   </td>
+  </tr>
+  <tr>
+   <td>fiuName
+   </td>
+   <td>M
+   </td>
+   <td>String
+   </td>
+   <td>Name of the FIU. As per records in Sahamati
+   </td>
+  </tr>
+  <tr>
+   <td>logoUrl
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Logo URL to be displayed in the FIU web screens
+   </td>
+  </tr>
+  <tr>
+   <td>clientId
+   </td>
+   <td>M
+   </td>
+   <td>String
+   </td>
+   <td>Client ID for Auth
+   </td>
+  </tr>
+  <tr>
+   <td>clientSecret
+   </td>
+   <td>M
+   </td>
+   <td>String
+   </td>
+   <td>Client Secret for Auth
+   </td>
+  </tr>
+  <tr>
+   <td>callbackUrl
+   </td>
+   <td>M
+   </td>
+   <td>String
+   </td>
+   <td>Url to redirect back to when user exits the Unaport web sdk
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration
+   </td>
+   <td>O
+   </td>
+   <td>Object
+   </td>
+   <td>Color Configuration to customize the web screens
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.primaryColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Primary color in Hex color code format.
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.secondaryColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Primary color in Hex color code format.
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.hintColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Hint Color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.borderColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Border color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.primaryButtonColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Primary Button Color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.secondaryButtonColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Secondary Button Color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.disableIconColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Disable icon color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.primaryBackgroundColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Primary background color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.secondaryBackgroundColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Secondary background color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.errorColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Error Color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.errorColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Header Color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.primaryTextColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Primary Text Color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.secondaryTextColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Secondary text color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.invertTextColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Invert Text color
+   </td>
+  </tr>
+  <tr>
+   <td>colorConfiguration.failureColor
+   </td>
+   <td>O
+   </td>
+   <td>String
+   </td>
+   <td>Failure Color
+   </td>
+  </tr>
+</table>
+
+### Sample config JSON(plain):
+
+
+<div class="codehilite"><pre><span></span><code><span class="err">{</span>
+<span class="w">    </span><span class="ss">&quot;mobileNumber&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;9867****13&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="ss">&quot;fiuName&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;Unacores FIU UAT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="ss">&quot;logoUrl&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;https://link.to/yourpage/something.png&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="ss">&quot;clientId&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;siddhar****tty@hi2.in&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="ss">&quot;clientSecret&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;12F&amp;*UFJKD****&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="ss">&quot;callbackUrl&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;https://google.com&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="ss">&quot;colorConfiguration&quot;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="ss">&quot;primaryColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;secondaryColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;hintColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;borderColor&quot;</span><span class="err">:</span><span class="ss">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;primaryButtonColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;secondaryButtonColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;disableIconColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;primaryBackgroundColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;secondaryBackgroundColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;errorColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;headerColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;primaryTextColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;secondaryTextColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;invertTextColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">&quot;failureColor&quot;</span><span class="err">:</span><span class="ss">&quot;#FF23DD&quot;</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div>
+
+
+
+### Sample config Encrypted:
+
+
+<div class="codehilite"><pre><span></span><code><span class="mf">2</span><span class="n">fo88dljax</span><span class="o">/</span><span class="n">Jj8bti9Yysyd5VvGm3SrTOADl9baEo2cPRirm0mCH5bGRiR0rFUE5CePPIDeEXTQdwUueDot490Ke0PihySVEACnSafl0bCxJwhMqukipeGTa9psFm9J6N6g70mcAGX0deDGdSRqZsc7C</span><span class="o">+</span><span class="mf">3</span><span class="n">CtQ</span><span class="o">/</span><span class="n">uww7HzdW</span><span class="o">/</span><span class="n">XADrt1gFjhyR</span><span class="o">+</span><span class="n">sRH</span><span class="o">/</span><span class="n">mtz2sneiIFRkXhxRRD9bwUGNRBKYq</span><span class="o">+</span><span class="n">QNxncBz8WsKt</span><span class="o">+</span><span class="n">k2XNutMhKmvwEAxYER0u230gVvBBT3cBKVYwmYTWzes9SVhFMHG42hmUY5HPZr</span><span class="o">/</span><span class="mf">5</span><span class="n">SMAvBNmLrTELswH51Ea5n8kK2piUAZrk3TKRPje1xNNKDTQnqNM8sUqgvXnCregZSROdkIsfQeGWMmbwfZWZAwr0Hd7W</span><span class="o">/</span><span class="n">e80INmYxs</span><span class="o">/</span><span class="n">TRiksDSpgHtHF</span><span class="o">+</span><span class="n">mJYFm2XzekZY7yrQP</span><span class="o">+</span><span class="n">xg6Kz</span><span class="o">+</span><span class="n">CUEQNYK1</span><span class="o">+</span><span class="n">l7</span><span class="o">/</span><span class="n">MG2NPaQM16rL6tYY1OXi57YlftYQMO7j8hIjVV3h7jcEUe47CwsLvCE3o4R</span><span class="o">+</span><span class="n">bnm</span><span class="o">+</span><span class="n">MRiUf0oF9r8xx2bSNcW6qxcIymMt6fPr8adAjxk6wPCbCTonZdLy4R0RCYsjjEZlRKNy1hAw7uPyEiNVXeHuNwRR7nPXPaeAA</span><span class="o">+</span><span class="n">HzSUe7ZO</span><span class="o">+</span><span class="n">jYCSqpYF8TC1om9wW5IbzT0dl1kO0xw7tD0rdLH1OBPEkmAlBtp7agVE</span><span class="o">/</span><span class="mf">5</span><span class="n">lRPYZu1CmribImWvG4Hexwrxv6Q0wBvYy3p8</span><span class="o">+</span><span class="n">vxp0CPGTrA8JsJOoyZaiiKqU5LTgR0zwCf25tjLenz6</span><span class="o">/</span><span class="n">GnQI8ZOsDwmwk6cPsLH4VT</span><span class="o">/</span><span class="mf">3</span><span class="n">EjR2</span><span class="o">+</span><span class="n">e2Vg9futMQuzAfnURrmfyQramJQDz1OWfZTdxpnhjitFL1FThwCZxBu</span><span class="o">/</span><span class="n">SsY1sA8FTKliyHeCsWRGH903S9ty2YY9</span><span class="o">/</span><span class="n">UI6zPZTdyFYXFT2jx0HEo4ho3Hp</span><span class="o">+</span><span class="n">xVPKksas0</span><span class="o">+</span><span class="n">xUudZAdOiWtxvqv9oD</span><span class="o">+</span><span class="n">xsAVmEg73R7zQg2ZjGz9NGKSwNKmAe00EWk0bvbf3XYrLnboA7iPewiJgrCmFhrMU0EuyFt736a1OzJof79Fl8w</span><span class="o">+</span><span class="mf">7</span><span class="n">BZW7gi</span>
+</code></pre></div>
+
+
+
+## Process flow
+
+<ol>
+<li>SDK consumer generates config JSON.</li>
+<li>JSON is then encrypted using AES-256-ecb algorithm with key provided by us</li>
+<li>SDK Consumer redirects the user to Unaport web view, or Loads the page as an Iframe. URL will be &lt;unaport web endpoint&gt;/unaport?config=&lt;encryptedconfigjson&gt;</li>
+<li>Unaport FIU securely generates a unique session, authenticates the user in the background using the client id and client secret</li>
+<li>Based on the mobile number passed Unaport will securely load a summary of the Users linked accounts and balances</li>
+<li><p>If the user has no linked accounts or wants to add additional accounts, User clicks on the link more accounts button to link. Linking steps are as follows:</p>
+<ul>
+<li>On clicking linked accounts, the Ink AA screen is securely loaded. An OTP is sent to the user for authentication</li>
+<li>Upon Authentication, users can select from a list of all FIP (Financial Information Providers)/ Banks.</li>
+<li>AA discovers accounts of the user based on his authenticated mobile number.</li>
+<li>User selects account(s) to be linked.</li>
+<li>User will receive an OTP from the Bank to link account</li>
+<li>Upon successful authentication, the user is shown a consent approval screen. He has to accept consent to his data.</li>
+<li>On clicking approve his consent is raised and data is securely fetched.</li>
+<li>This only needs to be done once per account.</li>
+</ul>
+</li>
+<li><p>User clicks on a particular account, He is able to see the latest transactions of that account, of any bank within the same application.</p>
+</li>
+<li>User can click on the Account analysis button to view ML powered analytics of his account, spending categories, income and trends.</li>
+<li>On the top right of the home page user will also see a notification icon, Upon clicking user recieves personalized nudges based on the data fetched from AA.</li>
+<li>User can exit the view as required</li>
+</ol>
+
+
+## Key Features
+- Single view of total balances and transactions across all banks.
+- ML powered account anlysis, spend categorization and insights.
+- Personalized nudges based on cumilative account data. -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Unacores Solutions Pvt Ltd.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3370 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Unaport.ai provides a suite of APIs designed for seamless integration in financial services, enabling account aggregation, consent management, and data sharing. Our comprehensive API documentation guides developers through the features, authentication, and best practices for utilizing our platform to build secure and scalable financial applications.">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../images/unaport_u.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Fiu - Unaport.ai - API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#new-functionality" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Unaport.ai - API Documentation" class="md-header__button md-logo" aria-label="Unaport.ai - API Documentation" data-md-component="logo">
+      
+  <img src="../images/unaport_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Unaport.ai - API Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Unaport.ai - API Documentation" class="md-nav__button md-logo" aria-label="Unaport.ai - API Documentation" data-md-component="logo">
+      
+  <img src="../images/unaport_logo.svg" alt="logo">
+
+    </a>
+    Unaport.ai - API Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏠 Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu_onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💼 FIU Onboarding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📚 API Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📚 API Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#postman" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔑 Postman Collection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#introduction" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📝 Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#login" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒 Authentication API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#consents" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📑 Consents API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#data" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊 Data API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#analytics" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📈 Analytics API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🔔 Notification API
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            🔔 Notification API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#consent-notification-api" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📝 Consent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#data-notification-api" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊 Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#analytics-notification-api" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📈 Analytics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu_web_sdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛠 SDK Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiu#consent-overview" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📜 Consent Relationship
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Functionality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Functionality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-account-aggregator-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi Account Aggregator Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unaportai-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Unaport.ai API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Unaport.ai API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consents-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Consents Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-reports-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Data Reports Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Analytics Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Response Status Codes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Response Status Codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh-token-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refresh Token API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-table_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-table_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-fiu-organisation-details-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get FIU Organisation Details API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-table_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-table_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-consent-template-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Consent Template API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-table_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-code-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose Code Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      FI TYPES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consent-relationship-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consent Relationship Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Points:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-table_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-consent-api-without-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Consent API without template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-table_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-consent-with-template-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Consent with Template API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-table_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-table_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-consent-status-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Consent Status API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-table_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revoke-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revoke Consent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revoke Consent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Path Parameters:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consent-notification-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consent-Notification-API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Body
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-notification-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data-Notification-API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-body_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Body
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch-data-status-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fetch Data Status API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-table_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-table_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch-data-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fetch Data API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-table_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-table_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deposit-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      DEPOSIT Object
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DEPOSIT Object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-holder-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account Holder Details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transactions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-bank-account-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Bank Account Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-analytics-api-sync-async" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Analytics API - ( Sync &amp; ASync)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-table_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-notification-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytics-Notification-Api
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-analytics-api-sync-async" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregate Analytics API - ( Sync &amp; ASync)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-table_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";  
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";  
+  evt.currentTarget.className += " active";
+}
+
+/* Light green background for footnotes */
+.footnote-ref, .footnote {
+    background-color: #e0f7e9; /* light green color */
+    padding: 5px;
+    border-radius: 3px;
+}
+
+</script>
+
+<div class="admonition note">
+<p class="admonition-title">🚀 API Version Update - v2.0.0 🚀</p>
+<p><strong>📅 Release Date:</strong> <em>28th January 2025</em></p>
+<p>We’re thrilled to announce the launch of <strong>Unaport FIU API v2.0.0</strong>! </p>
+<h3 id="new-functionality">New Functionality</h3>
+<h4 id="multi-account-aggregator-support">Multi Account Aggregator Support</h4>
+<ul>
+<li>Our APIs now support integration with multiple Account Aggregators (AAs).</li>
+<li><strong>Key features:</strong><ul>
+<li>Flexible configuration to add or manage multiple AAs.</li>
+<li>Improved routing logic to ensure seamless data flow from different AAs.</li>
+<li>Enhanced error handling and logging mechanisms for multi-AA interactions.</li>
+</ul>
+</li>
+</ul>
+<p>👉 <strong>New consumers, please use this version to access the latest features and improvements.</strong></p>
+<p><div class="line"></div></p>
+<p>🎯 <strong>Get started now!</strong>  </p>
+<p><a href="https://unacores.github.io/unaport-docs/json/postman.json" class="download-button" download>
+    ⬇️ <strong>Postman Collection v2.0</strong>
+</a></p>
+<p><a href="https://unacores.github.io/unaport-docs/json/Unaport.postman_environment.json"  download Environment>
+    <strong>Download Environment Variables</strong>
+</a></p>
+<p><em>(Ensure you whitelist the following Unaport IP addresses for notifications:)</em>  - <strong>UAT</strong>: <code>15.206.247.111</code> <strong>Production</strong>: <code>13.234.23.251</code>  </p>
+</div>
+<h2 id="introduction">🌟 <strong>Introduction</strong></h2>
+<p>To start with the integration, follow the steps below:  </p>
+<h1 id="unaportai-api">🔗 <strong>Unaport.ai API</strong></h1>
+<p>Welcome to the <strong>Unaport.ai API Reference</strong>!<br />
+This guide provides everything you need to integrate Unaport.ai services into your application, including:  </p>
+<ul>
+<li>Generating user consent  </li>
+<li>Retrieving user details  </li>
+<li>Accessing analyzed data and CAM sheets  </li>
+</ul>
+<p>The Unaport.ai APIs are fully RESTful, and all responses are delivered in <strong>JSON</strong> format.  </p>
+<p align="center">
+  <img src="https://unacores.github.io/unaport-docs/images/selection.png" alt="Dashboard" width="700">
+</p>
+
+<hr />
+<h3 id="authentication">🔐 <strong>Authentication</strong></h3>
+<p align="center">
+  <img src="https://unacores.github.io/unaport-docs/images/Login.png" alt="Dashboard" width="500">
+</p>
+
+<ol>
+<li><strong>Login API</strong>: Authenticate requests using the Bearer token obtained via the Login API.  </li>
+<li><strong>Refresh Token API</strong>: Get a new access token with a valid refresh token.  </li>
+<li><strong>Get Organisation Details API</strong>: Retrieve organizational details such as name, type, and contact information.  </li>
+</ol>
+<hr />
+<h3 id="consents-description">📝 <strong>Consents Description</strong></h3>
+<p align="center">
+  <img src="https://unacores.github.io/unaport-docs/images/Consents.png" alt="Consents" width="400">
+</p>
+
+<ol>
+<li><strong>Create Consent Template API</strong>: Create standardized consent templates with parameters like purpose, data types, and expiration.  </li>
+<li><strong>Get Consent Templates List API</strong>: View and manage predefined templates.  </li>
+<li><strong>Create Consent without Template API</strong>: Customize consent requests without using templates.  </li>
+<li><strong>Create Consent with Template API</strong>: Generate consent requests based on predefined templates.  </li>
+<li><strong>Check Consent Status API</strong>: Verify the status and details of a specific consent request.  </li>
+<li><strong>Revoke Consent API</strong>: FIUs can revoke already approved consent status.  </li>
+<li><strong>Consent Notification API</strong>: Notify FIUs about consent status changes.  </li>
+</ol>
+<hr />
+<h3 id="data-reports-description">📊 <strong>Data Reports Description</strong></h3>
+<p align="center">
+  <img src="https://unacores.github.io/unaport-docs/images/Data.png" alt="Data" width="300">
+</p>
+
+<ol>
+<li><strong>Fetch Data Status API</strong>: Check the status of data sharing for a consent handle.  </li>
+<li><strong>Fetch Data API</strong>: Retrieve session-specific data using a session ID.  </li>
+<li><strong>Export Data API</strong>: Export session-specific data.  </li>
+<li><strong>Data Notification API</strong>: Notify FIUs/AA clients about Financial Information fetch statuses.  </li>
+</ol>
+<hr />
+<h3 id="analytics-description">📈 <strong>Analytics Description</strong></h3>
+<p align="center">
+  <img src="https://unacores.github.io/unaport-docs/images/analytics.png" alt="Analytics" width="300">
+</p>
+
+<ol>
+<li><strong>Single Account - Generate Analytics API (Sync and Async)</strong>: Create detailed aggregateanalytical reports.  </li>
+<li><strong>Single Account - Fetch Analytics API</strong>: Retrieve analytics data for a specific analytic ID.  </li>
+<li><strong>Single Account - Export Analytics API</strong>: Export detailed analytics data.  </li>
+<li><strong>Aggregate Account - Generate Analytics API (Sync and Async)</strong>: Create detailed aggregate analytical reports.  </li>
+<li><strong>Aggregate Account - Fetch Analytics API</strong>: Retrieve analytics data for a specific Session ID.  </li>
+<li><strong>Aggregate Account - Export Analytics API</strong>: Export detailed analytics data for a specific Session ID.  . </li>
+</ol>
+<hr />
+<h2 id="response-status-codes">🛠️ <strong>Response Status Codes</strong></h2>
+<p>API responses are communicated via HTTP using the following status codes:  </p>
+<ul>
+<li><strong>200: OK</strong> – Successful request.  </li>
+<li><strong>201: Created</strong> – New resource created.  </li>
+<li><strong>400: Bad Request</strong> – Invalid request, often due to missing parameters.  </li>
+<li><strong>401: Unauthorized</strong> – No valid API key provided.  </li>
+<li><strong>403: Forbidden</strong> – Insufficient permissions.  </li>
+<li><strong>500: Server Errors</strong> – Issue on Unaport.ai's server.  </li>
+</ul>
+<hr />
+<h3 id="login">Login</h3>
+<p>All the API requests are authenticated using the Bearer token. To get this token, you will need to make a request to the login API using the credentials. The response will contain the token. Send the token in the header for all the requests.</p>
+<h4 id="request-table">Request Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Length</th>
+<th>Datatype</th>
+<th>Mandatory/Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>emailId</code></td>
+<td>User's email address</td>
+<td>254</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>User's password for login</td>
+<td>8-64</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response-table">Response Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>timestamp</code></td>
+<td>The timestamp of the response</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>txnId</code></td>
+<td>Unique transaction identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>API version</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>access_token</code></td>
+<td>Access token for the authenticated user</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>expires_in</code></td>
+<td>Duration (in seconds) before the access token expires</td>
+<td>Number</td>
+</tr>
+<tr>
+<td><code>refresh_expires_in</code></td>
+<td>Duration (in seconds) before the refresh token expires</td>
+<td>Number</td>
+</tr>
+<tr>
+<td><code>refresh_token</code></td>
+<td>Token used to refresh the access token</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>token_type</code></td>
+<td>Type of token, typically "Bearer"</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="refresh-token-api">Refresh Token API</h3>
+<p>Allows users to obtain a new access token by providing a valid refresh token. This ensures continued access to secured resources without requiring the user to re-authenticate, enhancing user experience and maintaining session continuity.</p>
+<h3 id="request-table_1">Request Table</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Length</th>
+<th>Datatype</th>
+<th>Mandatory/Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>refresh_token</code></td>
+<td>The refresh token for renewing access</td>
+<td>255</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-table_1">Response Table</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>timestamp</code></td>
+<td>The timestamp of the response</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>txnId</code></td>
+<td>Unique transaction identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>API version</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>access_token</code></td>
+<td>Access token for the authenticated user</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>expires_in</code></td>
+<td>Duration (in seconds) before the access token expires</td>
+<td>Number</td>
+</tr>
+<tr>
+<td><code>refresh_expires_in</code></td>
+<td>Duration (in seconds) before the refresh token expires</td>
+<td>Number</td>
+</tr>
+<tr>
+<td><code>refresh_token</code></td>
+<td>Token used to refresh the access token</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>token_type</code></td>
+<td>Type of token, typically "Bearer"</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-fiu-organisation-details-api">Get FIU Organisation Details API</h3>
+<p>The API retrieves information about a specific organization using its unique identifier. It provides essential details such as the organization's name, type, and contact information, enabling users to access relevant organizational data</p>
+<h3 id="request-table_2">Request Table</h3>
+<ul>
+<li><strong>URL:</strong> <code>https://common.sandbox.unaport.com/api/v1/FIU/getClientOrganisation</code></li>
+<li><strong>HTTP Method:</strong> <code>GET</code> </li>
+<li><strong>Headers:</strong></li>
+<li><strong>Authorization:</strong> Bearer token for authenticating the request.</li>
+<li><strong>Content-Type:</strong> Specifies the request body format (JSON).</li>
+</ul>
+<h3 id="response-table_2">Response Table</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ver</code></td>
+<td>API version</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>fiulive</code></td>
+<td>Live FIU entity information</td>
+<td>Object</td>
+</tr>
+<tr>
+<td><code>entityId</code></td>
+<td>Identifier of the FIU entity in live mode</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Unique identifier for the FIU entity in live mode</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>fiutest</code></td>
+<td>Test FIU entity details</td>
+<td>Object</td>
+</tr>
+<tr>
+<td><code>entityId</code></td>
+<td>Identifier of the FIU entity in test mode</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Unique identifier for the FIU entity in test mode</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>orgId</code></td>
+<td>Organization identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>The timestamp of the response</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>txnId</code></td>
+<td>Unique transaction identifier</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<div class="line"></div>
+
+<h3 id="consents">Consents</h3>
+<h3 id="create-consent-template-api">Create Consent Template API</h3>
+<p>The enables users to create a standardized consent template for data sharing among service providers. By defining parameters such as purpose, data types, and expiration, it streamlines the consent management process, ensuring compliance and clarity in user agreements.</p>
+<h3 id="request-table_3">Request Table</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Length</th>
+<th>Datatype</th>
+<th>Mandatory/Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>product_name</code></td>
+<td>Name of the product to be inserted</td>
+<td>100</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail</code></td>
+<td>Contains details of the user’s consent</td>
+<td>-</td>
+<td>Object</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.consentStart</code></td>
+<td>Start date for consent in ISO 8601 format</td>
+<td>20</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.consentExpiry</code></td>
+<td>Duration until consent expires, in months - <code>12</code></td>
+<td>2</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.consentMode</code></td>
+<td>Enum for the type of consent. Possible values are <code>VIEW</code>, <code>STORE</code>, <code>QUERY</code>, <code>STREAM</code></td>
+<td>10</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.fetchType</code></td>
+<td>Enum to specify either <code>ONETIME</code> or <code>PERIODIC</code> fetch of data</td>
+<td>8</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.consentTypes</code></td>
+<td>Types of consent requested, e.g., <code>PROFILE</code>, <code>SUMMARY</code>, <code>TRANSACTIONS</code></td>
+<td>15</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.fiTypes</code></td>
+<td>Types of financial information, e.g., <a href="#fi-types">FI Types</a></td>
+<td>15</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.DataConsumer.id</code></td>
+<td>ID of the FIU</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.Purpose.code</code></td>
+<td>Purpose code of the consent - <a href="#purpose-code-definition">Purpose Code Definition</a></td>
+<td>10</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.Purpose.refUri</code></td>
+<td>Reference URI for purpose definition - <code>https://api.rebit.org.in/aa/purpose/101.xml</code></td>
+<td>255</td>
+<td>String</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.Purpose.text</code></td>
+<td>Text description of the purpose, e.g., <code>Wealth management service</code></td>
+<td>255</td>
+<td>String</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.Purpose.Category.type</code></td>
+<td>Category type of the purpose, e.g., <code>Personal Finance</code></td>
+<td>50</td>
+<td>String</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.FIDataRange.from</code></td>
+<td>Start of the data range in months, negative for past dates - <code>-12</code></td>
+<td>4</td>
+<td>Number</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.FIDataRange.to</code></td>
+<td>End of the data range in months - <code>12</code></td>
+<td>4</td>
+<td>Number</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.DataLife.unit</code></td>
+<td>Time period for data storage. Options: <code>MONTH</code>, <code>YEAR</code>, <code>DAY</code>, <code>INF</code></td>
+<td>5</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.DataLife.value</code></td>
+<td>Value defining the duration for data life - <code>1</code></td>
+<td>3</td>
+<td>Number</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.Frequency.unit</code></td>
+<td>Frequency unit for data refresh, e.g., <code>HOUR</code>, <code>MONTH</code>, <code>YEAR</code>, <code>DAY</code>, <code>INF</code></td>
+<td>5</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.Frequency.value</code></td>
+<td>Frequency value for data refresh, e.g., <code>1</code></td>
+<td>3</td>
+<td>Number</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentDetail.DataFilter</code></td>
+<td>Conditions for filtering the data being fetched</td>
+<td>-</td>
+<td>Array</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<h4 id="purpose-code-definition">Purpose Code Definition</h4>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Service Description</th>
+<th>Category Code</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>Wealth management service</td>
+<td>01</td>
+<td>Personal Finance</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Customer spending patterns, budget or other reportings</td>
+<td>01</td>
+<td>Personal Finance</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Aggregated statement</td>
+<td>02</td>
+<td>Financial Reporting</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Explicit consent for monitoring of the accounts</td>
+<td>03</td>
+<td>Account Query and Monitoring</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Explicit one-time consent for the accounts</td>
+<td>03</td>
+<td>Account Query and Monitoring</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fi-types">FI TYPES</h4>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>FI Types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bank</td>
+<td>DEPOSIT, TERM_DEPOSIT, RECURRING_DEPOSIT</td>
+</tr>
+<tr>
+<td>Investment</td>
+<td>MUTUAL_FUNDS, ETF, EQUITIES, NPS</td>
+</tr>
+<tr>
+<td>Insurance</td>
+<td>INSURANCE_POLICIES</td>
+</tr>
+<tr>
+<td>GST</td>
+<td>GSTR1_3B</td>
+</tr>
+</tbody>
+</table>
+<p><a id="consent-overview"></a> <!-- This adds an anchor --></p>
+<h4 id="consent-relationship-overview">Consent Relationship Overview</h4>
+<p>The relationship between the consent status, consent handle, and consent ID for AA, FIP, and FIU is depicted in the table below:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Use Case</strong></th>
+<th><strong>Status</strong></th>
+<th><strong>Notification Sender</strong></th>
+<th><strong>Notification Receiver</strong></th>
+<th><strong>Consent Id</strong></th>
+<th><strong>Consent Handle</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Consent Approval Status</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Consent Request raised by FIU</td>
+<td>PENDING</td>
+<td>AA</td>
+<td>Customer</td>
+<td>Null</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Customer rejects the consent at AA Client</td>
+<td>FAILED</td>
+<td>AA</td>
+<td>FIU</td>
+<td>Null</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Consent is approved/paused/revoked by customer</td>
+<td>READY</td>
+<td>AA</td>
+<td>FIU, FIP</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Consent request is expired at AA</td>
+<td>EXPIRED</td>
+<td>AA</td>
+<td>FIU</td>
+<td>Null</td>
+<td>Available</td>
+</tr>
+<tr>
+<td><strong>Consent Status</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Consent Request raised by FIU</td>
+<td>CREATED</td>
+<td>AA</td>
+<td>Customer</td>
+<td>Null</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Consent is approved by customer</td>
+<td>ACTIVE</td>
+<td>AA</td>
+<td>FIU, FIP</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Customer revokes the consent using AA client</td>
+<td>REVOKED</td>
+<td>AA</td>
+<td>FIU, FIP</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Customer initiates revoke consent from FIP</td>
+<td>REVOKED</td>
+<td>FIP</td>
+<td>AA</td>
+<td>Available</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>AA processes the consent revocation from FIP</td>
+<td>REVOKED</td>
+<td>AA</td>
+<td>FIU, FIP, Customer</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>FIU sends consent revocation request to AA</td>
+<td>REVOKED</td>
+<td>FIU</td>
+<td>AA</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>AA processes the revocation request from FIU</td>
+<td>REVOKED</td>
+<td>AA</td>
+<td>FIU, FIP, Customer</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Customer pauses the consent using AA client</td>
+<td>PAUSED</td>
+<td>AA</td>
+<td>FIU, FIP</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Customer resumes the consent using AA client</td>
+<td>ACTIVE</td>
+<td>AA</td>
+<td>FIU, FIP</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Consent is expired at AA</td>
+<td>EXPIRED</td>
+<td>AA</td>
+<td>FIU, FIP</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+</tbody>
+</table>
+<h4 id="additional-notes">Additional Notes</h4>
+<ul>
+<li><strong>Consent Handle</strong>: Available with AA throughout the consent lifecycle.  </li>
+<li><strong>Consent ID</strong>: Generated by AA only after the consent is approved by the customer.  </li>
+</ul>
+<h3 id="key-points">Key Points:</h3>
+<ol>
+<li><strong>FIP</strong>: Receives the consent artefact only after approval by the customer. FIP uses the <strong>Consent ID</strong> for communication with AA.  </li>
+<li><strong>FIU and AA</strong>: May have both <strong>Consent Handle</strong> and <strong>Consent ID</strong> values depending on the consent artefact status.</li>
+</ol>
+<h3 id="response-table_3">Response Table</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>API version</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>txnId</code></td>
+<td>Unique transaction identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>productId</code></td>
+<td>Product identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>productName</code></td>
+<td>Name of the product</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>The timestamp of the response</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-consent-api-without-template">Create Consent API without template</h3>
+<p>The API allows users to generate a new consent request independently of predefined templates. This provides flexibility for users to define specific parameters, such as data types and sharing purposes, facilitating customized consent agreements tailored to unique data-sharing scenarios.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Length</th>
+<th>Datatype</th>
+<th>Mandatory/Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vuaId</code></td>
+<td>Virtual User ID representing the user within the consent framework</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>createdBy</code></td>
+<td>Email of the user or developer initiating the consent request</td>
+<td>100</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>trackingId</code></td>
+<td>Tracking identifier for the consent request</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>aaId</code></td>
+<td>Account Aggregator identifier for the request</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>fiuId</code></td>
+<td>Financial Information User identifier</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>redirectUrl</code></td>
+<td>URL to redirect after consent is processed</td>
+<td>255</td>
+<td>String</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>fiuBaseUrl</code></td>
+<td>Base URL for the Financial Information User API</td>
+<td>255</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>ConsentsRequest</code></td>
+<td>Main object containing details of the consent request</td>
+<td>-</td>
+<td>Object</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>├─ <code>ver</code></td>
+<td>Version of the consent request</td>
+<td>5</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>├─ <code>timestamp</code></td>
+<td>Timestamp of the consent request</td>
+<td>25</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>├─ <code>txnid</code></td>
+<td>Transaction ID associated with the request</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>├─ <code>ConsentDetail</code></td>
+<td>Details of the consent</td>
+<td>-</td>
+<td>Object</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>consentStart</code></td>
+<td>Start date-time of the consent (e.g., 2019-12-06T11:39:57.153Z)</td>
+<td>24</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>consentExpiry</code></td>
+<td>Expiry date-time for the consent (e.g., 2019-12-06T11:39:57.153Z)</td>
+<td>24</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>consentMode</code></td>
+<td>Mode of consent. Possible values are <code>VIEW</code>, <code>STORE</code>, <code>QUERY</code>, <code>STREAM</code></td>
+<td>10</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>fetchType</code></td>
+<td>Enum to specify either <code>ONETIME</code> or <code>PERIODIC</code> fetch of data</td>
+<td>8</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>consentTypes</code></td>
+<td>List of consent types (e.g., <code>PROFILE</code>, <code>SUMMARY</code>, <code>TRANSACTIONS</code>)</td>
+<td>-</td>
+<td>Array</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>fiTypes</code></td>
+<td>List of Financial Information types (e.g., <a href="#fi-types">FI Types</a>)</td>
+<td>-</td>
+<td>Array</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>DataConsumer</code></td>
+<td>Information about the consumer of the data</td>
+<td>-</td>
+<td>Object</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>id</code></td>
+<td>Identifier of the FIU</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>type</code></td>
+<td>Type of data consumer (e.g., <code>FIU</code>)</td>
+<td>10</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>Customer</code></td>
+<td>Details of the customer associated with the consent</td>
+<td>-</td>
+<td>Object</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>id</code></td>
+<td>Identifier of the Customer (e.g., customer_identifier@AA_identifier)</td>
+<td>100</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>Identifiers</code></td>
+<td>List of identifiers for the customer (e.g., mobile number)</td>
+<td>-</td>
+<td>Array</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>│  ├─ <code>Purpose</code></td>
+<td>Purpose of the data sharing</td>
+<td>-</td>
+<td>Object</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>code</code></td>
+<td>Purpose code (e.g., <code>103</code>)</td>
+<td>10</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>refUri</code></td>
+<td>Reference URI for purpose</td>
+<td>255</td>
+<td>String</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>text</code></td>
+<td>Text description of the purpose</td>
+<td>255</td>
+<td>String</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>Category</code></td>
+<td>Category for the purpose</td>
+<td>-</td>
+<td>Object</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>│  │  │  ├─ <code>type</code></td>
+<td>Type of category (e.g., <code>Financial Reporting</code>)</td>
+<td>50</td>
+<td>String</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>│  ├─ <code>FIDataRange</code></td>
+<td>Date range for the financial information</td>
+<td>-</td>
+<td>Object</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>from</code></td>
+<td>Start date of the data range</td>
+<td>24</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>to</code></td>
+<td>End date of the data range</td>
+<td>24</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>DataLife</code></td>
+<td>Duration of data availability</td>
+<td>-</td>
+<td>Object</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>unit</code></td>
+<td>Unit of time for data life (e.g., <code>MONTH</code>, <code>YEAR</code>, <code>DAY</code>, <code>INF</code>)</td>
+<td>5</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>value</code></td>
+<td>Value associated with the data life unit</td>
+<td>3</td>
+<td>Integer</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  ├─ <code>Frequency</code></td>
+<td>Frequency of data sharing</td>
+<td>-</td>
+<td>Object</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>unit</code></td>
+<td>Unit of frequency (e.g., <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>YEAR</code>, <code>INF</code>)</td>
+<td>5</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>│  │  ├─ <code>value</code></td>
+<td>Value associated with the frequency unit</td>
+<td>3</td>
+<td>Integer</td>
+<td>Mandatory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-table_4">Response Table</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ver</code></td>
+<td>API version</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>The timestamp of the response</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>txnid</code></td>
+<td>Unique transaction identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Customer</code></td>
+<td>Customer details</td>
+<td>Object</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Customer identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>ConsentHandle</code></td>
+<td>Unique identifier for the consent handle</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td>Status message indicating success of the action</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>redirectUrl</code></td>
+<td>URL for redirecting after consent creation</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-consent-with-template-api">Create Consent with Template API</h3>
+<p>This API allows users to generate a new consent request based on a predefined template. By leveraging existing templates, users can ensure compliance and consistency in consent agreements while easily specifying the relevant data types and sharing purposes for the intended data-sharing scenario.</p>
+<h3 id="request-table_4">Request Table</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Length</th>
+<th>Datatype</th>
+<th>Mandatory/Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vuaId</code></td>
+<td>User’s unique identifier for AA (Account Aggregator)</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>mobileNumber</code></td>
+<td>The mobile number associated with the consent request</td>
+<td>15</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>createdBy</code></td>
+<td>The email address of the person or system creating the consent</td>
+<td>100</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>trackingId</code></td>
+<td>Unique ID used to track the consent request</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>aaId</code></td>
+<td>The ID of the Account Aggregator initiating the consent request</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>fiuId</code></td>
+<td>The ID of the Financial Information User (FIU)</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>redirectUrl</code></td>
+<td>URL where the user will be redirected after consent is given</td>
+<td>255</td>
+<td>String</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>fiuBaseUrl</code></td>
+<td>The base URL of the FIU API</td>
+<td>255</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>productId</code></td>
+<td>The ID of the product for which consent is requested</td>
+<td>50</td>
+<td>String</td>
+<td>Mandatory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-table_5">Response Table</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ver</code></td>
+<td>API version</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>The timestamp of the response</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>txnid</code></td>
+<td>Unique transaction identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Customer</code></td>
+<td>Customer details</td>
+<td>Object</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Customer identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>ConsentHandle</code></td>
+<td>Unique identifier for the consent handle</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td>Status message indicating success of the action</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>redirectUrl</code></td>
+<td>URL for redirecting after consent creation</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="check-consent-status-api">Check Consent Status API</h3>
+<p>The API allows users to verify the status and details of a specific consent request using its unique consent handle. This enables users to retrieve information about the consent's validity, scope, and associated data-sharing agreements, ensuring transparency and control over consented data access.</p>
+<h3 id="header-table">Header Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Authorization</code></td>
+<td>Bearer token for authenticating the API request.</td>
+<td>String (Bearer Token)</td>
+</tr>
+<tr>
+<td><code>Data</code></td>
+<td>Empty request body, as this is a <code>GET</code> request.</td>
+<td>N/A (Empty Body)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-table_6">Response Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Data</code></td>
+<td>Array of consent records.</td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for the consent record.</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td><code>trackingId</code></td>
+<td>The tracking ID for the consent request.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>vuaId</code></td>
+<td>The ID of the user requesting consent.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>orgId</code></td>
+<td>The ID of the organization associated with the consent.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>consentHandle</code></td>
+<td>The unique handle for the consent.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>approveStatus</code></td>
+<td>The approval status of the consent.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>consentStatus</code></td>
+<td>The current status of the consent (e.g., ACTIVE, INACTIVE).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>fetchType</code></td>
+<td>The type of consent (e.g., <code>ONETIME</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>consentId</code></td>
+<td>The unique consent ID associated with the consent.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>The timestamp when the consent was created.</td>
+<td>String (ISO 8601)</td>
+</tr>
+<tr>
+<td><code>notificationDate</code></td>
+<td>The date when the consent notification was sent.</td>
+<td>String (ISO 8601)</td>
+</tr>
+<tr>
+<td><code>consentStart</code></td>
+<td>The start date of the consent validity period.</td>
+<td>String (ISO 8601)</td>
+</tr>
+<tr>
+<td><code>consentExpried</code></td>
+<td>The expiration date of the consent.</td>
+<td>String (ISO 8601)</td>
+</tr>
+<tr>
+<td><code>lastRuntime</code></td>
+<td>The last time the consent was executed.</td>
+<td>String (ISO 8601)</td>
+</tr>
+<tr>
+<td><code>nextRuntime</code></td>
+<td>The next time the consent is expected to be executed.</td>
+<td>String (ISO 8601 or null)</td>
+</tr>
+<tr>
+<td><code>updatedOn</code></td>
+<td>The timestamp when the consent was last updated.</td>
+<td>String (ISO 8601 or null)</td>
+</tr>
+<tr>
+<td><code>createdBy</code></td>
+<td>The user who created the consent.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>aaId</code></td>
+<td>The Account Aggregator ID associated with the consent.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>consentsDetail</code></td>
+<td>A detailed JSON string of the consent.</td>
+<td>String (JSON)</td>
+</tr>
+<tr>
+<td><code>signedConsent</code></td>
+<td>The signed consent token.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>consentidCalled</code></td>
+<td>The count of times the consent was called.</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td><code>runCounter</code></td>
+<td>The run counter for the consent.</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td><code>consentidError</code></td>
+<td>Any error associated with the consent call.</td>
+<td>Null / String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="revoke-consent">Revoke Consent</h3>
+<p>This API allows users to revoke a already approved consent request.</p>
+<h4 id="path-parameters">Path Parameters:</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>org_id</code></td>
+<td>The unique identifier of the organization.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>consentId</code></td>
+<td>The unique identifier of the consent to be revoked.</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consent-notification-api">Consent-Notification-API</h3>
+<p>This API is intended to be used by AA to notify FIU about the change in consent status due to the consent management operations performed by the Customer.</p>
+<p>FIU need to implement on your server and expose to receive notifications from Unaport.ai. These notifications are webhooks from Unaport based on the events that occur during the consent and data flow.</p>
+<p>The base_url is the server URL you share with us to receive notifications.</p>
+<h3 id="request-body">Request Body</h3>
+<p>Here's the table reflecting the attributes from the provided output:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ver</code></td>
+<td>Version of the notification</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>Timestamp of the notification</td>
+<td>ISO 8601 DateTime</td>
+</tr>
+<tr>
+<td><code>txnid</code></td>
+<td>Unique transaction ID</td>
+<td>UUID</td>
+</tr>
+<tr>
+<td><code>Notifier.type</code></td>
+<td>Type of the notifier (e.g., <code>AA</code>)</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Notifier.id</code></td>
+<td>Identifier for the notifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>ConsentStatusNotification.consentId</code></td>
+<td>ID of the consent</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>ConsentStatusNotification.consentHandle</code></td>
+<td>Handle associated with the consent</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>ConsentStatusNotification.consentStatus</code></td>
+<td>Status of the consent (<code>PAUSED</code>)</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<div class="line"></div>
+
+<h3 id="data">Data</h3>
+<h3 id="data-notification-api">Data-Notification-API</h3>
+<p>This API can be used by AAs to send notifications related to Financial Information (FI) fetch to FIU/AA Client.</p>
+<p>FIU need to implement on your server and expose to receive notifications from Unaport.ai. These notifications are webhooks from Unaport based on the events that occur during the consent and data flow.</p>
+<p>The base_url is the server URL you share with us to receive notifications.</p>
+<h3 id="request-body_1">Request Body</h3>
+<p>Here’s the table representation of the provided JSON structure:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Value/Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ver</code></td>
+<td>API version</td>
+<td><code>2.0.0</code> (String)</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>Timestamp of the response</td>
+<td><code>2023-06-26T11:39:57.153Z</code> (String)</td>
+</tr>
+<tr>
+<td><code>txnid</code></td>
+<td>Unique transaction identifier</td>
+<td><code>0b811819-9044-4856-b0ee-8c88035f8858</code> (String)</td>
+</tr>
+<tr>
+<td><code>Notifier</code></td>
+<td>Notifier details</td>
+<td>Object</td>
+</tr>
+<tr>
+<td><code>Notifier.type</code></td>
+<td>Type of notifier</td>
+<td><code>AA</code> (String)</td>
+</tr>
+<tr>
+<td><code>Notifier.id</code></td>
+<td>Notifier identifier</td>
+<td><code>AA-1</code> (String)</td>
+</tr>
+<tr>
+<td><code>FIStatusNotification</code></td>
+<td>Financial Information (FI) status notification details</td>
+<td>Object</td>
+</tr>
+<tr>
+<td><code>FIStatusNotification.sessionId</code></td>
+<td>Session identifier</td>
+<td><code>XXXX0-XXXX-XXXX</code> (String)</td>
+</tr>
+<tr>
+<td><code>FIStatusNotification.sessionStatus</code></td>
+<td>Current session status</td>
+<td><code>ACTIVE</code> (String)</td>
+</tr>
+<tr>
+<td><code>FIStatusNotification.FIStatusResponse</code></td>
+<td>List of FI status responses</td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code>FIStatusResponse[0].fipID</code></td>
+<td>Financial Information Provider (FIP) ID</td>
+<td><code>FIP-1</code> (String)</td>
+</tr>
+<tr>
+<td><code>FIStatusResponse[0].Accounts</code></td>
+<td>List of accounts for the FI</td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code>Accounts[0].linkRefNumber</code></td>
+<td>Account reference number</td>
+<td><code>XXXX-XXXX-XXXX</code> (String)</td>
+</tr>
+<tr>
+<td><code>Accounts[0].FIStatus</code></td>
+<td>Financial information status</td>
+<td><code>READY</code> (String)</td>
+</tr>
+<tr>
+<td><code>Accounts[0].description</code></td>
+<td>Additional details or description</td>
+<td>Empty string (<code>""</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fetch-data-status-api">Fetch Data Status API</h3>
+<p>This API enables users to retrieve the current status of data sharing associated with a specific consent handle. This API provides insights into whether the consent is active, the data requested, and any updates on the data-sharing process, ensuring users can monitor and manage their consented data effectively.</p>
+<h3 id="header-table_1">Header Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Authorization</code></td>
+<td>Bearer token for authenticating the API request.</td>
+<td>String (Bearer Token)</td>
+</tr>
+<tr>
+<td><code>Data</code></td>
+<td>Empty request body, as this is a <code>GET</code> request.</td>
+<td>N/A (Empty Body)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-table_7">Response Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data</code></td>
+<td>Array containing FIU notification details.</td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code>ver</code></td>
+<td>API version used for the notification.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>Timestamp of the notification.</td>
+<td>String (ISO 8601)</td>
+</tr>
+<tr>
+<td><code>txnid</code></td>
+<td>Unique transaction ID for the notification.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Notifier.type</code></td>
+<td>Type of notifier (e.g., <code>AA</code> for Account Aggregator).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Notifier.id</code></td>
+<td>ID of the notifier (Account Aggregator ID).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>FIStatusNotification.sessionId</code></td>
+<td>Session ID associated with the notification.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>FIStatusNotification.sessionStatus</code></td>
+<td>Status of the session (e.g., <code>COMPLETED</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>FIStatusNotification.FIStatusResponse</code></td>
+<td>Array containing financial institution status responses.</td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code>FIStatusResponse.fipID</code></td>
+<td>Financial institution provider ID.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>FIStatusResponse.Accounts</code></td>
+<td>Array of account statuses for the financial institution.</td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code>Accounts.linkRefNumber</code></td>
+<td>Link reference number associated with the account.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Accounts.FIStatus</code></td>
+<td>Status of financial information readiness (e.g., <code>READY</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Accounts.description</code></td>
+<td>Description of the FI status.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Overall status of the notification (e.g., <code>success</code>).</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fetch-data-api">Fetch Data API</h3>
+<p>This allows users to retrieve data associated with a specific session identified by its unique session ID. This API provides access to the relevant information tied to the session, enabling users to track and manage data interactions seamlessly within their established sessions.</p>
+<h3 id="header-table_2">Header Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Authorization</code></td>
+<td>Bearer token for authenticating the API request.</td>
+<td>String (Bearer Token)</td>
+</tr>
+<tr>
+<td><code>sessionId</code></td>
+<td>Unique session identifier for fetching financial data.</td>
+<td>Path Parameter</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-table_8">Response Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>API version</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>txnId</code></td>
+<td>Unique transaction identifier</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>The timestamp of the response</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>tabs</code></td>
+<td>Array of tab names for different financial data types.</td>
+<td>Array of Objects</td>
+</tr>
+<tr>
+<td><code>tabs.name</code></td>
+<td>Type of financial information (e.g., "DEPOSIT").</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>DEPOSIT</code></td>
+<td>Contains summary, account holder, and transaction details.</td>
+<td>Object</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="deposit-object"><code>DEPOSIT</code> Object</h3>
+<h4 id="summary-details">Summary Details</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Unique ID (can be null if not provided).</td>
+<td>String or Null</td>
+</tr>
+<tr>
+<td><code>currentBalance</code></td>
+<td>Current balance of the account.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>orgId</code></td>
+<td>Unique organization identifier.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>branch</code></td>
+<td>Branch code of the account.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Status of the account (e.g., <code>ACTIVE</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>Currency in which the account operates (e.g., <code>INR</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>fip</code></td>
+<td>Financial institution provider ID.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>accountNumber</code></td>
+<td>Masked account number.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>sessionId</code></td>
+<td>Unique session identifier.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>Timestamp when the account was created.</td>
+<td>String (ISO 8601)</td>
+</tr>
+<tr>
+<td><code>facility</code></td>
+<td>Type of facility (e.g., <code>OD</code> for Overdraft).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>ifscCode</code></td>
+<td>IFSC code of the branch.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>microCode</code></td>
+<td>Micro Code of the branch.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>openingDate</code></td>
+<td>Date when the account was opened.</td>
+<td>String (YYYY-MM-DD)</td>
+</tr>
+<tr>
+<td><code>currentOdLimit</code></td>
+<td>Current overdraft limit (if applicable).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>drawingLimit</code></td>
+<td>Current drawing limit.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>accountType</code></td>
+<td>Type of account (e.g., <code>SAVINGS</code>).</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h4 id="account-holder-details">Account Holder Details</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Name of the account holder.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>dob</code></td>
+<td>Date of birth of the account holder.</td>
+<td>String (YYYY-MM-DD)</td>
+</tr>
+<tr>
+<td><code>nominee</code></td>
+<td>Nominee status (e.g., <code>REGISTERED</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Email of the account holder.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>pan</code></td>
+<td>PAN number of the account holder.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>address</code></td>
+<td>Residential address of the account holder.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>mobile</code></td>
+<td>Mobile number of the account holder.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>fetchType</code></td>
+<td>Type of fetch (e.g., <code>deposit</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>accountHoldertype</code></td>
+<td>Account holder type (e.g., <code>SINGLE</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>ckycCompliance</code></td>
+<td>CKYC compliance status.</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h4 id="transactions">Transactions</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tranTimestamp</code></td>
+<td>Timestamp of the transaction.</td>
+<td>String (ISO 8601)</td>
+</tr>
+<tr>
+<td><code>narration</code></td>
+<td>Description or note for the transaction.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>Transaction amount.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Type of transaction (<code>DEBIT</code> or <code>CREDIT</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td>Transaction mode (e.g., <code>OTHERS</code>).</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>currentBalance</code></td>
+<td>Balance after the transaction.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>txnId</code></td>
+<td>Unique transaction ID.</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>reference</code></td>
+<td>Reference number for the transaction.</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<div class="line"></div>
+
+<h3 id="single-bank-account-analytics">Single Bank Account Analytics</h3>
+<h3 id="generate-analytics-api-sync-async">Generate Analytics API - ( Sync &amp; ASync)</h3>
+<p>The API allows users to create detailed analytical reports based on the activities and data interactions associated with a specific session identified by its session ID. This API provides insights into user behavior, data usage patterns, and overall engagement, helping organizations make informed decisions and optimize their services.</p>
+<h3 id="header-table_3">Header Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Authorization</code></td>
+<td>Bearer token for authenticating the API request.</td>
+<td>String (Bearer Token)</td>
+</tr>
+<tr>
+<td><code>sessionId</code></td>
+<td>Unique session identifier used to fetch analytics data.</td>
+<td>Path Parameter</td>
+</tr>
+<tr>
+<td><code>reportId</code></td>
+<td>Static part of the endpoint that appears before the <code>sessionId</code></td>
+<td>String (UUID)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-structure">Response Structure</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reportId</code></td>
+<td>Unique identifier for the analytics report.</td>
+<td>String (Integer)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>HTTP status code indicating the success of the request.</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="analytics-notification-api">Analytics-Notification-Api</h3>
+<p>The Analytics Notification API is designed to notify the client about the status and details of analytics-related sessions and transactions. This API provides critical information regarding the progress and success of analytic operations, including unique identifiers for tracking, timestamps for accurate logging, and session information for context.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Value/Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>API version</td>
+<td><code>2.0.0</code> (String)</td>
+</tr>
+<tr>
+<td><code>txnId</code></td>
+<td>Unique transaction identifier</td>
+<td><code>85939887-8067-491f-8149-c90b054ff0ee</code> (String)</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>Timestamp of the response</td>
+<td><code>2024-11-20T09:31:59.801Z</code> (String)</td>
+</tr>
+<tr>
+<td><code>sessionId</code></td>
+<td>Unique session identifier</td>
+<td><code>248c487f-fd9e-4522-9fb6-c50af4dbcb5f</code> (String)</td>
+</tr>
+<tr>
+<td><code>analyticId</code></td>
+<td>List of analytic IDs</td>
+<td><code>[524]</code> (Array of integers)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Status of the operation</td>
+<td><code>SUCCESS</code> (String)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aggregate-analytics-api-sync-async">Aggregate Analytics API - ( Sync &amp; ASync)</h3>
+<p>The API allows users to create detailed analytical reports based on the activities and data interactions associated with a specific session identified by its session ID. This API provides insights into user behavior, data usage patterns, and overall engagement, helping organizations make informed decisions and optimize their services.</p>
+<h3 id="header-table_4">Header Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Authorization</code></td>
+<td>Bearer token for authenticating the API request.</td>
+<td>String (Bearer Token)</td>
+</tr>
+<tr>
+<td><code>OrgID</code></td>
+<td>Organisation ID</td>
+<td>String (UUID)</td>
+</tr>
+<tr>
+<td><code>sessionId</code></td>
+<td>Unique session identifier used to fetch analytics data.</td>
+<td>Path Parameter</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-structure_1">Response Structure</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reportId</code></td>
+<td>Unique identifier for the analytics report.</td>
+<td>String (Integer)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>HTTP status code indicating the success of the request.</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Unacores Solutions Pvt Ltd.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
