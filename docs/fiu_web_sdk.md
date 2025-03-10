@@ -25,18 +25,23 @@ Currently, the SDK supports Finvu as an Account Aggregator (AA), with plans to a
 2. **Redirect to Unaport Web SDK**: The SDK consumer redirects the user to Unaport's WebView or loads it as an iframe.
     - Example URL: `<unaport-web-endpoint>/view?config=<encryptedconfigjson>`
 3. **Select Banks/FIP**:
-    - User will select the bank name from the list in the first screen. Based on the Selected FIP they will be able to link their account approve their consent for the selected bank/fips. 
+    - User will select the bank name from the list in the first screen. Based on the Selected FIP they will be able to link their account approve their consent for the selected bank/fips.
+    ![Select Banks](images/sdk1.png)
 4. **Consent Creation & Authentication**:
     - The SDK securely creates consent using the provided template ID.
     - The user is authenticated in the background.
     - The SDK redirects to the AA OTP screen.
+    ![Enter AA OTP](images/sdk2.png)
 5. **Linked Account Summary**:
     - Based on the provided mobile number and Selected Bank, Unaport securely retrieves and displays the user's linked accounts and Discovered Accounts if not linked.
     - If no accounts are linked, or additional accounts need to be added, the user can link them via the "Link Button" option:
      - A bank OTP is required for account linking.
+     ![Enter Bank OTP](images/sdk3.5.png)
      - Upon successful authentication, the user reviews and approves consent.
+     ![Approve Consent](images/sdk4.png)
 6. **Exit Option**:
     - Users can exit the view anytime as needed.
+    ![Exit](images/sdk5.png)
 
 ## Process for Generating Encrypted SDK Configuration
 
